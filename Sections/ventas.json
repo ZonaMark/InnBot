@@ -9,7 +9,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Chasis Acrilico 4x4 Carro Proyecto",
     "Existencias":10,
     "Precio Promedio":120.0,
@@ -17,7 +17,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Shield para ESP32",
     "Existencias":17,
     "Precio Promedio":120.0,
@@ -25,7 +25,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Sensores ultrasónicos HC-SR04 Con Soporte",
     "Existencias":14,
     "Precio Promedio":60.0,
@@ -33,7 +33,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Fotoresistencias (LDR):",
     "Existencias":20,
     "Precio Promedio":8.0,
@@ -41,7 +41,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Sensores de temperatura y humedad (AHT20+BMP280)",
     "Existencias":12,
     "Precio Promedio":55.0,
@@ -49,7 +49,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"\/Sections\/cart\/esp-32.png",
     "Descripción":"Sensor óptico Reflexivo QRD1114",
     "Existencias":16,
     "Precio Promedio":12.0,
