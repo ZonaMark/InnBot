@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robótica e Innovación</title>
+  <link rel="stylesheet" href="Styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+<div class="page-container">
+<!-- SIDEBAR -->
+  <div id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="top-logo">
+      <img src="img/Logo0.png" alt="ZonaInnBot">
+    </div>
+    <nav class="nav-menu">
+        <div class="linea"> </div>
+        <a class="nav-item" data-section="Inicio" onclick="navigateToSection('Inicio'); return false;"><span class="nav-icon">🏠</span> Inicio</a>
+        <a class="nav-item" data-section="Cursos" onclick="navigateToSection('Cursos'); return false;"><span class="nav-icon">📚</span>Cursos</a>
+        <a class="nav-item" data-section="Catalogo" onclick="navigateToSection('Catalogo'); return false;"><span class="nav-icon">📋</span>Catálogo</a>
+        <a class="nav-item" data-section="Contacto" onclick="navigateToSection('Contacto'); return false;"><span class="nav-icon">📧</span>Contacto</a>
+        <a class="nav-item" data-section="Objetivos" onclick="navigateToSection('Objetivos'); return false;"><span class="nav-icon">🎯</span>Objetivos</a>
+        <a class="nav-item" data-section="Proyectos" onclick="navigateToSection('Proyectos'); return false;"><span class="nav-icon">⚡</span>Proyectos</a>
+        <a class="nav-item" data-section="Sitios" onclick="navigateToSection('Sitios'); return false;"><span class="nav-icon">🔗</span>Sitios de Interés</a>
+        <a href="https://zonamark/ZM/Sections/Tarjetas.pdf" target="_blank" class="nav-item" data-section="Sitios"><span class="nav-icon">📕</span>Credenciales</a>
+    </nav>
+    <div class="linea"> </div>
+  </aside>
+<!-- MAIN CONTENT -->
+  <main class="main-content" id="mainContent">
+  <!-- TOP BAR -->
+    <div class="top-bar">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <div class="time-box">
+        <div id="fecha">.</div>
+        <div id="hora">.</div>
+      </div>
+      <div class="controls">
+        <button class="control-btn" id="zoomOut">-</button>
+        <span id="zoomLevel">100%</span>
+        <button class="control-btn" id="zoomIn">+</button>
+        <button class="control-btn" id="themeToggle">🌙</button>
+      </div>
+    </div>
+<!-- TOP BANNER -->
+    <div class="top-banner" onclick="navigateToSection('Inicio'); return false;">
+      <img src="img/banner0.png" alt="Banner Zona InnBot">
+      <div class="hero-manto"><h1 class="hero-title"> ¡Inspírate, Crea y Transforma el Futuro con Robótica! </h1></div>
+    </div>
+    <div class="linea"> </div>
+<!-- HERO SECTION -->
+    <section class="hero-banner" id="heroSection"> </section>
+    <div class="linea"> </div>
+<!-- WHO SECTION -->
+    <section class="who-section">
+      <h2 class="section-title">¿Para quién es este sitio?</h2>
+      <div class="who-grid">
+      <div class="who-card" data-index="0">
+          <div class="who-icon">👶</div>
+          <h3 class="who-title">Niños que inician en la tecnología</h3>
+        </div>
+        <div class="who-card" data-index="1">
+          <div class="who-icon">🎓</div>
+          <h3 class="who-title">Jóvenes y universitarios</h3>
+        </div>
+        <div class="who-card" data-index="2">
+          <div class="who-icon">💼</div>
+          <h3 class="who-title">Emprendedores</h3>
+        </div>
+        <div class="who-card" data-index="3">
+          <div class="who-icon">🏭</div>
+          <h3 class="who-title">Empresas de agricultura o automatización</h3>
+        </div>
+      </div>
+    </section>
+<!-- FOOTER -->
+    <div class="linea"> </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3 id="companyName">Robótica</h3>
+          <p style="color: var(--text-secondary); margin-top: 12px;">Transformando vidas a través de la educación tecnológica.</p>
+        </div>
+        <div class="footer-section">
+          <a onclick="navigateToSection('Contacto'); return false;"><h3>Contacto</h3></a>
+          <ul class="footer-links">
+          	<li><a id="footerEmailhref" href="" target="_blank" rel="noopener noreferrer">
+          	<i class="fa-brands fa-google"></i> <span id="footerEmail"></span> </a> </li>
+
+          	<li><a  id="footerPhoneLink" href="" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-phone"></i> <span id="footerPhone"></span></a></li>
+
+          	<li><a id="footerWhatsApp" href="" target="_blank" rel="noopener noreferrer">
+          	<i class="fa-brands fa-whatsapp"></i> <span> WhatsApp</span></a></li>
+
+
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Navegación</h3>
+          <ul class="footer-links">
+            <li><a onclick="navigateToSection('Cursos'); return false;">Cursos</a></li>
+            <li><a onclick="navigateToSection('Catalogo'); return false;">Catálogo</a></li>
+            <li><a onclick="navigateToSection('Cronograma'); return false;">Cronograma</a></li>
+            <li><a onclick="navigateToSection('Contacto'); return false;">Contacto</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Redes Sociales</h3>
+          <ul class="footer-links">
+	<li><a id="footerFacebook" href="" target="_blank" rel="noopener noreferrer">
+	<i class="fa-brands fa-facebook"></i> <span>Facebook</span> </a></li>
+
+	<li><a id="footerInstagram" href="" target="_blank" rel="noopener noreferrer">
+	<i class="fa-brands fa-instagram"></i> <span>Instagram</span> </a></li>
+
+	<li><a id="footerYoutube" href="" target="_blank" rel="noopener noreferrer">
+	<i class="fa-brands fa-youtube"></i> <span>Youtube</span> </a></li>
+
+	<li><a id="footerLinkedIn" href="" target="_blank" rel="noopener noreferrer">
+	<i class="fa-brands fa-linkedin"></i> <span>LinkedIn</span> </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Zona-InnBot-Robótica. Todos los derechos reservados.</p>
+        <p style="margin-top: 8px;"><a href="#" style="color: var(--accent-primary); text-decoration: none;">Política de Privacidad</a></p>
+      </div>
+    </footer>
+  </main>
+</div>
+<!-- MODAL INFO -->
+<div id="whoModal" class="who-modal">
+  <div class="who-modal-content">
+    <span class="who-modal-close">
+    <button class="button-close">&times;</button></span>
+    <h2 id="modalTitle" class="section-title"></h2>
+    <p id="modalText"></p>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<div class="courses-grid"></div>
+
+<!-- Chatbot container -->
+<div id="chatbot-container"></div>
+<link rel="stylesheet" href="Sections/chatbot.css">
+<script src="Sections/chatbot.js"></script>
+
+<script src="Script.js"></script>
+<script type="module" src="Sections/ScriptForm.js"></script>
+<script type="module" src="Sections/Cargar_cart.js"></script>
+</body>
+</html>

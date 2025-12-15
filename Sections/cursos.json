@@ -1,0 +1,113 @@
+{
+    "contacto": {
+        "correo": "zona.innbot@gmail.com",
+        "celular": "+52 2711912112",
+        "facebook": "https://www.facebook.com/p/Fundacion-BSM-Central-El-Potrero-100077399813734/?locale=es_LA",
+        "instagram": "https://instagram.com",
+        "youtube": "https://youtube.com",
+        "linkedIn": "https://www.linkedin.com/in/marcosmoreno3m"
+    },
+
+    "cursos": [
+        {
+            "titulo": "Robótica Divertida: Nivel Básico",
+            "imagen": "img/rnb.png",
+            "frase": "Para niños de 12 en adelante. Aprende electrónica y programación con TinkerCad y Crocodile Clips.",
+            "duracion": "⏱ Duración: 20 horas",
+            "material": "🧰 Material digital incluido",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Robótica Nivel Intermedio",
+            "imagen": "img/rni.png",
+            "frase": "Para jóvenes y universitarios: ESP32 Sensores y controladores.",
+            "duracion": "⏱ Duración: 30 horas",
+            "material": "⚙️ Proyectos aplicados",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Robótica Nivel Avanzado",
+            "imagen": "img/rna.png",
+            "frase": "Para Jovenes universitarios: ESP32 sensores y controladores integrados.",
+            "duracion": "⏱ Duración: 30 horas",
+            "material": "🌱 Proyectos con sensores reales",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Robótica Nivel Experto",
+            "imagen": "img/rne.png",
+            "frase": "Para jóvenes y universitarios: ESP32 Sensores, controladores y protocolos de comunicación",
+            "duracion": "⏱ Duración: 30 horas",
+            "material": "⚙️ Proyectos aplicados",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Programación con Scratch",
+            "imagen": "img/pcs.png",
+            "frase": "Niños a partir de los 8 años, Aprende fundamentos de programación.",
+            "duracion": "⏱ Duración: 15 horas",
+            "material": "🐱🧩 Aprende jugando",
+            "Fecha": "12/18/2025 al 12/31/2025",
+            "modalidad": "En línea",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Programación de Video Juegos con GODOT + IA",
+            "imagen": "img/cgd.png",
+            "frase": "Para Jovenes: Motor de videojuegos libre y potente que convierte tus ideas en experiencias interactivas.",
+            "duracion": "⏱ Duración: 20 horas",
+            "material": "🕹️ automatización e IA",
+            "Fecha": "12/15/2025 al 12/31/2025",
+            "modalidad": "Presencial",
+            "Lugar": "FBSM"
+        },
+        {
+            "titulo": "Automatización: Captación y seguimiento sin esfuerzo",
+            "imagen": "img/iafirebase.png",
+            "frase": "Deja que la tecnología trabaje por ti: capta, conecta y convierte clientes con automatización.",
+            "duracion": "⏱ Duración: 8 horas",
+            "material": "🤖✨ automatización e IA",
+            "Fecha": "12/15/2025 al 12/31/2025",
+            "modalidad": "Presencial",
+            "Lugar": "FBSM"
+        },
+        {
+            "titulo": "Ofimatica: Excel/ Word",
+            "imagen": "img/exwo.png",
+            "frase": "herramientas informáticos diseñados para optimizar y automatizar tareas comunes de oficina. Creación, edición, almacenamiento y procesamiento de información.",
+            "duracion": "⏱ Duración: 20 horas",
+            "material": "📝 Word - 📊 Excel",
+            "Fecha": "11/03/2025 al 11/28/2025",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+		{
+            "titulo": "TeleSecundaria Ojo Chico",
+            "imagen": "img/tableta.png",
+            "frase": "Curso aplicado para niños de 13 a 15 años, Introducción a la robotica/programación",
+            "duracion": "⏱ Duración: 14 horas",
+            "material": "📘 Tablet, Scratch, Una hora de Codigo",
+            "Fecha": "12/04/2025 al 12/19/2025",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        },
+        {
+            "titulo": "Canva: Expresa tus Ideas",
+            "imagen": "img/canva.png",
+            "frase": "Canva es una herramienta digital que facilita la creación de diseños y materiales visuales mediante plantillas y edición por bloques",
+            "duracion": "⏱ Duración: 15 horas",
+            "material": "Table - PC",
+            "Fecha": "11/03/2025 al 11/28/2025",
+            "modalidad": "Presencial",
+            "lugar": "FBSM"
+        }
+    ]
+}
