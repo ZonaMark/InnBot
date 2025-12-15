@@ -1,0 +1,65 @@
+
+*** These modified files were found in JOE when it aborted on Mon Dec 15 13:03:13 2025
+*** JOE was aborted by UNIX signal 15
+
+*** File '.eslintrc.js'
+module.exports = {
+  env: {
+    es6: true,
+    node: true,
+  },
+  parserOptions: {
+    "ecmaVersion": 2018,
+  },
+  extends: [
+    "eslint:recommended",
+    "google",
+  ],
+  rules: {
+    "no-restricted-globals": ["error", "name", "length"],
+    "prefer-arrow-callback": "error",
+    "quotes": ["error", "double", {"allowTemplateLiterals": true}],
+  },
+  overrides: [
+    {
+      files: ["**/*.spec.*"],
+      env: {
+        mocha: true,
+      },
+      rules: {},
+    },
+  ],
+  globals: {},
+};
+
+*** File '(Unnamed)'
+
+
+*** File '(Unnamed)'
+convert
+myadmin
+requirements
+permi
+android.permissions
+path
+android.api
+android.api = 
+
+*** File '(Unnamed)'
+index.js
+.env
+.env
+.env
+.env
+.env
+.eslintrc.js
+generararchivos.sh
+generararchivos.sh
+/home/zonamark/Scripts/generararchivos.sh
+.eslintrc.js
+
+*** File '* Startup Log *'
+Processing '/etc/joe/jpicorc'...
+Processing '/etc/joe/ftyperc'...
+Finished processing /etc/joe/ftyperc
+Finished processing /etc/joe/jpicorc
