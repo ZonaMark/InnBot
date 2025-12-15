@@ -1,0 +1,19 @@
+# Node
+node_modules/
+functions/node_modules/
+
+# Env
+.env
+.env.*
+*.local
+
+# Firebase
+.firebase/
+serviceAccountKey.json
+
+# Logs
+*.log
+
+# Sistema
+.DS_Store
+Thumbs.db
