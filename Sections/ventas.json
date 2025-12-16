@@ -1,7 +1,7 @@
 [
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/1.png",
     "Descripción":"Tarjetas de programación ESP-WROOM32",
     "Existencias":17,
     "Precio Promedio":140.0,
@@ -9,7 +9,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/2.png",
     "Descripción":"Chasis Acrilico 4x4 Carro Proyecto",
     "Existencias":10,
     "Precio Promedio":120.0,
@@ -17,7 +17,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/3.png",
     "Descripción":"Shield para ESP32",
     "Existencias":17,
     "Precio Promedio":120.0,
@@ -25,7 +25,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/4.png",
     "Descripción":"Sensores ultrasónicos HC-SR04 Con Soporte",
     "Existencias":14,
     "Precio Promedio":60.0,
@@ -33,7 +33,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/5.png",
     "Descripción":"Fotoresistencias (LDR):",
     "Existencias":20,
     "Precio Promedio":8.0,
@@ -41,7 +41,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/6.png",
     "Descripción":"Sensores de temperatura y humedad (AHT20+BMP280)",
     "Existencias":12,
     "Precio Promedio":55.0,
@@ -49,7 +49,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/7.png",
     "Descripción":"Sensor óptico Reflexivo QRD1114",
     "Existencias":16,
     "Precio Promedio":12.0,
@@ -57,7 +57,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/8.png",
     "Descripción":"Motoreductores + Llanta incluida 4Pz ",
     "Existencias":12,
     "Precio Promedio":150.0,
@@ -65,7 +65,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/9.png",
     "Descripción":"MicroServos",
     "Existencias":11,
     "Precio Promedio":40.0,
@@ -73,7 +73,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/10.png",
     "Descripción":"ServoMotores",
     "Existencias":12,
     "Precio Promedio":80.0,
@@ -81,7 +81,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/11.png",
     "Descripción":"Display de 8 Segmentos",
     "Existencias":10,
     "Precio Promedio":15.0,
@@ -89,7 +89,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/12.png",
     "Descripción":"Drivers puente H ",
     "Existencias":10,
     "Precio Promedio":60.0,
@@ -97,7 +97,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/13.png",
     "Descripción":"Buzzer",
     "Existencias":10,
     "Precio Promedio":18.0,
@@ -105,7 +105,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/14.png",
     "Descripción":"Potenciometros",
     "Existencias":20,
     "Precio Promedio":15.0,
@@ -113,7 +113,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/15.png",
     "Descripción":"Placas de prototipado",
     "Existencias":10,
     "Precio Promedio":55.0,
@@ -121,7 +121,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/16.png",
     "Descripción":"Baterias Recargables 7.4v\/3500mah IoLi",
     "Existencias":10,
     "Precio Promedio":400.0,
@@ -129,7 +129,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/17.png",
     "Descripción":"LED RGB",
     "Existencias":34,
     "Precio Promedio":5.0,
@@ -137,7 +137,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/18.png",
     "Descripción":"LED Multicolores",
     "Existencias":300,
     "Precio Promedio":2.0,
@@ -145,7 +145,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/19.png",
     "Descripción":"Pinza pelacable ponchadora de terminales KIT",
     "Existencias":1,
     "Precio Promedio":0.0,
@@ -153,7 +153,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/20.png",
     "Descripción":"Cargador de Baterias ",
     "Existencias":1,
     "Precio Promedio":600.0,
@@ -161,7 +161,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/21.png",
     "Descripción":"Multimetro-Amperimetro",
     "Existencias":11,
     "Precio Promedio":65.0,
@@ -169,7 +169,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/22.png",
     "Descripción":"Módulos Bluetooth Integrado a la Tarjeta WROOM-32",
     "Existencias":10,
     "Precio Promedio":0.0,
@@ -177,7 +177,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/23.png",
     "Descripción":"Modulos Regulador 5V mini560 DC-DC reductor",
     "Existencias":10,
     "Precio Promedio":45.0,
@@ -185,7 +185,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/24.png",
     "Descripción":"Sensores de detección de colores TCS3200",
     "Existencias":10,
     "Precio Promedio":60.0,
@@ -193,7 +193,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/25.png",
     "Descripción":"Sensor PIR",
     "Existencias":12,
     "Precio Promedio":55.0,
@@ -201,7 +201,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/26.png",
     "Descripción":"Sensores Hall (para detectar campos magnéticos)",
     "Existencias":10,
     "Precio Promedio":20.0,
@@ -209,7 +209,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/27.png",
     "Descripción":"Sensor de Velocidad",
     "Existencias":10,
     "Precio Promedio":0.0,
@@ -217,7 +217,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/28.png",
     "Descripción":"Sensor Intensidad luminica TEMT6000",
     "Existencias":12,
     "Precio Promedio":80.0,
@@ -225,7 +225,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/29.png",
     "Descripción":"Sensor de Gas",
     "Existencias":10,
     "Precio Promedio":50.0,
@@ -233,7 +233,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/30.png",
     "Descripción":"Sensor de Humedad",
     "Existencias":10,
     "Precio Promedio":60.0,
@@ -241,7 +241,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/31.png",
     "Descripción":"Integrados 555",
     "Existencias":10,
     "Precio Promedio":15.0,
@@ -249,7 +249,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/32.png",
     "Descripción":"Módulos de reléy",
     "Existencias":15,
     "Precio Promedio":28.0,
@@ -257,7 +257,7 @@
   },
   {
     "Disponible":"SI",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/33.png",
     "Descripción":"Teclado Matricial",
     "Existencias":11,
     "Precio Promedio":45.0,
@@ -265,7 +265,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/34.png",
     "Descripción":"Giroscopio\/Acelerometro GY-Bml160",
     "Existencias":10,
     "Precio Promedio":70.0,
@@ -273,7 +273,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/35.png",
     "Descripción":"Sensor de presion de agua",
     "Existencias":5,
     "Precio Promedio":60.0,
@@ -281,7 +281,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/36.png",
     "Descripción":"Sensor Laser",
     "Existencias":5,
     "Precio Promedio":70.0,
@@ -289,7 +289,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/37.png",
     "Descripción":"Sensor Presencia por Radar RCWL-05-16",
     "Existencias":10,
     "Precio Promedio":45.0,
@@ -297,7 +297,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/38.png",
     "Descripción":"Modulo sensor de sonido",
     "Existencias":10,
     "Precio Promedio":0.0,
@@ -305,7 +305,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/39.png",
     "Descripción":"Modulo Rf Radiofrecuencia Nrf24L01+ Mod. Transmisión",
     "Existencias":10,
     "Precio Promedio":120.0,
@@ -313,7 +313,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/40.png",
     "Descripción":"Tarjetas RFID (con lector y tarjetas)",
     "Existencias":11,
     "Precio Promedio":60.0,
@@ -321,7 +321,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/41.png",
     "Descripción":"Pantallas LCD OLED básicas (con controlador I2C)",
     "Existencias":10,
     "Precio Promedio":90.0,
@@ -329,7 +329,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/42.png",
     "Descripción":"Transistores varios",
     "Existencias":18,
     "Precio Promedio":10.0,
@@ -337,7 +337,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/43.png",
     "Descripción":"Módulos de almacenamiento microSD",
     "Existencias":12,
     "Precio Promedio":30.0,
@@ -345,7 +345,7 @@
   },
   {
     "Disponible":"Si",
-    "Imagen":"\/ZM\/Sections\/cart\/esp-32.png",
+    "Imagen":"Sections\/cart\/44.png",
     "Descripción":"Módulos GPS",
     "Existencias":12,
     "Precio Promedio":140.0,
