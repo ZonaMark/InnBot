@@ -1,6 +1,19 @@
 {
   "rules": {
     ".read": false,
-    ".write":true
+    ".write":true,
+      
+    "Acceso": {
+      ".read": true,
+      ".write": false
+    },  
+  	"codigos": {
+      ".read": true,
+      ".write": false
+    },
+    "url": {
+      ".read": true,
+      ".write": false
+    }
   }
 }

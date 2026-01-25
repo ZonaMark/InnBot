@@ -7,14 +7,15 @@
                 diseñados para niños, jóvenes, emprendedores y profesionales.
             </p>
             <div class="hero-buttons">
-                <button class="hero-btn primary" onclick="navigateToSection('Cursos')">Ver Cursos</button>
-                <button class="hero-btn secondary" onclick="navigateToSection('Contacto')">Contacto Directo</button>
-                <button class="hero-btn primary" onclick="navigateToSection('Catalogo')">Catálogo</button>
+                <button class="hero-btn primary" data-section="Cursos">Ver Cursos</button>
+                <button class="hero-btn secondary" data-section="Contacto">Contacto Directo</button>
+                <button class="hero-btn primary" data-section="Catalogo">Catálogo</button>
+                <button class="SectionMisCursos hero-btn primary">Mis Cursos</button>
             </div>
 	</div>
-<section class="features">
+<section class="features feature-A">
   <div class="features-horizontal">
-    <div class="hero-image-inicio">
+    <div class="hero-image-A">
       <img src="img/inicio1.png" alt="Hero Image">
     </div>
 
@@ -22,25 +23,21 @@
       <h2 class="section-title">¿Qué encontrarás aquí?</h2>
       <div class="features-grid">
         <div class="feature-card">
-          <div class="feature-icon">🤖</div>
           <h3>Robótica desde cero</h3>
           <p>Aprende electrónica, sensores, actuadores y programación con actividades guiadas paso a paso.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">💡</div>
           <h3>Proyectos reales</h3>
           <p>Construye robots, simulaciones, videojuegos, mecanismos automáticos y más.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🎮</div>
           <h3>Herramientas modernas</h3>
           <p>Scratch, Tinkercad, simuladores, programación visual y plataformas de aprendizaje.</p>
         </div>
 
         <div class="feature-card">
-          <div class="feature-icon">🚀</div>
           <h3>Aprendizaje flexible</h3>
           <p>Cursos en línea, presenciales, material descargable y soporte personalizado.</p>
         </div>
@@ -49,9 +46,9 @@
   </div>
 </section>
 
-<section class="features">
+<section class="features feature-B">
   <div class="features-horizontal">
-    <div class="hero-image-inicio">
+    <div class="hero-image-B">
       <img src="img/dirigido.png" alt="Hero Image">
     </div>
 
@@ -85,9 +82,9 @@
 </section>
 
     <!-- Misión y visión -->
-    <section class="features">
+    <section class="features feature-C">
   <div class="features-horizontal">
-    <div class="hero-image-inicio">
+    <div class="hero-image-C">
       <img src="img/filosofia.png" alt="Hero Image">
     </div>
 
@@ -116,7 +113,7 @@
     <!-- CTA final -->
     <section class="feature-card">
         <h2>¿Listo para comenzar tu camino en la robótica?</h2>
-        <button class="cta-btn" onclick="navigateToSection('Cursos')">
+        <button class="cta-btn" data-section="Cursos">Ver Cursos</button>
             Empezar Ahora
         </button>
     </section>

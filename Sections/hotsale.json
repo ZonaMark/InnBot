@@ -1,0 +1,37 @@
+{
+    "hotsale": { 
+        "venta": true
+    },
+    "servicios": [
+        {
+            "titulo": "Laptop HP",
+            "imagen1": "img/hp.png",
+            "imagen2": "img/hp1.png",
+            "imagen3": "img/hp2.png",
+            "imagen4": "img/hp3.png",
+            "frase": "HP MODEL: 14-dk1514",
+            "recurso": "Sistema Operativo DUAL Windows 11 | Linux Zorin/GNU",
+            "beneficios": "Aprovecha esta super Oferta, Equipo muy bien Cuidado, Actualizado",
+            "sistema": "AMD Athlon Silver 3050U With Radeom Graphics x 2, Memora RAM 4.0GB SDD 128GB",
+            "detalles": "En Excelentes Condiciones",
+            "costo": "$8,400.00",
+            "descuento": "50%",
+            "oferta": "$4,200.00"
+        },
+        {
+            "titulo": "Laptop ACER",
+            "imagen1": "img/acer.png",
+            "imagen2": "img/acer1.png",
+            "imagen3": "img/acer2.png",
+            "imagen4": "img/acer3.png",
+            "frase": "Acer ASPIRE: V5 Series",
+            "recurso": "Sistema Operativo DUAL Windows 11 | Linux Zorin/GNU",
+            "beneficios": "Aprovecha esta super Oferta, Equipo con excelentes caracteristicas",
+            "sistema": "AMD A10-5757M APU With Radeon(tm) HD Graphics TOUCHSCREEN LCD brillante Panoramica, RAM 12GB SDD 250GB, Teclado Retroiluminado",
+            "detalles": "Algunos Rayones y desgaste de pintura, cargador original reparado del cable",
+            "costo": "$10,350.00",
+            "descuento": "60%",
+            "oferta": "$4,140.00"        
+        }
+    ]
+}

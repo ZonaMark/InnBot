@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Acceso al curso navideño</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #1d486d;
+      background-size: cover; /* La imagen se ajusta para cubrir todo */
+      background-position: center; /* Centra la imagen */
+      background-repeat: no-repeat; /* no repetir */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    .contenedor {
+	  position: relative;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+	  margin-top: 160px; /* ajusta el valor según lo que necesites */
+      padding: 8px;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      background-image: url("img/navidad.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+	  background-color: rgba(0, 0, 0, 0.4); /* Fondo translúcido */
+    }
+.tituloCurso {
+  position: sticky;   /* se queda visible al hacer scroll */
+  top: 0;
+  background: rgba(0,0,0,0.6); /* contraste */
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;        /* siempre encima de las tarjetas */
+}
+
+.tituloCurso h2 {
+  color: #fff;
+  font-size: 1.8em;
+  text-shadow: 2px 2px 5px black;
+  margin: 0;
+}
+
+    .tarjetas {
+      display: grid;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      overflow-y: auto;
+    }
+
+
+    .tarjeta {
+      background: #fff;
+      border: 3px solid #004080;
+      border-radius: 15px;
+      width: 120px;
+      height: 160px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s;
+      font-weight: bold;
+      color: #2f4f4f;
+      position: relative;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .tarjeta::before { content: "💻"; position: absolute; top: 10px; left: 10px; font-size: 24px; }
+    .tarjeta::after { content: "🖱️"; position: absolute; bottom: 10px; right: 10px; font-size: 24px; }
+    .tarjeta:hover { transform: scale(1.1); }
+    .tarjeta.seleccionada { border: 4px solid green; box-shadow: 0 0 15px green; }
+    h3 { color: #004080; margin-bottom: 10px; }
+    .edades {
+      margin: 20px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .edad {
+      background: #f0f8ff;
+      border: 2px solid #4682b4;
+      border-radius: 8px;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .edad:hover { background: #add8e6; }
+    .edad.seleccionada { background: #4682b4; color: white; font-weight: bold; }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover { background: #00264d; }
+    #mensaje { margin-top: 20px; font-weight: bold; color: #b22222; }
+    #zonaPassword { margin-top: 15px; }
+    #inputCodigo { padding: 8px; border-radius: 6px; border: 1px solid #004080; }
+  </style>
+</head>
+<body>
+  <div class=tituloCurso> <h2 id="TituloCurso">  </h2> </div>
+  <div class="contenedor">
+
+    <div class="tarjetas" id="tarjetas"></div>
+
+    <h3 id="tituloEdades">Selecciona tu edad</h3>
+    <div class="edades" id="edades"></div>
+
+    <!-- Campo de password solo si es acceso por código -->
+    <div id="zonaPassword" style="display:none;">
+      <input type="password" id="inputCodigo" placeholder="Ingresa tu código" />
+    </div>
+
+    <button id="btnAcceder">Entrar al curso</button>
+    <p id="mensaje"></p>
+  </div>
+  <script type="module" src="Script_next.js"></script>
+</body>
+</html>

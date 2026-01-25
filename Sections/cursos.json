@@ -5,7 +5,8 @@
         "facebook": "https://www.facebook.com/p/Fundacion-BSM-Central-El-Potrero-100077399813734/?locale=es_LA",
         "instagram": "https://instagram.com",
         "youtube": "https://youtube.com",
-        "linkedIn": "https://www.linkedin.com/in/marcosmoreno3m"
+        "linkedIn": "https://www.linkedin.com/in/marcosmoreno3m",
+        "formato_fecha": "El formato de Fecha en los cursos es 12/25/2025 al 01/15/2026"
     },
 
     "cursos": [
@@ -17,7 +18,10 @@
             "material": "🧰 Material digital incluido",
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "1290549952"
         },
         {
             "titulo": "Robótica Nivel Intermedio",
@@ -27,7 +31,10 @@
             "material": "⚙️ Proyectos aplicados",
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "797678953"
         },
         {
             "titulo": "Robótica Nivel Avanzado",
@@ -37,7 +44,10 @@
             "material": "🌱 Proyectos con sensores reales",
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "1684794685"
         },
         {
             "titulo": "Robótica Nivel Experto",
@@ -47,7 +57,10 @@
             "material": "⚙️ Proyectos aplicados",
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "2116460145"
         },
         {
             "titulo": "Programación con Scratch",
@@ -55,9 +68,12 @@
             "frase": "Niños a partir de los 8 años, Aprende fundamentos de programación.",
             "duracion": "⏱ Duración: 15 horas",
             "material": "🐱🧩 Aprende jugando",
-            "Fecha": "12/18/2025 al 12/31/2025",
-            "modalidad": "En línea",
-            "lugar": "FBSM"
+            "Fecha": "02/16/2026 al 03/06/2026",
+            "modalidad": "Presencial",
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/Scratch/",
+            "acceso": "Libre",
+            "gid": "608066316"
         },
         {
             "titulo": "Programación de Video Juegos con GODOT + IA",
@@ -65,9 +81,12 @@
             "frase": "Para Jovenes: Motor de videojuegos libre y potente que convierte tus ideas en experiencias interactivas.",
             "duracion": "⏱ Duración: 20 horas",
             "material": "🕹️ automatización e IA",
-            "Fecha": "12/15/2025 al 12/31/2025",
+            "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "Lugar": "FBSM"
+            "Lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "31837739"
         },
         {
             "titulo": "Automatización: Captación y seguimiento sin esfuerzo",
@@ -75,9 +94,12 @@
             "frase": "Deja que la tecnología trabaje por ti: capta, conecta y convierte clientes con automatización.",
             "duracion": "⏱ Duración: 8 horas",
             "material": "🤖✨ automatización e IA",
-            "Fecha": "12/15/2025 al 12/31/2025",
+            "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "Lugar": "FBSM"
+            "Lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "362886922"
         },
         {
             "titulo": "Ofimatica: Excel/ Word",
@@ -85,19 +107,25 @@
             "frase": "herramientas informáticos diseñados para optimizar y automatizar tareas comunes de oficina. Creación, edición, almacenamiento y procesamiento de información.",
             "duracion": "⏱ Duración: 20 horas",
             "material": "📝 Word - 📊 Excel",
-            "Fecha": "11/03/2025 al 11/28/2025",
+            "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "1708200077"
         },
 		{
-            "titulo": "Curso Navideño: SuperKidS Juega, crea y aprende Tech’s",
+            "titulo": "“SuperKidS: Juega, crea y aprende Tech’s”",
             "imagen": "img/tableta.png",
-            "frase": "Niños descubriendo la tecnología a través del juego, la curiosidad y la exploración divertida.",
-            "duracion": "⏱ Duración: 13 horas 45 minutos",
-            "material": "📘 PC, Aplicaciones Gamificadas",
-            "Fecha": "12/22/2025 al 12/27/2025",
+            "frase": "Curso aplicado para niños de 5 a 12 años, Aprende Jugando, Matematicas, Español, Geografia",
+            "duracion": "⏱ Duración: 14 horas",
+            "material": "📘 TuxMath, Math Playground, ABCya Money Games",
+            "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/Curso_Navidad/index.html",
+            "acceso": "Libre",
+            "gid": "940509685"
         },
         {
             "titulo": "Canva: Expresa tus Ideas",
@@ -105,9 +133,12 @@
             "frase": "Canva es una herramienta digital que facilita la creación de diseños y materiales visuales mediante plantillas y edición por bloques",
             "duracion": "⏱ Duración: 15 horas",
             "material": "Table - PC",
-            "Fecha": "11/03/2025 al 11/28/2025",
+            "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
-            "lugar": "FBSM"
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "483750340"
         }
     ]
 }

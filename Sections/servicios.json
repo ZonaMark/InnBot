@@ -1,0 +1,61 @@
+{
+    "contacto": {
+        "correo": "zona.innbot@gmail.com",
+        "celular": "+52 2711912112",
+        "facebook": "https://www.facebook.com/p/Fundacion-BSM-Central-El-Potrero-100077399813734/?locale=es_LA",
+        "instagram": "https://instagram.com",
+        "youtube": "https://youtube.com",
+        "linkedIn": "https://www.linkedin.com/in/marcosmoreno3m",
+        "formato_fecha": "El formato de Fecha en los cursos es 12/25/2025 al 01/15/2026"
+    },
+    "servicios": [
+        {
+            "titulo": "Migración de Windows a Distribuciones Linux/GNU",
+            "imagen": "img/windows-linux.png",
+            "frase": "No tires tu laptop/Pc, Transformala y dale una segunda vida con herramientas modernas y eficientes con Linux.",
+            "recurso": "🟣  Ubuntu → estable, popular y con gran soporte, 🔵 Zorin OS → interfaz amigable, ideal para usuarios que vienen de Windows, 🟢 AntiX → ligera, perfecta para PCs con pocos recursos.",
+            "beneficios": "Aprovecha mejor el hardware existente, Reduce costos de licencias, Mayor seguridad y estabilidad, Ideal para entornos educativos y oficinas con equipos limitados.",
+            "costo": "Previa Cotización"
+        },
+        {
+            "titulo": "Migración de equipos escolares con Linux educativo",
+            "imagen": "img/linux-work.png",
+            "frase": "Convierte computadoras antiguas en aulas digitales modernas y accesibles.",
+            "recurso": "🔵 Zorin OS → interfaz amigable, ideal para usuarios que migran desde Windows, 🟢 AntiX → ligera, perfecta para PCs con pocos recursos, 🟡 Edubuntu → pensada para entornos escolares, con software educativo preinstalado.",
+            "beneficios": "Aprovecha al máximo equipos antiguos en red. Reduce costos de licencias y mantenimiento. Mejora la seguridad y estabilidad del sistema. Facilita el acceso a herramientas educativas modernas. Escalable: permite integrar más equipos sin grandes inversiones.",
+            "costo": "Previa Cotización"
+        },
+        {
+            "titulo": "Diseño y desarrollo de páginas web personalizadas",
+            "imagen": "img/html-js-css-firebase.png",
+            "frase": "“Haz que tu negocio, proyecto o institución tenga presencia profesional en internet.”",
+            "recurso": "📱 Diseño responsivo → páginas que se adaptan a móviles, tablets y PC. 🎨 Estilo personalizado → acorde a la identidad visual de tu marca. ⚡ Optimización de rendimiento → carga rápida y eficiente. 🔒 Seguridad integrada → buenas prácticas para proteger datos y accesos. ☁️ Integración con servicios en la nube → formularios, bases de datos y correo electrónico. ",
+            "beneficios": "Mayor visibilidad y alcance en internet. Imagen profesional frente a clientes y estudiantes. Posibilidad de integrar cursos inscripciones. Escalable: se puede ampliar con nuevas secciones o funcionalidades.",
+            "costo": "Previa Cotización"
+        },
+        {
+            "titulo": "Instalación de cámaras Inalámbricas (WIFI) ",
+            "imagen": "img/camarea-wifi.png",
+            "frase": "No necesitan cableado de video, solo alimentación eléctrica Se configuran rápido y son fáciles de mover.",
+            "recurso": "Acceso remoto mediante aplicaciones móviles.",
+            "beneficios": "Recomendadas para hogares y oficinas pequeñas.",
+            "costo": "Previa Cotización"
+        },
+        {
+            "titulo": "Instalación de Cámaras IP (Internet Protocol) ",
+            "imagen": "img/camaras_ip.png",
+            "frase": "Se conectan a la red (LAN/WiFi). No necesitan cableado de video, solo alimentación eléctrica, tienen una alta calidad de imagen y escalabilidad.",
+            "recurso": "Usan NVR (Network Video Recorder) o almacenamiento en la nube",
+            "beneficios": "Permiten acceso remoto desde PC o móvil",
+            "costo": "Previa Cotización"
+        },
+        {
+            "titulo": "CCTV (Circuito Cerrado de Televisión)",
+            "imagen": "img/camaras-cctv.png",
+            "frase": "Conexión por cable coaxial mas alimentación eléctrica, Requiere un DVR (Digital Video Recorder).",
+            "recurso": "Ideal para sistemas tradicionales y confiables.",
+            "beneficios": "Menor costo inicial, pero menos flexibilidad.",
+            "costo": "Previa Cotización"
+        }
+    ]
+}

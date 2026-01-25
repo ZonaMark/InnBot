@@ -1,0 +1,33 @@
+ {   "proyectos" : [
+        {
+            "titulo": "Software de Máquina Vending",
+            "imagen": "img/proyecto0.png",
+            "frase": "Sistema inteligente para administrar inventario, ventas, reportes y control remoto de máquinas expendedoras. Incluye interfaz moderna, acceso seguro y módulos de mantenimiento. Ideal para emprendedores y empresas",
+            "material": "🧰 Material digital incluido"
+		},
+        {
+            "titulo": "Control Inteligente para Lavadora",
+            "imagen": "img/proyecto1.png",
+            "frase": "Programa diseñado para gestionar ciclos de lavado, niveles de agua y tiempo automático. Pensado para modernizar lavadoras mecánicas y mejorar su eficiencia",
+            "material": "🧰 Material digital incluido"
+        },
+        {
+            "titulo": "Semáforo Inteligente con Arduino",
+            "imagen": "img/proyecto2.png",
+            "frase": "Proyecto educativo donde los estudiantes aprenden sobre electrónica, temporización y lógica programable mediante un semáforo funcional controlado por Arduino.",
+            "material": "🧰 Material digital incluido"
+        },
+        {
+            "titulo": "Robot Seguidor de Línea",
+            "imagen": "img/proyecto3.png",
+            "frase": "Construcción de un robot autónomo capaz de seguir trayectorias marcadas en el piso. Excelente para aprender sensores, control PID y diseño mecánico básico.",
+            "material": "🧰 Material digital incluido"
+        },
+        {
+            "titulo": "Riego Automático con Sensores",
+            "imagen": "img/proyecto4.png",
+            "frase": "Sistema que activa el riego dependiendo de la humedad del suelo. Pensado para agricultura, domótica y proyectos escolares orientados a la sostenibilidad",
+            "material": "🧰 Material digital incluido"
+        }
+    ]
+}

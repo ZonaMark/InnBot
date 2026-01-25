@@ -1,0 +1,134 @@
+.hotsale-widget {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  font-family: system-ui, sans-serif;
+  z-index: 9999;
+}
+
+.hotsale-button {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.hotsale-bubble {
+  background: #111833;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hotsale-panel {
+  display: none;
+  position: fixed;         /* lo sacamos del flujo normal */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* lo centramos */
+  width: 80%;
+  max-width: 900px;
+  max-height: 80%;
+  overflow-y: auto;
+  flex-direction: column;
+  gap: 20px;
+  background: #0b1023;
+  color: #e6eefc;
+  border: 1px solid #2a3a6e;
+  border-radius: 12px;
+  padding: 20px;
+  z-index: 10000;
+}
+
+.hotsale-panel.open {
+  display: flex;
+}
+
+.hotsale-item {
+  background: #111833;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hotsale-item img {
+  max-width: 150px;
+  border-radius: 8px;
+}
+
+.hotsale-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.hotsale-actions button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.hotsale-actions .contact-btn {
+  background: #233060;
+  color: #fff;
+}
+
+.hotsale-actions .cancel-btn {
+  background: #6e2a2a;
+  color: #fff;
+}
+
+
+.hotsale-images {
+  display: flex;          /* activa flexbox */
+  flex-direction: row;    /* las coloca en fila horizontal */
+  gap: 10px;              /* espacio entre imágenes */
+  justify-content: center;/* opcional: centrarlas horizontalmente */
+  flex-wrap: wrap;        /* permite que se acomoden en varias filas si la pantalla es pequeña */
+}
+
+.hotsale-images img {
+  max-width: 150px;       /* tamaño máximo de cada imagen */
+  border-radius: 8px;
+}
+
+/* Estilo para pantallas pequeñas (móvil) */
+@media (max-width: 768px) {
+  .hotsale-widget {
+   position: fixed;
+   top: 50px;
+   right: 20px;
+  }
+
+  .hotsale-button {
+  width: 60px;
+  height: 60px;
+  }
+  .hotsale-images {
+    flex-wrap: nowrap;          /* no se rompen en filas */
+    overflow-x: auto;           /* scroll horizontal */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .hotsale-images img {
+    flex: 0 0 auto;             /* cada imagen ocupa su espacio fijo */
+    width: 80%;                 /* ancho relativo para que se vean grandes en móvil */
+    scroll-snap-align: center;  /* se centra al soltar el dedo */
+  }
+
+  /* Opcional: ocultar scrollbar */
+  .hotsale-images::-webkit-scrollbar {
+    display: none;
+  }
+  .hotsale-images {
+    -ms-overflow-style: none;  /* IE/Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+
+}
