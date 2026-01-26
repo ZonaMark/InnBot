@@ -75,15 +75,15 @@ window.agregarCarrito = function (index) { // asi para que la funcion se vea de 
     renderProductos();
     renderCarrito();
   }
-
-window.quitarDelCarrito = function (index) { // asi para que la funcion se vea de forma global
+  
+  window.quitarDelCarrito = function (index) { // asi para que la funcion se vea de forma global
     productosData[index].Existencias += carrito[index].cantidad;
     delete carrito[index];
     renderProductos();
     renderCarrito();
   }
 
-  function renderCarrito() {
+ export function renderCarrito() {
     carritoDiv.innerHTML = '';
     let total = 0;
 
@@ -103,25 +103,4 @@ window.quitarDelCarrito = function (index) { // asi para que la funcion se vea d
     });
 
     totalSpan.textContent = total.toFixed(2);
-  }
-
-window.finalizarVenta = function (index) { // asi para que la funcion se vea de forma global
-    if (!nombre.value || !telefono.value || Object.keys(carrito).length === 0) {
-      alert('Completa los datos y agrega productos');
-      return;
-    }
-
-    const venta = {
-      cliente: nombre.value,
-      telefono: telefono.value,
-      productos: carrito,
-      total: totalSpan.textContent,
-      fecha: new Date().toISOString()
-    };
-
-    console.log('Venta lista para Firebase:', venta);
-    alert('Venta registrada (simulación)');
-
-    carrito = {};
-    renderCarrito();
   }

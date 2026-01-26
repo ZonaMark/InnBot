@@ -2,9 +2,9 @@
 // ---------- Firebase ----------
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
-import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
-
+import { getDatabase, ref, set, get, push } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 import { navigateToSection } from "../Script.js";
+import { renderCarrito } from "./Cargar_cart.js";
 
 const homepath = "https://zonamark/ZM/";
 
@@ -140,6 +140,45 @@ const observer = new MutationObserver(() => {
      observer.disconnect();
     }
 });
+
+
+window.finalizarVenta = async function () {
+  try {
+    if (!nombre.value || !telefono.value || Object.keys(carrito).length === 0) {
+      throw new Error("Completa los datos y agrega productos");
+    }
+
+    await signInAnonymously(auth);
+    if (!auth.currentUser) {
+      throw new Error("No se pudo autenticar al usuario");
+    }
+    const uid = auth.currentUser.uid;
+    const venta = {
+    cliente: nombre.value,
+     fecha: new Date().toLocaleString(),
+     telefono: telefono.value,
+     total: totalSpan.textContent,
+     Productos: {}
+    };
+    // Reorganiza el carrito 
+    Object.entries(carrito).forEach(([key, item], index) => {
+      venta.Productos[index] = {
+        Descripción: item.producto.Descripción,
+        Cantidad: item.cantidad,
+        Precio_Promedio: item.producto["Precio Promedio"],
+        Con_Iva: item.producto["Con Iva"]
+      };
+    });
+    const ventasRef = ref(db, "Ventas/" + uid);
+    const result = await push(ventasRef, venta);
+    showToast("En breve nos ponemos en contacto para la venta directa ✔");
+    carrito = {};
+    renderCarrito();
+  } catch (error) {
+    console.error("❌ Error en finalizarVenta:", error);
+    showToast("Error al registrar la venta: " + error.message);
+  }
+};
 
 observer.observe(document.body, { childList: true, subtree: true });
 
