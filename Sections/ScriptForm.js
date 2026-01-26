@@ -4,7 +4,7 @@ import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/1
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getDatabase, ref, set, get, push } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 import { navigateToSection } from "../Script.js";
-import { renderCarrito } from "./Cargar_cart.js";
+import { renderCarrito, esperarProductos } from "./Cargar_cart.js";
 
 const homepath = "https://zonamark/ZM/";
 
@@ -87,14 +87,10 @@ const observer = new MutationObserver(() => {
 
         // 3️⃣ Guardar en la BD bajo el UID
         await set(ref(db, 'Contactos/' + uid), datos);
-
         // 4️⃣ Feedback al usuario
         showToast("En breve nos comunicaremos contigo ✔");
         localStorage.removeItem("cursoSeleccionado");
-
-
         navigateToSection("Cursos");
-
       } catch (error) {
         console.error("ERROR:", error);
         showToast("Lo lamento ha ocurrido un ERROR");
@@ -174,6 +170,10 @@ window.finalizarVenta = async function () {
     showToast("En breve nos ponemos en contacto para la venta directa ✔");
     carrito = {};
     renderCarrito();
+    nombre.value = ""; 
+    telefono.value = "";
+    navigateToSection("Catalogo");
+    esperarProductos();
   } catch (error) {
     console.error("❌ Error en finalizarVenta:", error);
     showToast("Error al registrar la venta: " + error.message);

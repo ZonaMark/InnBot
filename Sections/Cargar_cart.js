@@ -1,5 +1,5 @@
 
-function esperarProductos() {
+export function esperarProductos() {
   const target = document.getElementById("heroSection");
 
   if (!target) return;
