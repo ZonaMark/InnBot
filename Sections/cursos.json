@@ -63,11 +63,11 @@
             "gid": "1502337236"
         },
 		{
-            "titulo": "Programación Brazos Robóticos\Rviz",
+            "titulo": "Programación Brazos Robóticos Rviz",
             "imagen": "img/rviz.png",
-            "frase": "Instalación, Procesos de programación GUI Rvix y python [motion planning][Scene Objects]",
+            "frase": "Instalación, Procesos de programación GUI Rvix y python motion planning | Scene Objects",
             "duracion": "⏱ Duración: 20 horas",
-            "material": "",
+            "material": "🌱 Todo en entorno Virtual",
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
