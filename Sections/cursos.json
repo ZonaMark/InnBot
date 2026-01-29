@@ -19,7 +19,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "1290549952"
         },
@@ -32,7 +32,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "797678953"
         },
@@ -45,9 +45,35 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "1684794685"
+        },
+        {
+            "titulo": "Linux/GNU",
+            "imagen": "img/linux-work.png",
+            "frase": "Instalación de Distribuciones Linux, Gestor de Paquetes, Configuración, Ambientes Virtuales, Terminal Bash",
+            "duracion": "⏱ Duración: 20 horas",
+            "material": "🌱 Todo en entorno Virtual",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM",
+            "ruta": "https://zonamark.github.io/InnBot/",
+            "acceso": "Codigo",
+            "gid": "1502337236"
+        },
+		{
+            "titulo": "Programación Brazos Robóticos\Rviz",
+            "imagen": "img/rviz.png",
+            "frase": "Instalación, Procesos de programación GUI Rvix y python [motion planning][Scene Objects]",
+            "duracion": "⏱ Duración: 20 horas",
+            "material": "",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM",
+            "ruta": "https://zonamark.github.io/InnBot/",
+            "acceso": "Codigo",
+            "gid": "1292784233"
         },
         {
             "titulo": "Robótica Nivel Experto",
@@ -58,7 +84,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "2116460145"
         },
@@ -71,7 +97,7 @@
             "Fecha": "02/16/2026 al 03/06/2026",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/Scratch/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Libre",
             "gid": "608066316"
         },
@@ -84,7 +110,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "Lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "31837739"
         },
@@ -97,7 +123,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "Lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "362886922"
         },
@@ -110,7 +136,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "1708200077"
         },
@@ -123,7 +149,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/Curso_Navidad/index.html",
+            "ruta": "https://zonamark.github.io/InnBot/Curso_Navidad/index.html",
             "acceso": "Libre",
             "gid": "940509685"
         },
@@ -136,7 +162,7 @@
             "Fecha": "Periodo de Registro",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ruta": "https://zonamark/ZM/",
+            "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "483750340"
         }
