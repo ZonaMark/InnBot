@@ -50,6 +50,19 @@
             "gid": "1684794685"
         },
         {
+            "titulo": "Robótica Nivel Experto",
+            "imagen": "img/rne.png",
+            "frase": "Para jóvenes y universitarios: ESP32 Sensores, controladores y protocolos de comunicación",
+            "duracion": "⏱ Duración: 30 horas",
+            "material": "⚙️ Proyectos aplicados",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM",
+            "ruta": "https://zonamark.github.io/InnBot/",
+            "acceso": "Codigo",
+            "gid": "2116460145"
+        },
+        {
             "titulo": "Linux/GNU",
             "imagen": "img/linux-work.png",
             "frase": "Instalación de Distribuciones Linux, Gestor de Paquetes, Configuración, Ambientes Virtuales, Terminal Bash",
@@ -74,19 +87,6 @@
             "ruta": "https://zonamark.github.io/InnBot/",
             "acceso": "Codigo",
             "gid": "1292784233"
-        },
-        {
-            "titulo": "Robótica Nivel Experto",
-            "imagen": "img/rne.png",
-            "frase": "Para jóvenes y universitarios: ESP32 Sensores, controladores y protocolos de comunicación",
-            "duracion": "⏱ Duración: 30 horas",
-            "material": "⚙️ Proyectos aplicados",
-            "Fecha": "Periodo de Registro",
-            "modalidad": "Presencial",
-            "lugar": "FBSM",
-            "ruta": "https://zonamark.github.io/InnBot/",
-            "acceso": "Codigo",
-            "gid": "2116460145"
         },
         {
             "titulo": "Programación con Scratch",
