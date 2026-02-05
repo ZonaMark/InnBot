@@ -139,6 +139,21 @@
             "ruta": "https://zonamark/ZM/",
             "acceso": "Codigo",
             "gid": "483750340"
+        },
+        {
+            "titulo": "Tu celular fácil y seguro",
+            "imagen": "img/celular.png",
+            "frase": "Aprende a usar tu celular sin complicaciones, Pierde el miedo al celular, gana confianza y conécta con tu familia de forma segura y fácil",
+            "duracion": "⏱ Duración: 10 horas",
+            "material": "Celular propio",
+            "Fecha": "Periodo de Registro",
+            "modalidad": "Presencial",
+            "lugar": "FBSM",
+            "ruta": "https://zonamark/ZM/",
+            "acceso": "Codigo",
+            "gid": "99605463"
         }
+
+
     ]
 }
