@@ -122,13 +122,17 @@
     scroll-snap-align: center;  /* se centra al soltar el dedo */
   }
 
-  /* Opcional: ocultar scrollbar */
-  .hotsale-images::-webkit-scrollbar {
-    display: none;
-  }
   .hotsale-images {
-    -ms-overflow-style: none;  /* IE/Edge */
-    scrollbar-width: none;     /* Firefox */
+    flex-direction: column;  /* vertical en móvil */
+    flex-wrap: nowrap;        /* sin filas, columna única */
+    gap: 15px;               /* más separación vertical */
+    overflow-x: visible;     /* quitar scroll horizontal */
+    overflow-y: auto;        /* scroll vertical si hay muchas imágenes */
+  }
+
+  .hotsale-images img {
+    width: 100%;             /* cada imagen ocupa todo el ancho disponible */
+    max-width: none;         /* ignora el max-width de escritorio */
   }
 
 }

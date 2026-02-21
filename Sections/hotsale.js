@@ -1,16 +1,13 @@
-
-  document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
   const hotsaleContainer = document.getElementById("hotsale-container");
+  const overlay = document.getElementById("overlay"); // reusamos el overlay
 
-  // Revisar el JSON
   fetch("Sections/hotsale.json")
     .then(res => res.json())
     .then(data => {
       if (data.hotsale && data.hotsale.venta === true) {
-        // Mostrar el contenedor
         hotsaleContainer.style.display = "block";
 
-        // Cargar el HTML del widget
         fetch("Sections/hotsale.html")
           .then(res => res.text())
           .then(html => {
@@ -19,11 +16,13 @@
             const saletoggleBtn = document.getElementById("hotsaleToggle");
             const salepanel = document.getElementById("hotsalePanel");
 
-            saletoggleBtn.addEventListener("click", () => {
+            saletoggleBtn.addEventListener("click", (e) => {
+              e.stopPropagation();
               salepanel.classList.add("open");
+              overlay.style.display = "block"; // mostrar overlay
 
-              // Aquí cargas los servicios del JSON como ya lo hicimos antes
-              salepanel.innerHTML = ""; 
+              // Limpiar y cargar servicios
+              salepanel.innerHTML = "";
               data.servicios.forEach(servicio => {
                 const item = document.createElement("div");
                 item.classList.add("hotsale-item");
@@ -44,32 +43,30 @@
                 salepanel.appendChild(item);
               });
 
-              // Botones de acción
-              const actions = document.createElement("div");
-              actions.classList.add("hotsale-actions");
-              actions.innerHTML = `
-                <button class="contact-btn">Ponerme en contacto</button>
-                <button class="cancel-btn">Cancelar</button>
-              `;
-              salepanel.appendChild(actions);
+              // Botón de contacto
+              const contactBtn = document.createElement("button");
+              contactBtn.classList.add("contact-btn");
+              contactBtn.textContent = "Ponerme en contacto";
+              salepanel.appendChild(contactBtn);
 
-              actions.querySelector(".cancel-btn").addEventListener("click", () => {
+              contactBtn.addEventListener("click", () => {
+                const whatsappNumber = localStorage.getItem("whatsapp");
+                if (whatsappNumber) {
+                  const mensaje = encodeURIComponent("Hola, estoy interesado en la oferta del hotsale.");
+                  window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
+                } else {
+                  alert("No se encontró un número de WhatsApp en localStorage.");
+                }
+              });
+
+              // Cerrar panel al hacer click fuera (overlay)
+              overlay.addEventListener("click", () => {
                 salepanel.classList.remove("open");
-              });
-              actions.querySelector(".contact-btn").addEventListener("click", () => {
-              const whatsappNumber = localStorage.getItem("whatsapp"); // tu número guardado
-              if (whatsappNumber) {
-              // Abrir WhatsApp con mensaje prellenado
-               const mensaje = encodeURIComponent("Hola, estoy interesado en la oferta del hotsale.");
-               window.open(`https://wa.me/${whatsappNumber}?text=${mensaje}`, "_blank");
-              } else {
-               alert("No se encontró un número de WhatsApp en localStorage.");
-              }
-              });
+                overlay.style.display = "none"; // ocultar overlay
+              }, { once: true }); // listener se elimina automáticamente después de ejecutar
             });
           });
       } else {
-        // Ocultar el contenedor si venta es false
         hotsaleContainer.style.display = "none";
       }
     })

@@ -3,6 +3,7 @@ const sgMail = require("@sendgrid/mail");
 const twilio = require("twilio");
 const {defineSecret} = require("firebase-functions/params");
 const {onValueCreated} = require("firebase-functions/v2/database");
+const {onCall} = require("firebase-functions/v2/https");
 
 admin.initializeApp();
 
@@ -11,6 +12,7 @@ const SENDGRID_API_KEY = defineSecret("SENDGRID_API_KEY");
 const TWILIO_ACCOUNT_SID = defineSecret("TWILIO_ACCOUNT_SID");
 const TWILIO_AUTH_TOKEN = defineSecret("TWILIO_AUTH_TOKEN");
 const TWILIO_WHATSAPP_NUMBER = defineSecret("TWILIO_WHATSAPP_NUMBER");
+const CLAVE_ADMIN = defineSecret("CLAVE_ADMIN");
 
 // --- Función para Contactos ---
 exports.sendEmailOnNewContact = onValueCreated(
@@ -95,4 +97,67 @@ async function handleNotification(event, subject) {
   }
 }
 
+exports.generarCodigo = onCall(
+    {secrets: [CLAVE_ADMIN]},
+    async (request) => {
+      const {password} = request.data;
 
+      if (!password || password !== CLAVE_ADMIN.value()) {
+        throw new Error("No autorizado");
+      }
+
+      const codigo = Math.random().toString(36).substring(2, 8).toUpperCase();
+      const ahora = Date.now();
+      const expira = ahora + 4 * 60 * 60 * 1000; // 4 horas
+
+      await admin.database().ref("codigos").set({
+        codigo,
+        expira,
+        creado: ahora,
+        activo: true,
+      });
+
+      return {codigo, expira};
+    },
+);
+
+
+exports.validarCodigo = onCall(
+    {region: "us-central1"},
+    async (request) => {
+      const passValue = request.data.codigo;
+
+      if (!passValue) {
+        return {valido: false, mensaje: "❌ Codigo Proporcionado x Facilitador"};
+      }
+
+      const snapshot = await admin.database()
+          .ref("codigos")
+          .once("value");
+
+      if (!snapshot.exists()) {
+        return {valido: false, mensaje: "No existe el nodo CODIGOS❌"};
+      }
+
+      const datos = snapshot.val();
+      const ahora = Date.now();
+
+      // 🔒 Verificar si está activo
+      if (!datos.activo) {
+        return {valido: false, mensaje: "El acceso no está habilitado ❌"};
+      }
+
+      // ⏳ Verificar expiración
+      if (ahora > datos.expira) {
+        await admin.database().ref("codigos/activo").set(false);
+        return {valido: false, mensaje: "El código ha expirado ⏳"};
+      }
+
+      // 🔑 Verificar coincidencia
+      if (passValue !== datos.codigo) {
+        return {valido: false, mensaje: "Código incorrecto ❌"};
+      }
+
+      return {valido: true, mensaje: "Código válido y vigente ✅"};
+    },
+);

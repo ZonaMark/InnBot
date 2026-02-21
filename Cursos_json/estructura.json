@@ -1,0 +1,157 @@
+{
+  "curso": {
+    "id":"",
+    "titulo": "",
+    "descripcion": "",
+    "edad": "",
+    "Objetivo1": "",
+    "Objetivo2": "",
+    "PerfilEgre": "",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": ""
+    }
+  },
+
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 15,
+    "unidadTiempo": "minutos"
+  },
+
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "",
+      "descripcion": "",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "",
+          "duracionMin": 0,
+          "descripcion": "",
+          "tipo": "",
+          "niveles": ["", "", ""],
+          "enlaces": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "",
+          "duracionMin": 0,
+          "descripcion": "",
+          "tipo": "",
+          "niveles": ["", "", ""],
+          "enlaces": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Recese",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "",
+          "duracionMin": 0,
+          "descripcion": "",
+          "tipo": "",
+          "niveles": ["", "", ""],
+          "enlaces": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ]
+        },
+        {
+          "id": "d1-act4",
+          "titulo": "",
+          "duracionMin": 0,
+          "descripcion": "",
+          "tipo": "",
+          "niveles": ["", "", ""],
+          "enlaces": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "",
+              "url": ""
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "fechaCreacion": "2025-02-16",
+    "ultimaActualizacion": "2025-02-17",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

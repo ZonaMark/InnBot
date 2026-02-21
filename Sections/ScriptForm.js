@@ -5,8 +5,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/fireba
 import { getDatabase, ref, set, get, push } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
 import { navigateToSection } from "../Script.js";
 import { renderCarrito, esperarProductos } from "./Cargar_cart.js";
-
-const homepath = "https://zonamark/ZM/";
+import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-functions.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyA4rztw2QNuhy1FV9qoozCZkwOfz3jyLvk",
@@ -20,25 +19,23 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 const auth = getAuth(app);
+const functions = getFunctions(app, "us-central1");
+const generarCodigoFn = httpsCallable(functions, "generarCodigo");
+const validarCodigoFn = httpsCallable(functions, "validarCodigo");
+
+
+const homepath = "https://zonamark/ZM/";
+
 
 export async function validarCodigo(passValue) {
-try{
-  const snapshot = await get(ref(db, "codigos"));
-  if (!snapshot.exists()) {
-    return { valido: false, mensaje: "No existe el nodo codigos ❌" };
+  try {
+    const result = await validarCodigoFn({ codigo: passValue });
+    return result.data;
+  } catch (error) {
+    return { valido: false, mensaje: " ❌ Error de servidor" };
   }
-  const datos = snapshot.val();
-  const ahora = Date.now();
-  if (ahora > datos.expiresAt) {
-    return { valido: false, mensaje: "El código ha expirado ❌" };
-  }
-  if (passValue !== datos.codigo) {
-    return { valido: false, mensaje: "Código incorrecto ❌" };
-  }
-  return { valido: true, mensaje: "Código válido y vigente ✅" };
-} catch (err) {
-	return { valido: false, mensaje: "Algo paso lo siento." }; }
 }
+
 
 export async function obtenerUrl(urlvalor) {
 try{
@@ -184,36 +181,26 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 // ---------------- reCAPTCHA Listener (opcional) ----------------
 
-function generarCodigo() {
-  const codigo = Math.floor(100000 + Math.random() * 900000).toString();
-  const expiresAt = Date.now() + 30 * 60 * 1000; // 30 minutos
-  const createdAt = Date.now();
-  // Guardar en Firebase bajo codigos/{codigo}
-  set(ref(db, "codigos/"), {
-    codigo,
-    expiresAt,
-    createdAt
-  });
-  const box = document.getElementById("overcode");
-  box.textContent = `Código generado: ${codigo}`;
-  setTimeout(() => {
-	box.textContent = "";                       // borra el texto
-	document.getElementById("overcode").remove(); // quita el overlay
-	document.getElementById("G91364").style.display = "none"; // oculta el otro elemento
-	}, 15000); // espera 15 segundos
-}
 
 document.body.addEventListener("click", async (e) => {
   if (e.target && e.target.id === "submitBtn") {
+
     const pass = document.getElementById("passwordInput").value;
-    const snapshot = await get(ref(db, "Acceso/Codigo"));
-    if (snapshot.exists()) {
-      const claveGuardada = snapshot.val();
-      if (pass === claveGuardada) {
-        generarCodigo();
-      } else {
-        alert("Contraseña incorrecta ❌");
-      }
+
+    try {
+      const result = await generarCodigoFn({ password: pass });
+
+      const box = document.getElementById("overcode");
+      box.textContent = `Código generado: ${result.data.codigo}`;
+
+      setTimeout(() => {
+        box.textContent = "";
+        document.getElementById("overcode").remove();
+        document.getElementById("G91364").style.display = "none";
+      }, 15000);
+
+    } catch (error) {
+      alert("Contraseña incorrecta ❌");
     }
   }
 });

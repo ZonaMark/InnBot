@@ -143,8 +143,8 @@
 </div>
 <div id="toast" class="toast"></div>
 <div class="courses-grid"></div>
-
-<div id="cursoModal"><h2>Selecciona tu curso</h2></div>
+<div id="overlaySecun"></div>
+<div id="cursoModal"></div>
 <div id="G91364" style="display:none;"></div>
 <!-- hosale container -->
 <div id="hotsale-container"></div>
@@ -152,7 +152,10 @@
 <div id="chatbot-container"></div>
 <script src="Sections/chatbot.js"></script>
 <script src="Sections/hotsale.js"></script>
-<script type="module" src="Script.js"></script>
+<script type="module">
+  import { iniciarSitio } from "./Script.js";
+  document.addEventListener("DOMContentLoaded", iniciarSitio);
+</script>
 <script type="module" src="Sections/ScriptForm.js"></script>
 <script type="module" src="Sections/Cargar_cart.js"></script>
 </body>

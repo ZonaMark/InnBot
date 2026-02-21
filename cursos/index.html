@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Curso de Verano Tecnológico</title>
+  <link rel="stylesheet" href="./src/styles.css" />
+  <!-- GSAP para animaciones -->
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+</head>
+<body>
+  <header class="app-header">
+    <h1 id="curso-titulo">Curso de Verano Tecnológico</h1>
+    <p id="curso-descripcion">Retos por nivel: 🟢 Básico, 🔵 Intermedio, 🟣 Avanzado</p>
+  </header>
+
+  <main class="container" id="main-container">
+    <section class="timeline" id="timeline-container"></section>
+    <section class="day-panel" id="day-panel"> </section>
+  </main>
+  <!-- Overlay de slime / temporizador -->
+  <div id="slime-overlay" class="slime-overlay hidden">
+    <div class="slime-fill"></div>
+    <div class="slime-content">
+      <h2>Cuenta regresiva</h2>
+      <div class="countdown">
+        <span id="countdown-min">00</span>:<span id="countdown-sec">00</span>
+      </div>
+      <button id="close-slime-btn" class="secondary">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Overlay de felicitación -->
+  <div id="congrats-overlay" class="congrats-overlay hidden">
+    <div class="congrats-card">
+      <h2>¡Felicidades! Nivel superado 🎉</h2>
+      <p>Has completado este día. Se desbloquea el siguiente en la línea de tiempo.</p>
+      <button id="close-congrats-btn" class="primary">Continuar</button>
+    </div>
+  </div>
+
+  <!-- Overlay de constancia final -->
+  <div id="certificate-overlay" class="certificate-overlay hidden">
+    <div class="certificate-card">
+      <h2>Constancia</h2>
+      <blockquote id="certificate-text">
+        Participó en el Curso de Verano Tecnológico desarrollando habilidades digitales, matemáticas,
+        lingüísticas y de pensamiento lógico, acorde a su nivel.
+      </blockquote>
+      <button id="close-cert-btn" class="primary">Cerrar</button>
+    </div>
+  </div>
+  <div id="pantalla">
+    <div class="reloj-container">
+      <svg class="reloj" width="160" height="160">
+        <circle
+          class="fondo"
+          cx="80"
+          cy="80"
+          r="70"
+        />
+        <circle
+          class="progreso"
+          cx="80"
+          cy="80"
+          r="70"
+        />
+      </svg>
+      <p id="mensaje">Cargando curso</p>
+    </div>
+  </div>
+  <footer class="app-footer">
+    <p>Diseñado por Facilitador de habilidades digitales: Marcos Moreno — Curso de Verano Tecnológico</p>
+  </footer>
+  <!-- SVG filter para gooey / slime -->
+  <svg id="filters" xmlns="http://www.w3.org/2000/svg">
+    <filter id="goo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" mode="matrix"
+        values="1 0 0 0 0
+                0 1 0 0 0
+                0 0 1 0 0
+                0 0 0 18 -8" result="goo"/>
+      <feBlend in="SourceGraphic" in2="goo"/>
+    </filter>
+  </svg>
+  <!-- Scripts del curso -->
+  <!--  <script type="module" src="renderCurso.js" defer></script> -->
+  <script type="module" src="./src/app.js" defer></script>
+</body>
+</html>

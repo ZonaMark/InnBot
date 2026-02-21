@@ -1,0 +1,942 @@
+{
+  "curso": {
+    "id": "curso-verano-tecnologico",
+    "titulo": "Curso de Verano Tecnológico",
+    "descripcion": "Retos por nivel: 🟢 Básico, 🔵 Intermedio, 🟣 Avanzado",
+    "edad": "5 a 12 años",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Participó en el Curso de Verano Tecnológico desarrollando habilidades digitales, matemáticas, lingüísticas y de pensamiento lógico, acorde a su nivel."
+    }
+  },
+
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 15,
+    "unidadTiempo": "minutos"
+  },
+
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "Día 1 — Matemáticas y lógica",
+      "descripcion": "TuxMath, Math Playground. Torneo y retos por nivel.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "Presentación del curso + niveles",
+          "duracionMin": 25,
+          "descripcion": "Modelo pedagógico y reglas. Niveles: 🟢 Básico (5–6), 🔵 Intermedio (7–9), 🟣 Avanzado (10–12).",
+          "tipo": "introductoria",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Abrir TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "TuxMath — operaciones por nivel",
+          "duracionMin": 25,
+          "descripcion": "🟢 Sumas/restas, 🔵 multiplicaciones, 🟣 mixtas.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Abrir TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Math Playground — aritmética y lógica",
+          "duracionMin": 30,
+          "descripcion": "Retos gamificados de operaciones y pensamiento lógico.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Jugando con la mente",
+              "url": "https://pbskids.org/games/spanish"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act4",
+          "titulo": "Mini torneo — estaciones por tiempos",
+          "duracionMin": 30,
+          "descripcion": "Puntuación por precisión y tiempo en TuxMath.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Día 2 — Geografía y exploración",
+      "descripcion": "Seterra, Google Earth. Viaje virtual por equipos.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Seterra — continentes/países/capitales",
+          "duracionMin": 25,
+          "descripcion": "🟢 Continentes, 🔵 países, 🟣 capitales.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Seterra",
+              "url": "https://www.seterra.com"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funciona la geografía",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "Google Earth — exploración guiada",
+          "duracionMin": 25,
+          "descripcion": "Lugares emblemáticos y marcadores.",
+          "tipo": "exploracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Google Earth Web",
+              "url": "https://earth.google.com/web"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funciona Google Earth",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act3",
+          "titulo": "Seterra — retos de localización",
+          "duracionMin": 30,
+          "descripcion": "Ranking por aciertos y tiempo.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Seterra",
+              "url": "https://www.geoguessr.com/es/vgp/3004"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act4",
+          "titulo": "Google Earth — mini viaje virtual",
+          "duracionMin": 30,
+          "descripcion": "Recorrido con capturas y notas.",
+          "tipo": "exploracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Google Earth Web",
+              "url": "https://earth.google.com/web"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Día 3 — Lenguaje y uso de monedas",
+      "descripcion": "Khan Academy Kids y ABCya Money Games.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Khan Academy Kids — lectura guiada",
+          "duracionMin": 25,
+          "descripcion": "Cuentos y comprensión por nivel.",
+          "tipo": "lectura",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "Escritura breve y preguntas",
+          "duracionMin": 25,
+          "descripcion": "Resumen y preguntas comprensivas.",
+          "tipo": "escritura",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act3",
+          "titulo": "ABCya — Money Games",
+          "duracionMin": 30,
+          "descripcion": "Comprar, sumar precios y dar cambio.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "ABCya Money Games",
+              "url": "https://www.mathsisfun.com/money/money-master.html"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act4",
+          "titulo": "Mini cuento ilustrado + mercado",
+          "duracionMin": 30,
+          "descripcion": "Vocabulario y precios del mercado (integración).",
+          "tipo": "integracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            },
+            {
+              "texto": "ABCya Money Games",
+              "url": "https://www.abcya.com"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 4,
+      "titulo": "Día 4 — Inglés con juegos",
+      "descripcion": "British Council – LearnEnglish Kids.",
+      "actividades": [
+        {
+          "id": "d4-act1",
+          "titulo": "Canciones y vocabulario",
+          "duracionMin": 25,
+          "descripcion": "Vocabulario básico por nivel.",
+          "tipo": "audio",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act2",
+          "titulo": "Palabras y frases",
+          "duracionMin": 25,
+          "descripcion": "Spelling, matching, ordering.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act3",
+          "titulo": "Comprensión auditiva y pronunciación",
+          "duracionMin": 30,
+          "descripcion": "Listening + práctica guiada.",
+          "tipo": "audio",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act4",
+          "titulo": "Diálogo corto por equipos",
+          "duracionMin": 30,
+          "descripcion": "Guion por nivel y presentación.",
+          "tipo": "presentacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Día 5 — Evaluación, IA y presentación",
+      "descripcion": "TuxMath, AI for Oceans, Lightbot y constancia.",
+      "actividades": [
+        {
+          "id": "d5-act1",
+          "titulo": "Torneo TuxMath por niveles",
+          "duracionMin": 25,
+          "descripcion": "Competencia de precisión y tiempo.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act2",
+          "titulo": "Code.org — AI for Oceans",
+          "duracionMin": 25,
+          "descripcion": "Datos, entrenamiento, sesgos.",
+          "tipo": "conceptual",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "AI for Oceans",
+              "url": "https://studio.code.org/s/oceans"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act3",
+          "titulo": "Lightbot — lógica visual",
+          "duracionMin": 30,
+          "descripcion": "Secuencias e iteraciones.",
+          "tipo": "programacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Lightbot",
+              "url": "https://lightbot.com"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act4",
+          "titulo": "Presentaciones por equipos",
+          "duracionMin": 30,
+          "descripcion": "Síntesis de aprendizajes.",
+          "tipo": "presentacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    }
+  ],
+  "Semana2": [
+    {
+      "dia": 1,
+      "titulo": "Día 1 — Matemáticas y lógica",
+      "descripcion": "TuxMath, Math Playground. Torneo y retos por nivel.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "Presentación del curso + niveles",
+          "duracionMin": 25,
+          "descripcion": "Modelo pedagógico y reglas. Niveles: 🟢 Básico (5–6), 🔵 Intermedio (7–9), 🟣 Avanzado (10–12).",
+          "tipo": "introductoria",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Abrir TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "TuxMath — operaciones por nivel",
+          "duracionMin": 25,
+          "descripcion": "🟢 Sumas/restas, 🔵 multiplicaciones, 🟣 mixtas.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Abrir TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Math Playground — aritmética y lógica",
+          "duracionMin": 30,
+          "descripcion": "Retos gamificados de operaciones y pensamiento lógico.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Jugando con la mente",
+              "url": "https://pbskids.org/games/spanish"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act4",
+          "titulo": "Mini torneo — estaciones por tiempos",
+          "duracionMin": 30,
+          "descripcion": "Puntuación por precisión y tiempo en TuxMath.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funcionan las matemáticas",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Día 2 — Geografía y exploración",
+      "descripcion": "Seterra, Google Earth. Viaje virtual por equipos.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Seterra — continentes/países/capitales",
+          "duracionMin": 25,
+          "descripcion": "🟢 Continentes, 🔵 países, 🟣 capitales.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Seterra",
+              "url": "https://www.seterra.com"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funciona la geografía",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "Google Earth — exploración guiada",
+          "duracionMin": 25,
+          "descripcion": "Lugares emblemáticos y marcadores.",
+          "tipo": "exploracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Google Earth Web",
+              "url": "https://earth.google.com/web"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tux Paint (actividad offline)",
+              "url": "https://tuxpaint.org"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Video cómo funciona Google Earth",
+              "url": "https://www.youtube.com/watch?v=2TLB5TdSwBA&pp=ygUeY29tbyBmdW5jaW9uYW4gbGFzIG1hdGVtYXRpY2Fz"
+            }
+          ]
+        },
+        {
+          "id": "d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act3",
+          "titulo": "Seterra — retos de localización",
+          "duracionMin": 30,
+          "descripcion": "Ranking por aciertos y tiempo.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Seterra",
+              "url": "https://www.geoguessr.com/es/vgp/3004"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act4",
+          "titulo": "Google Earth — mini viaje virtual",
+          "duracionMin": 30,
+          "descripcion": "Recorrido con capturas y notas.",
+          "tipo": "exploracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Google Earth Web",
+              "url": "https://earth.google.com/web"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Día 3 — Lenguaje y uso de monedas",
+      "descripcion": "Khan Academy Kids y ABCya Money Games.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Khan Academy Kids — lectura guiada",
+          "duracionMin": 25,
+          "descripcion": "Cuentos y comprensión por nivel.",
+          "tipo": "lectura",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "Escritura breve y preguntas",
+          "duracionMin": 25,
+          "descripcion": "Resumen y preguntas comprensivas.",
+          "tipo": "escritura",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act3",
+          "titulo": "ABCya — Money Games",
+          "duracionMin": 30,
+          "descripcion": "Comprar, sumar precios y dar cambio.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "ABCya Money Games",
+              "url": "https://www.mathsisfun.com/money/money-master.html"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act4",
+          "titulo": "Mini cuento ilustrado + mercado",
+          "duracionMin": 30,
+          "descripcion": "Vocabulario y precios del mercado (integración).",
+          "tipo": "integracion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Khan Academy Kids",
+              "url": "https://learn.khanacademy.org/khan-academy-kids"
+            },
+            {
+              "texto": "ABCya Money Games",
+              "url": "https://www.abcya.com"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 4,
+      "titulo": "Día 4 — Inglés con juegos",
+      "descripcion": "British Council – LearnEnglish Kids.",
+      "actividades": [
+        {
+          "id": "d4-act1",
+          "titulo": "Canciones y vocabulario",
+          "duracionMin": 25,
+          "descripcion": "Vocabulario básico por nivel.",
+          "tipo": "audio",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act2",
+          "titulo": "Palabras y frases",
+          "duracionMin": 25,
+          "descripcion": "Spelling, matching, ordering.",
+          "tipo": "practica",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act3",
+          "titulo": "Comprensión auditiva y pronunciación",
+          "duracionMin": 30,
+          "descripcion": "Listening + práctica guiada.",
+          "tipo": "audio",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act4",
+          "titulo": "Diálogo corto por equipos",
+          "duracionMin": 30,
+          "descripcion": "Guion por nivel y presentación.",
+          "tipo": "presentacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "British Council – LearnEnglish Kids",
+              "url": "https://learnenglishkids.britishcouncil.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Día 5 — Evaluación, IA y presentación",
+      "descripcion": "TuxMath, AI for Oceans, Lightbot y constancia.",
+      "actividades": [
+        {
+          "id": "d5-act1",
+          "titulo": "Torneo TuxMath por niveles",
+          "duracionMin": 25,
+          "descripcion": "Competencia de precisión y tiempo.",
+          "tipo": "competencia",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "TuxMath",
+              "url": "https://tuxmath.org"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act2",
+          "titulo": "Code.org — AI for Oceans",
+          "duracionMin": 25,
+          "descripcion": "Datos, entrenamiento, sesgos.",
+          "tipo": "conceptual",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "AI for Oceans",
+              "url": "https://studio.code.org/s/oceans"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act3",
+          "titulo": "Lightbot — lógica visual",
+          "duracionMin": 30,
+          "descripcion": "Secuencias e iteraciones.",
+          "tipo": "programacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [
+            {
+              "texto": "Lightbot",
+              "url": "https://lightbot.com"
+            }
+          ],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act4",
+          "titulo": "Presentaciones por equipos",
+          "duracionMin": 30,
+          "descripcion": "Síntesis de aprendizajes.",
+          "tipo": "presentacion",
+          "niveles": ["basico", "intermedio", "avanzado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "fechaCreacion": "2025-02-16",
+    "ultimaActualizacion": "2025-02-17",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

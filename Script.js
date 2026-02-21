@@ -4,13 +4,16 @@
 import { validarCodigo } from "./Sections/ScriptForm.js";
 let isDarkMode = true;
 
-document.addEventListener("DOMContentLoaded", () => {
-    initApp();
-	cargarContactofooter();
-	navigateToSection("Inicio"); //INICIO POR DEFECTO
-	actualizarFechaHora();
-    setInterval(actualizarFechaHora, 1000);
-});
+export function iniciarSitio() {
+  initApp();
+  cargarInicio();
+  cargarContactofooter();
+  navigateToSection("Inicio");
+  initSidebar();
+  actualizarFechaHora();
+  setInterval(actualizarFechaHora, 1000);
+  document.getElementById("overlaySecun").addEventListener("click", ocultarModal);
+}
 
 function cargarContactofooter(){
 	// Cargar datos desde cursos.json contacto
@@ -363,52 +366,59 @@ async function cargarMisCursos() {
       const option = document.createElement("option");
       option.value = Miscurso.titulo;
       option.textContent = `${Miscurso.titulo}`;
-	  option.dataset.ruta = Miscurso.ruta;
-	  option.dataset.acceso = Miscurso.acceso;
-	  option.dataset.hoja = Miscurso.gid;
+	    option.dataset.acceso = Miscurso.acceso;
+      option.dataset.id = Miscurso.ID;
+	    option.dataset.hoja = Miscurso.gid;
       select.appendChild(option);
     });
-    document.getElementById("cursoModal").style.display = "block";
+    mostrarModal();
     document.getElementById("cursoBtn").onclick = async () => {
-		const passValue = document.getElementById("passwordInput").value;
-		if (passValue === "") { alert("Falta ingresar el código ❌");
-			return; // detiene la ejecución, no continúa
-		}
-		const resultado = await validarCodigo(passValue);
-		if (!resultado.valido) {
-			alert(resultado.mensaje);
-			return;
-		}
-	  const selectedOption = select.options[select.selectedIndex];
-    const cursoSeleccionado = selectedOption.value;
-    const rutaSeleccionada = selectedOption.dataset.ruta;
-	  const tipoacceso = selectedOption.dataset.acceso;
-	  const hoja = selectedOption.dataset.hoja;
+      let passValue = document.getElementById("passwordInput").value;
+      if (passValue === "") { alert("❌ Codigo Proporcionado x Facilitador");
+        return; // detiene la ejecución, no continúa
+      }
+      const resultado = await validarCodigo(passValue);
+      if (!resultado.valido) {
+        alert(resultado.mensaje);
+        return;
+      }
+      passValue = 0;
+      const selectedOption = select.options[select.selectedIndex];
+      const cursoSeleccionado = selectedOption.value;
+      const tipoacceso = selectedOption.dataset.acceso;
+      const hoja = selectedOption.dataset.hoja;
+      const IDcurso = selectedOption.dataset.id;
 
-    // Guardar curso y ruta en localStorage
-    localStorage.setItem("cursoSeleccionado", cursoSeleccionado);
-    localStorage.setItem("rutaSeleccionada", rutaSeleccionada);
-	  localStorage.setItem("tipoAcceso", tipoacceso);
-	  localStorage.setItem("hoja", hoja);
-	  localStorage.setItem("next", "login.html");
-	  localStorage.setItem("codigoTemporal", passValue);
-	  window.location.href = localStorage.getItem("next");
+      // Guardar curso y ruta en localStorage
+      localStorage.setItem("cursoSeleccionado", cursoSeleccionado);
+      localStorage.setItem("tipoAcceso", tipoacceso);
+      localStorage.setItem("hoja", hoja);
+      localStorage.setItem("next", "login.html");
+      localStorage.setItem("IDcurso", IDcurso);
+      generarLlave2();
+      window.location.href = localStorage.getItem("next");
     };
   }
   else {
 	 document.getElementById("cursoModal").innerHTML="";
-	generarContenidoModal();
-    const select = document.getElementById("cursoSelect");
+   generarContenidoModal();
+   const select = document.getElementById("cursoSelect");
     select.innerHTML = ""; // limpiar antes de agregar
 
-    Validos.forEach(Miscurso => {
-      const option = document.createElement("option");
-      option.value = "Sin Cursos en Proceso";
-      option.textContent = "Sin Cursos en Proceso";
-      select.appendChild(option);
-    });
-    document.getElementById("cursoModal").style.display = "block";
+  Validos.forEach(Miscurso => {
+     const option = document.createElement("option");
+     option.value = "Sin Cursos en Proceso";
+     option.textContent = "Sin Cursos en Proceso";
+     select.appendChild(option);
+  });
+   document.getElementById("cursoModal").style.display = "none";
 	}
+}
+
+function generarLlave2() {
+    const llave = Math.random().toString(36).substring(2, 12).toUpperCase();
+    const expiracion = Date.now() + 30 * 1000; // 10 segundos
+    localStorage.setItem("codigoTemporal", JSON.stringify({ llave, expiracion }));
 }
 
 function generarContenidoModal() {
@@ -676,42 +686,6 @@ export async function navigateToSection(sectionName) {
     }, 300);
 }
 
-/* ============================================================
-    ZOOM DEL SITIO
-============================================================ */
-
-let zoomLevel = 90;
-const zoomDisplay = document.getElementById("zoomLevel");
-
-document.getElementById("zoomIn").addEventListener("click", () => {
-    zoomLevel += 10;
-    document.body.style.zoom = zoomLevel + "%";
-    zoomDisplay.textContent = zoomLevel + "%";
-});
-
-document.getElementById("zoomOut").addEventListener("click", () => {
-    zoomLevel = Math.max(50, zoomLevel - 10);
-    document.body.style.zoom = zoomLevel + "%";
-    zoomDisplay.textContent = zoomLevel + "%";
-});
-
-/* ============================================================
-    TEMA OSCURO / CLARO
-============================================================ */
- // Tema oscuro/claro
-        document.getElementById('themeToggle').addEventListener('click', () => {
-		isDarkMode = !isDarkMode;
-	    if (isDarkMode) {
-			document.body.classList.add('dark-mode');
-			document.body.classList.remove('light-mode');
-			document.getElementById('themeToggle').textContent = '🌙';
-		} else {
-			document.body.classList.add('light-mode');
-			document.body.classList.remove('dark-mode');
-			document.getElementById('themeToggle').textContent = '☀️';
-			}
-		});
-
 function actualizarFechaHora() {
   const ahora = new Date();
 
@@ -730,131 +704,166 @@ function actualizarFechaHora() {
   if (elHora)  elHora.textContent  = horaFormateada;
 }
 
-/* ============================
-     CARGAR CONTENIDO EXTERNO
-============================ */
+function mostrarModal() {
+  document.getElementById("cursoModal").style.display = "block";
+  document.getElementById("overlaySecun").style.display = "block";
+}
 
-let whoData = {}; // Aquí se almacenarán todos los textos
+function ocultarModal() {
+  document.getElementById("cursoModal").style.display = "none";
+  document.getElementById("overlaySecun").style.display = "none";
+}
 
-fetch("Sections/Who-content.html")
-  .then(res => res.text())
-  .then(html => {
-    const tempDiv = document.createElement("div");
-    tempDiv.innerHTML = html;
+export function cargarInicio() {
 
-    const items = tempDiv.querySelectorAll(".who-info");
+  /* ================= ZOOM ================= */
 
-    items.forEach(item => {
-      const id = item.id;  // item-0, item-1...
+  let zoomLevel = 90;
+  const zoomDisplay = document.getElementById("zoomLevel");
+  const zoomIn = document.getElementById("zoomIn");
+  const zoomOut = document.getElementById("zoomOut");
 
-      // Tomamos el título
-      const title = item.querySelector("h2").textContent;
-
-      // Capturar todo el contenido del item EXCEPTO el h2
-      const fullHTML = item.innerHTML;
-      const contentOnly = fullHTML.replace(item.querySelector("h2").outerHTML, "").trim();
-
-      whoData[id] = {
-        title: title,
-        text: contentOnly
-      };
+  if (zoomIn && zoomOut && zoomDisplay) {
+    zoomIn.addEventListener("click", () => {
+      zoomLevel += 10;
+      document.body.style.zoom = zoomLevel + "%";
+      zoomDisplay.textContent = zoomLevel + "%";
     });
-  });
 
-/* ============================
-      MODAL DINÁMICO
-============================ */
-const whoCards = document.querySelectorAll(".who-card");
-const modal = document.getElementById("whoModal");
-const modalTitle = document.getElementById("modalTitle");
-const modalText = document.getElementById("modalText");
-const modalClose = document.querySelector(".who-modal-close");
+    zoomOut.addEventListener("click", () => {
+      zoomLevel = Math.max(50, zoomLevel - 10);
+      document.body.style.zoom = zoomLevel + "%";
+      zoomDisplay.textContent = zoomLevel + "%";
+    });
+  }
 
-whoCards.forEach(card => {
-  card.addEventListener("click", () => {
-    const index = card.dataset.index;  // 0,1,2,3
-    const key = `item-${index}`;
 
-    if (whoData[key]) {
-      modalTitle.textContent = whoData[key].title;
-      modalText.innerHTML = whoData[key].text;
-      modal.classList.add("active");
+  /* ================= TEMA ================= */
+
+  let isDarkMode = false;
+  const themeToggle = document.getElementById("themeToggle");
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      isDarkMode = !isDarkMode;
+
+      if (isDarkMode) {
+        document.body.classList.add("dark-mode");
+        document.body.classList.remove("light-mode");
+        themeToggle.textContent = "🌙";
+      } else {
+        document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+        themeToggle.textContent = "☀️";
+      }
+    });
+  }
+
+
+  /* ================= WHO CONTENT ================= */
+
+  let whoData = {};
+
+  fetch("Sections/Who-content.html")
+    .then(res => res.text())
+    .then(html => {
+
+      const tempDiv = document.createElement("div");
+      tempDiv.innerHTML = html;
+
+      const items = tempDiv.querySelectorAll(".who-info");
+
+      items.forEach(item => {
+        const id = item.id;
+        const title = item.querySelector("h2").textContent;
+        const fullHTML = item.innerHTML;
+        const contentOnly = fullHTML.replace(
+          item.querySelector("h2").outerHTML,
+          ""
+        ).trim();
+
+        whoData[id] = { title, text: contentOnly };
+      });
+    });
+
+
+  /* ================= MODAL ================= */
+
+  const whoCards = document.querySelectorAll(".who-card");
+  const modal = document.getElementById("whoModal");
+  const modalTitle = document.getElementById("modalTitle");
+  const modalText = document.getElementById("modalText");
+  const modalClose = document.querySelector(".who-modal-close");
+
+  if (whoCards && modal && modalTitle && modalText) {
+    whoCards.forEach(card => {
+      card.addEventListener("click", () => {
+        const key = `item-${card.dataset.index}`;
+        if (whoData[key]) {
+          modalTitle.textContent = whoData[key].title;
+          modalText.innerHTML = whoData[key].text;
+          modal.classList.add("active");
+        }
+      });
+    });
+
+    if (modalClose) {
+      modalClose.addEventListener("click", () =>
+        modal.classList.remove("active")
+      );
+    }
+  }
+}
+
+function initSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
+  const menuToggle = document.getElementById("menuToggle");
+  const overlay = document.getElementById("overlay");
+
+  // Toggle con botón
+  menuToggle.addEventListener("click", () => {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('open');
+    if (window.innerWidth > 768) {
+      mainContent.classList.toggle("shifted");
     }
   });
-});
 
-// Cerrar modal
-modalClose.addEventListener("click", () => modal.classList.remove("active"));
-window.addEventListener("click", e => {
-  if (e.target === modal) modal.classList.remove("active");
-});
-/* =============== sidebar=====================*/
-
-const sidebar = document.getElementById("sidebar");
-const mainContent = document.getElementById("mainContent");
-const menuToggle = document.getElementById("menuToggle");
-const overlay = document.getElementById("overlay");
-
-// Toggle con botón
-
-menuToggle.addEventListener("click", () => {
-  sidebar.classList.toggle('open');
-  overlay.classList.toggle('open');
-
-  if (window.innerWidth > 768) {
-    mainContent.classList.toggle("shifted");
-  }
-});
-
-// Cerrar al hacer click en overlay (móvil)
-overlay.addEventListener("click", () => {
-  sidebar.classList.remove("open");
-  overlay.classList.remove("open");
-  mainContent.classList.remove("shifted");
-});
-
-// Gestos táctiles (móvil)
-let startX = 0;
-let currentX = 0;
-let gestureEnabled = false;
-
-document.addEventListener("touchstart", (e) => {
-  startX = e.touches[0].clientX;
-  // Solo activar si empieza cerca del borde izquierdo (20px)
-  gestureEnabled = startX < 20;
-});
-
-document.addEventListener("touchmove", (e) => {
-    if (!gestureEnabled) return;
-  currentX = e.touches[0].clientX;
-});
-
-document.addEventListener("touchend", () => {
-  if (!gestureEnabled) return;
-
-  let diffX = currentX - startX;
-
-  // Deslizar hacia la derecha → abrir
-  if (diffX > 50) {
-    sidebar.classList.add("open");
-    overlay.classList.add("open");
-  }
-
-  // Deslizar hacia la izquierda → cerrar
-  if (diffX < -50) {
+  // Cerrar al hacer click en overlay (móvil o desktop)
+  overlay.addEventListener("click", () => {
     sidebar.classList.remove("open");
     overlay.classList.remove("open");
     mainContent.classList.remove("shifted");
-  }
-});
+  });
 
-// Detectar clic fuera del modal
-document.addEventListener("click", function(event) {
-  const modal = document.getElementById("cursoModal");
+  // Gestos táctiles (móvil)
+  let startX = 0;
+  let currentX = 0;
+  let gestureEnabled = false;
 
-  // Si el modal está visible y el clic no fue dentro de él
-  if (modal.style.display === "block" && !modal.contains(event.target)) {
-    // Regresar al sitio anterior
-    modal.style.display = "none";
-  }
-});
+  document.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    gestureEnabled = startX < 20; // solo desde borde izquierdo
+  });
+
+  document.addEventListener("touchmove", (e) => {
+    if (!gestureEnabled) return;
+    currentX = e.touches[0].clientX;
+  });
+
+  document.addEventListener("touchend", () => {
+    if (!gestureEnabled) return;
+    let diffX = currentX - startX;
+
+    if (diffX > 50) { // deslizar derecha → abrir
+      sidebar.classList.add("open");
+      overlay.classList.add("open");
+    }
+    if (diffX < -50) { // deslizar izquierda → cerrar
+      sidebar.classList.remove("open");
+      overlay.classList.remove("open");
+      mainContent.classList.remove("shifted");
+    }
+  });
+}

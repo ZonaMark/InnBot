@@ -2,21 +2,53 @@ import { obtenerUrl } from "./Sections/ScriptForm.js";
 let nombreSeleccionado = null;
 let edadSeleccionada = null;
 const tipoAcceso = localStorage.getItem("tipoAcceso"); // "codigo" o "Libre"
-const homepath = "https://zonamark/ZM/";
+
+const homepath = (() => {
+  const path = window.location.pathname;
+  return path.includes('InnBot') ? '/InnBot/' : '/ZM/';
+})();
+
 document.getElementById("TituloCurso").textContent=localStorage.getItem("cursoSeleccionado");
 
-    // Mostrar campo password si es acceso por código
+// Mostrar campo password si es acceso por código
 if (tipoAcceso === "Codigo") {
    document.getElementById("zonaPassword").style.display = "block";
    document.getElementById("tituloEdades").style.display = "none";
    document.getElementById("edades").style.display = "none";
 }
 
+function validarLlave2() {
+  const data2 = localStorage.getItem("codigoTemporal");
+  if (!data2) {
+        // Mensaje de debug mostrando qué hay en localStorage
+        document.body.innerHTML = ` <p>Acceso no autorizado ❌</p>`;
+        setTimeout(() => {
+            localStorage.clear(); // opcional si quieres limpiar todo
+            window.location.replace(homepath);
+        }, 5000); // 5 segundos para que puedas leer el mensaje
+        return false;
+  }
+  const { llave, expiracion } = JSON.parse(data2);
+    // Validar expiración
+  if (Date.now() > expiracion) {
+      document.body.innerHTML = "Llave expirada";
+      localStorage.removeItem("codigoTemporal"); // eliminar llave expirada
+      setTimeout(() => {
+          localStorage.clear(); // opcional si quieres limpiar todo
+          window.location.replace(homepath);
+      }, 5000);
+      return;
+  }
+    // ✅ Llave válida, eliminarla para un solo uso
+    localStorage.removeItem("codigoTemporal");
+  return true;
+}
+
+
 async function cargarNombres() {
 	try {
 		document.getElementById("mensaje").textContent = "Cargando nombres...";
-		if(localStorage.getItem("codigoTemporal")){
-			localStorage.removeItem("codigoTemporal");
+		if(validarLlave2){
 			const gid = localStorage.getItem("hoja");
 			const baseUrl = await obtenerUrl("url/dire"); // espera a que se resuelva
 			const url = `${baseUrl}?gid=${gid}&single=true&output=csv`;
@@ -51,7 +83,8 @@ async function cargarNombres() {
 
 		}
 		else{
-				window.location.href = homepath;
+			localStorage.clear(); // opcional si quieres limpiar todo
+      window.location.replace(homepath);
 		}
       } catch (error) {
         console.error("Error al cargar accesos", error);
@@ -89,13 +122,12 @@ function cargarEdades() {
     }
   }
 }
-function generarLlave() {
-    // Generar una llave aleatoria
-    const llave = Math.random().toString(36).substring(2, 12).toUpperCase();
-    const expiracion = Date.now() + (5 * 60 * 1000); // 5 minutos
 
-    // Guardar en localStorage
+function generarLlave() {
+    const llave = Math.random().toString(36).substring(2, 12).toUpperCase();
+    const expiracion = Date.now() + 30 * 1000; // 30 segundos
     localStorage.setItem("llaveAcceso", JSON.stringify({ llave, expiracion }));
+    return llave;
 }
 
     document.getElementById("btnAcceder").addEventListener("click", () => {
@@ -109,7 +141,7 @@ function generarLlave() {
         return;
       }
 
-      if (tipoAcceso === "codigo" && !document.getElementById("inputCodigo").value) {
+      if (tipoAcceso === "Codigo" && !document.getElementById("inputCodigo").value) {
         document.getElementById("mensaje").textContent = "Debes ingresar tu código.";
         return;
       }
@@ -128,11 +160,12 @@ function generarLlave() {
 			valido = String(alumno.Codigo).trim() === String(edadSeleccionada);
 	  }
       if (valido) {
-        if (localStorage.getItem("rutaSeleccionada")) {
-		  generarLlave();
-		  window.location.href = localStorage.getItem("rutaSeleccionada");
-		} else {
-          alert("No se encontró a ruta del curso seleccionado.");
+        if (localStorage.getItem("IDcurso")) {
+		      generarLlave();
+          window.location.href = `${homepath}cursos/index.html`;
+		    } 
+        else {
+          alert("No se encontró la ruta del curso seleccionado.");
         }
       } else {
         document.getElementById("mensaje").textContent = "Datos inválidos, intenta de nuevo.";

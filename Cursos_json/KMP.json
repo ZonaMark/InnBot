@@ -1,0 +1,479 @@
+{
+  "curso": {
+    "id":"KMP",
+    "titulo": "Kit de Marketing Profesional",
+    "descripcion": "Curso práctico para emprendedores enfocado en el uso de herramientas digitales gratuitas y de Inteligencia Artificial (Canva, ChatGPT, Copilot, Bing Image Creator, CapCut) para crear flyers, banners y videos promocionales aplicados a sus negocios.",
+    "edad": "18+",
+    "Objetivo1": "Apropiar: Dominar las funciones básicas de diseño digital y herramientas de IA. Producir: Crear activos visuales reales (flyers, videos, banners) aplicados a su negocio. Optimizar: Reducir los tiempos de creación de contenido mediante el uso de asistentes inteligentes.",
+    "Objetivo2": "Que la persona emprendedora desarrolle habilidades prácticas para crear flyers, banners y videos promocionales, utilizando herramientas digitales gratuitas y de Inteligencia Artificial, con el fin de mejorar la promoción visual de su negocio y fortalecer su autonomía digital.",
+    "PerfilEgre": "✔ Identificar qué tipo de diseño necesita su negocio ✔ Crear flyers y banners funcionales en Canva ✔ Generar textos promocionales con apoyo de IA ✔ Diseñar un video corto listo para redes sociales ✔ Adaptar sus diseños a WhatsApp, Facebook e Instagram",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Se otorga la presente constancia a quien concluye satisfactoriamente el curso 'Kit de Marketing Profesional', demostrando habilidades en diseño digital y uso de IA para la promoción de su negocio."
+    }
+  },
+
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 10,
+    "unidadTiempo": "minutos"
+  },
+
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "Día 1: Del miedo a la acción: primeros resultados",
+      "descripcion": "Romper el miedo al diseño y lograr un primer resultado visible. Se introduce Canva y ChatGPT para crear una tarjeta digital de presentación.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "¿Qué vende más: texto o imagen?",
+          "duracionMin": 30,
+          "descripcion": "Ejemplos reales de impacto visual vs. textual en marketing.",
+          "tipo": "teórico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "Diferencia entre flyer, banner y video",
+          "duracionMin": 15,
+          "descripcion": "Explicación de los formatos y su aplicación en negocios.",
+          "tipo": "teórico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Creación de cuenta en Canva",
+          "duracionMin": 15,
+          "descripcion": "Registro y exploración inicial de la plataforma Canva.",
+          "tipo": "práctico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act4",
+          "titulo": "IA de Texto: Nombre, eslogan y misión",
+          "duracionMin": 45,
+          "descripcion": "Uso de ChatGPT y Copilot para redactar identidad básica del negocio.",
+          "tipo": "práctico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [
+            {"texto": "ChatGPT", "url": "https://chat.openai.com"},
+            {"texto": "Copilot", "url": "https://copilot.microsoft.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto": "ChatGPT", "url": "https://chat.openai.com"},
+            {"texto": "Copilot", "url": "https://copilot.microsoft.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act5",
+          "titulo": "Exploración guiada de plantillas",
+          "duracionMin": 15,
+          "descripcion": "Revisión de plantillas básicas en Canva.",
+          "tipo": "práctico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act6",
+          "titulo": "Ejemplo práctico: Tarjeta de presentación digital",
+          "duracionMin": 30,
+          "descripcion": "Creación de un flyer sencillo con datos del negocio.",
+          "tipo": "práctico",
+          "niveles": ["Muy básico", "", ""],
+          "enlaces": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto": "Canva", "url": "https://www.canva.com"}
+          ],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Día 2: El Arte del Flyer",
+      "descripcion": "Objetivo: Aplicar composición y jerarquía visual en diseños reales.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Composición Básica",
+          "duracionMin": 45,
+          "descripcion": "¿Qué quiero que sienta el cliente? Regla de tercios y ubicación de precio.",
+          "tipo": "Teórico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "Taller Canva",
+          "duracionMin": 45,
+          "descripcion": "Uso de elementos, marcos y capas para un flyer de oferta.",
+          "tipo": "Taller",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Canva", "url": "https://www.canva.com"}],
+          "enlaces_de_respaldo": [{"texto": "Canva Editor", "url": "https://www.canva.com"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act3",
+          "titulo": "Identidad y Formatos",
+          "duracionMin": 45,
+          "descripcion": "Tipografías, jerarquía visual y remoción de fondos con IA.",
+          "tipo": "Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Canva", "url": "https://www.canva.com"}],
+          "enlaces_de_respaldo": [{"texto": "Canva IA", "url": "https://www.canva.com"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act4",
+          "titulo": "Flyer de Promoción",
+          "duracionMin": 15,
+          "descripcion": "Crear flyer 'Promoción de la Semana' con nombre, slogan y texto de IA.",
+          "tipo": "Proyecto",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "ChatGPT", "url": "https://chat.openai.com"}],
+          "enlaces_de_respaldo": [{"texto": "OpenAI", "url": "https://chat.openai.com"}],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Día 3: IA para Productos Imposibles",
+      "descripcion": "Objetivo: Generar bocetos profesionales y catálogo visual avanzado.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Prompts de Imagen",
+          "duracionMin": 45,
+          "descripcion": "Cómo pedirle a Bing Image Creator o Copilot diseños específicos.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Bing Create", "url": "https://www.bing.com/create"}],
+          "enlaces_de_respaldo": [{"texto": "Copilot", "url": "https://copilot.microsoft.com"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "Bocetado Pro",
+          "duracionMin": 60,
+          "descripcion": "Generar el diseño de ensueño de un cliente y textos IA para pasteles/piñatas.",
+          "tipo": "Taller",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Bing Create", "url": "https://www.bing.com/create"}],
+          "enlaces_de_respaldo": [{"texto": "ChatGPT", "url": "https://chat.openai.com"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act3",
+          "titulo": "Integración Final",
+          "duracionMin": 35,
+          "descripcion": "Llevar la imagen de IA a Canva para hacer un Banner de Catálogo.",
+          "tipo": "Proyecto",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Canva", "url": "https://www.canva.com"}],
+          "enlaces_de_respaldo": [{"texto": "Canva Web", "url": "https://www.canva.com"}],
+          "enlaces_videos": []
+        }
+      ]
+    }
+  ],
+  "Semana2": [
+    {
+      "dia": 4,
+      "titulo": "Día 4: Introducción al Video",
+      "descripcion": "Aprender el lenguaje del video corto y usar CapCut y Canva Video para crear un primer clip promocional.",
+      "actividades": [
+        {
+          "id": "d4-act1",
+          "titulo": "El lenguaje del video corto",
+          "duracionMin": 25,
+          "descripcion": "¿Qué hace que un Reel sea viral? Principios básicos de atracción visual.",
+          "tipo": "teórico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act2",
+          "titulo": "IA para ideas visuales",
+          "duracionMin": 20,
+          "descripcion": "Uso de IA para sugerir ideas visuales de productos (pasteles, piñatas).",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"Copilot","url":"https://copilot.microsoft.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"Copilot","url":"https://copilot.microsoft.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act3",
+          "titulo": "CapCut básico",
+          "duracionMin": 60,
+          "descripcion": "Línea de tiempo, cortes, transiciones y efectos de sonido.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act4",
+          "titulo": "Ejemplo práctico: Stop Motion",
+          "duracionMin": 45,
+          "descripcion": "Video de 10 segundos tipo 'Stop Motion' con fotos del producto.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"Canva","url":"https://www.canva.com"},
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"Canva","url":"https://www.canva.com"},
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Día 5: IA aplicada al Video",
+      "descripcion": "Uso de IA en CapCut para subtítulos, guiones y audio en videos promocionales.",
+      "actividades": [
+        {
+          "id": "d5-act1",
+          "titulo": "Subtítulos mágicos",
+          "duracionMin": 60,
+          "descripcion": "Uso de IA en CapCut para subtitular automáticamente.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act2",
+          "titulo": "Guion corto con IA",
+          "duracionMin": 30,
+          "descripcion": "Generación de guion corto con IA enfocado al negocio.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"ChatGPT","url":"https://chat.openai.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"ChatGPT","url":"https://chat.openai.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act3",
+          "titulo": "Audio y voz",
+          "duracionMin": 30,
+          "descripcion": "Uso de voces de IA o música libre de copyright.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"Copilot","url":"https://copilot.microsoft.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"Copilot","url":"https://copilot.microsoft.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act4",
+          "titulo": "Ejemplo práctico: Tutorial rápido",
+          "duracionMin": 30,
+          "descripcion": "Video de 'Cómo rellenar una piñata o decorar un cupcake'.",
+          "tipo": "práctico",
+          "niveles": ["Intermedio","",""],
+          "enlaces": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 6,
+      "titulo": "Día 6: Cierre y Autonomía",
+      "descripcion": "Integración de todo lo aprendido en un kit final y estrategias de difusión digital.",
+      "actividades": [
+        {
+          "id": "d6-act1",
+          "titulo": "Formatos según necesidad",
+          "duracionMin": 30,
+          "descripcion": "Cómo elegir formatos para WhatsApp, Facebook e impresión.",
+          "tipo": "teórico",
+          "niveles": ["Avanzado","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act2",
+          "titulo": "Estrategia WhatsApp",
+          "duracionMin": 30,
+          "descripcion": "Cómo armar el catálogo profesional con lo diseñado.",
+          "tipo": "práctico",
+          "niveles": ["Avanzado","",""],
+          "enlaces": [
+            {"texto":"WhatsApp Business","url":"https://www.whatsapp.com/business"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"WhatsApp Business","url":"https://www.whatsapp.com/business"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act3",
+          "titulo": "Proyecto final",
+          "duracionMin": 60,
+          "descripcion": "Pulir un kit completo (Flyer + Video + Copy de venta).",
+          "tipo": "práctico",
+          "niveles": ["Avanzado","",""],
+          "enlaces": [
+            {"texto":"Canva","url":"https://www.canva.com"},
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_de_respaldo": [
+            {"texto":"Canva","url":"https://www.canva.com"},
+            {"texto":"CapCut","url":"https://www.capcut.com"}
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act4",
+          "titulo": "Exhibición de resultados",
+          "duracionMin": 30,
+          "descripcion": "Presentación de proyectos y entrega de insignias de 'Emprendedor Digital'.",
+          "tipo": "práctico",
+          "niveles": ["Avanzado","",""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "fechaCreacion": "2026-02-19",
+    "ultimaActualizacion": "2026-02-19",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}
+    
