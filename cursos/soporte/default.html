@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>⚠️ MENSAJE CLASIFICADO ⚠️</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000000;
+      font-family: 'Courier New', monospace;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Estática de fondo (efecto de interferencia) */
+    body::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.02) 0px,
+        rgba(255, 255, 255, 0.02) 2px,
+        transparent 2px,
+        transparent 4px
+      );
+      pointer-events: none;
+      animation: static 0.1s infinite;
+    }
+
+    @keyframes static {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-2px, 2px); }
+      50% { transform: translate(2px, -2px); }
+      75% { transform: translate(-1px, -1px); }
+      100% { transform: translate(1px, 1px); }
+    }
+
+    /* Líneas de escaneo */
+    body::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255, 0, 0, 0.03) 50%,
+        transparent 100%MARCOS MORENO
+      );
+      animation: scan 4s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes scan {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100%); }
+    }
+
+    .mensaje-container {
+      position: relative;
+      z-index: 10;
+      max-width: 850px;
+      width: 85%;
+      background: rgba(0, 0, 0, 0.85);
+      border: 3px solid #ff0000;
+      box-shadow: 
+        0 0 30px rgba(255, 0, 0, 0.5),
+        inset 0 0 30px rgba(255, 0, 0, 0.3);
+      padding: 50px 40px;
+      animation: flicker 0.5s infinite;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 1; }
+      25% { opacity: 0.95; }
+      50% { opacity: 1; }
+      75% { opacity: 0.95; }
+      100% { opacity: 1; }
+    }
+
+    .cinta-superior {
+      position: absolute;
+      top: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ff0000;
+      color: black;
+      padding: 5px 30px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      animation: pulse 1s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 20px red; }
+      50% { box-shadow: 0 0 40px red; }
+    }
+
+    .clasificacion {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #ff0000;
+      border: 2px solid #ff0000;
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      transform: rotate(3deg);
+      opacity: 0.8;
+    }
+
+    .clasificacion-izq {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #ff0000;
+      font-size: 0.7rem;
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+      letter-spacing: -5px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #ff0000;
+      font-size: 2.5rem;
+      margin: 30px 0 20px;
+      text-transform: uppercase;
+      letter-spacing: 8px;
+      text-shadow: 
+        0 0 10px red,
+        0 0 20px rgba(255, 0, 0, 0.5);
+      font-weight: 900;
+      animation: glitch 2s infinite;
+    }
+
+    @keyframes glitch {
+      0%, 100% { transform: skew(0deg); }
+      95% { transform: skew(2deg); }
+      96% { transform: skew(-2deg); }
+      97% { transform: skew(1deg); }
+      98% { transform: skew(-1deg); }
+    }
+
+    .mensaje-principal {
+      color: #ffaaaa;
+      font-size: 1.4rem;
+      line-height: 1.8;
+      text-align: center;
+      margin: 40px 0;
+      padding: 30px;
+      border: 2px dashed #ff0000;
+      position: relative;
+      font-family: 'Courier New', monospace;
+      font-weight: bold;
+      text-shadow: 0 0 5px red;
+    }
+
+    .mensaje-principal::before {
+      content: '▮';
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      color: red;
+      animation: blink 1s infinite;
+    }
+
+    .mensaje-principal::after {
+      content: '▮';
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      color: red;
+      animation: blink 1s infinite reverse;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .destacado {
+      color: #ffffff;
+      font-size: 1.8rem;
+      margin: 20px 0;
+      text-transform: uppercase;
+      border-left: 4px solid red;
+      border-right: 4px solid red;
+      padding: 10px;
+      text-align: center;
+      background: rgba(255, 0, 0, 0.1);
+      animation: glow 1.5s infinite;
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px white; }
+      50% { text-shadow: 0 0 20px red; }
+    }
+
+    .facilitador-info {
+      background: rgba(255, 0, 0, 0.1);
+      border: 2px solid #ff0000;
+      padding: 25px;
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .facilitador-info::before {
+      content: '█ █ █ █ █ █ █ █';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: rgba(255, 0, 0, 0.2);
+      font-size: 0.8rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    .facilitador-icono {
+      font-size: 3rem;
+      background: black;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid red;
+      border-radius: 50%;
+      box-shadow: 0 0 30px red;
+    }
+
+    .facilitador-texto {
+      color: white;
+    }
+
+    .facilitador-texto strong {
+      color: red;
+      font-size: 1.8rem;
+      display: block;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+
+    .codigo-secreto {
+      font-family: 'Courier New', monospace;
+      color: #00ff00;
+      background: rgba(0, 255, 0, 0.1);
+      padding: 5px 10px;
+      border: 1px solid #00ff00;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .temporizador-container {
+      text-align: center;
+      margin: 40px 0 20px;
+      position: relative;
+    }
+
+    .advertencia {
+      color: #ff0000;
+      font-size: 1.2rem;
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+      text-transform: uppercase;
+    }
+
+    .temporizador {
+      display: inline-block;
+      background: black;
+      border: 3px solid red;
+      padding: 20px 50px;
+    }
+
+    .temporizador-numero {
+      font-size: 6rem;
+      font-weight: bold;
+      color: red;
+      text-shadow: 0 0 30px red;
+      font-family: 'Courier New', monospace;
+      display: inline-block;
+      min-width: 120px;
+    }
+
+    .autodestruccion {
+      color: #ff6666;
+      font-size: 1.1rem;
+      margin-top: 15px;
+      text-transform: uppercase;
+    }
+
+    .barra-progreso {
+      width: 100%;
+      height: 4px;
+      background: #330000;
+      margin: 30px 0 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .barra-progreso::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #ff0000, #ff6666);
+      animation: progreso 5s linear forwards;
+    }
+
+    @keyframes progreso {
+      from { width: 100%; }
+      to { width: 0%; }
+    }
+
+    .footer-seguridad {
+      display: flex;
+      justify-content: space-between;
+      color: #660000;
+      font-size: 0.7rem;
+      margin-top: 30px;
+      border-top: 1px solid #330000;
+      padding-top: 15px;
+    }
+
+    .footer-seguridad span {
+      letter-spacing: 2px;
+    }
+
+    .codigo-barras {
+      font-family: 'Courier New', monospace;
+      color: #330000;
+      font-size: 1.2rem;
+      letter-spacing: 5px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; letter-spacing: 4px; }
+      .destacado { font-size: 1.2rem; }
+      .temporizador-numero { font-size: 4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="mensaje-container" id="mensajeContainer">
+    <div class="cinta-superior">⚠️ CONFIDENCIAL ⚠️</div>
+    <div class="clasificacion">NIVEL 7</div>
+    <div class="clasificacion-izq">TOP SECRET</div>
+    
+    <h1>⚠️ MISIÓN IMPOSIBLE ⚠️</h1>
+    
+    <div class="mensaje-principal">
+      <p>"Agente, este mensaje se autodestruirá en 15 segundos..."</p>
+    </div>
+    
+    <div class="destacado">
+      ⚡ ESTA ES TU MISIÓN ⚡
+    </div>
+    
+    <div style="color: white; text-align: center; font-size: 1.3rem; margin: 20px 0; line-height: 1.8;">
+      <p>SI DECIDES <span style="color: red; font-weight: bold;">ACEPTARLA</span> tendrás que arriesgarlo todo</p>
+      <p style="font-size: 1.8rem; margin: 15px 0;">🔥 SI TE ATRAPAN, DESCONOCEREMOS TU EXISTENCIA 🔥</p>
+    </div>
+    
+    <div class="facilitador-info">
+      <div class="facilitador-icono">
+        🕴️
+      </div>
+      <div class="facilitador-texto">
+        <strong>MARCOS MORENO</strong>
+        <span style="color: #ffaaaa;">Facilitador / Controlador de Misión</span>
+        <div style="margin-top: 10px;">
+          <span class="codigo-secreto">CÓDIGO: AGENTE-47</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="temporizador-container">
+      <div class="advertencia">⚡ AUTO-DESTRUCCIÓN ACTIVADA ⚡</div>
+      <div class="temporizador">
+        <span class="temporizador-numero" id="contador">5</span>
+      </div>
+      <div class="autodestruccion">
+        🎯 ESTE MENSAJE SE AUTODESTRUIRÁ 🎯
+      </div>
+    </div>
+    
+    <div class="barra-progreso"></div>
+    
+    <div class="footer-seguridad">
+      <span>███ ███ ███</span>
+      <span>FECHA: 🚫🚫/🚫🚫/🚫🚫🚫🚫</span>
+      <span class="codigo-barras">▌▌▌▌▌▌▌▌▌▌</span>
+    </div>
+  </div>
+
+  <script>
+    // Temporizador de 5 segundos con efecto Misión Imposible
+    let segundos = 15;
+    const contadorElement = document.getElementById('contador');
+    const mensajeContainer = document.getElementById('mensajeContainer');
+    const audio = new Audio('data:audio/wav;base64,UklGRlwAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YVAAAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA='); // Silencio (no podemos poner audio real sin permisos)
+    
+    // Efecto de interferencia al actualizar
+    function actualizarContador() {
+      segundos--;
+      contadorElement.textContent = segundos;
+      
+      // Efecto de glitch en cada tick
+      mensajeContainer.style.transform = `translate(${Math.random() * 4 - 2}px, ${Math.random() * 4 - 2}px)`;
+      setTimeout(() => {
+        mensajeContainer.style.transform = 'translate(0, 0)';
+      }, 50);
+      
+      if (segundos <= 0) {
+        clearInterval(intervalo);
+        
+        // Explosión de glitch final
+        mensajeContainer.style.transition = 'all 0.3s';
+        mensajeContainer.style.transform = 'scale(1.2)';
+        mensajeContainer.style.opacity = '0';
+        mensajeContainer.style.filter = 'blur(10px)';
+        
+        // Desaparecer
+        setTimeout(() => {
+          mensajeContainer.style.display = 'none';
+        }, 300);
+      }
+    }
+    
+    // Iniciar con efecto de entrada
+    mensajeContainer.style.opacity = '0';
+    mensajeContainer.style.transform = 'scale(0.8)';
+    setTimeout(() => {
+      mensajeContainer.style.transition = 'all 0.5s';
+      mensajeContainer.style.opacity = '1';
+      mensajeContainer.style.transform = 'scale(1)';
+    }, 100);
+    
+    const intervalo = setInterval(actualizarContador, 1000);
+    
+    // Pequeños glitches aleatorios durante la cuenta
+    setInterval(() => {
+      if (segundos > 0) {
+        mensajeContainer.style.borderColor = `rgba(255, ${Math.random() * 100}, ${Math.random() * 100}, 1)`;
+        setTimeout(() => {
+          mensajeContainer.style.borderColor = '#ff0000';
+        }, 100);
+      }
+    }, 200);
+  </script>
+</body>
+</html>

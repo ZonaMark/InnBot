@@ -1,0 +1,352 @@
+{
+  "curso": {
+    "id": "OFFICE-INTER-TECHNOVA",
+    "titulo": "Certificación Práctica: Office TechNova (Excel y Word)",
+    "descripcion": "Curso 100% práctico basado en el estándar EC0366. Gestión de empresa ficticia TechNova de cero a intermedio.",
+    "edad": "Jóvenes y adultos",
+    "Objetivo": "Al finalizar el curso, el participante operará de manera integral las herramientas de Excel y Word para la gestión de datos administrativos y comunicación corporativa, cumpliendo con los estándares de desempeño del EC0366.",
+    "Objetivo1": "Dominar 14 funciones de Excel y tablas dinámicas para el análisis de ventas.",
+    "Objetivo2": "Ejecutar procesos de combinación de correspondencia en Word vinculados a Excel.",
+    "PerfilEgre": "El egresado creará bases de datos automatizadas, reportes visuales dinámicos y documentación masiva personalizada.",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.1",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Por haber completado el proyecto integrador de gestión administrativa TechNova."
+    }
+  },
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 10,
+    "unidadTiempo": "minutos"
+  },
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "Fundamentos y Entorno Corporativo",
+      "descripcion": "Inicio del proyecto y configuración de datos básicos.",
+      "actividades": [
+        {
+          "id": "s1-d1-act1",
+          "titulo": "Encuadre y Entorno",
+          "duracionMin": 40,
+          "descripcion": "MANUAL: 1. Explorar pestañas de Excel y Word. 2. Crear carpeta del proyecto. 3. Identificar filas, columnas y celdas. 4. Configurar el libro 'Gestion_TechNova'.",
+          "tipo": "teórico-práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Que es Excel", "url": "https://support.microsoft.com/es-es/office/-qu%C3%A9-es-excel-94b00f50-5896-479c-b0c5-ff74603b35a3"}],
+          "enlaces_de_respaldo": [{"texto": "Que es Word", "url": "https://support.microsoft.com/es-es/office/-qu%C3%A9-es-word-68d147fc-69f6-4339-b2c7-8a7ee9d81be3"}],
+          "enlaces_videos": [{"texto": "Conceptos básicos Excel", "url": "https://www.youtube.com/watch?v=SPHil1QRP_M"}]
+        },
+        {
+          "id": "s1-d1-act2",
+          "titulo": "Captura y Aritmética",
+          "duracionMin": 50,
+          "descripcion": "MANUAL: 1. Capturar tabla de 10 productos. 2. Usar autorrelleno para IDs. 3. Aplicar funciones SUMA, PROMEDIO, MIN y MAX.",
+          "tipo": "práctica",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Fórmulas básicas", "url": "https://support.microsoft.com/es-es/office/ejemplos-de-f%C3%B3rmulas-usadas-con-frecuencia-b45a3946-819e-455e-ac20-770ea6aa05da"}],
+          "enlaces_de_respaldo": [{"texto": "Fórmulas básicas", "url": "https://www.xataka.com/basics/formulas-excel-esenciales-para-empezar-aprender-formulas-excel"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1-d1-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s1-d1-act3",
+          "titulo": "Tablas en Word",
+          "duracionMin": 50,
+          "descripcion": "MANUAL: 1. Crear documento 'Reporte_Enero'. 2. Insertar tabla manual. 3. Aplicar formatos de párrafo.",
+          "tipo": "práctica",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Tablas en Word", "url": "https://support.microsoft.com/es-es/office/copiar-de-excel-a-otro-programa-de-office-4ba759cc-62f3-422c-bd75-3fc83b06bb6b"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Formato de Tablas", "url": "https://www.youtube.com/watch?v=9LMI0UcjLh8"}]
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Lógica y Automatización",
+      "descripcion": "Implementación de reglas de negocio.",
+      "actividades": [
+        {
+          "id": "s1-d2-act1",
+          "titulo": "Funciones Lógicas",
+          "duracionMin": 60,
+          "descripcion": "MANUAL: 1. Usar CONTAR para censo. 2. Implementar función SI para bonos. 3. Unir nombres con CONCATENAR.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Función SI", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-si-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Función SI lógica", "url": "https://www.youtube.com/watch?v=MYV5IMVXbgI"}]
+        },
+        {
+          "id": "s1-d2-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s1-d2-act2",
+          "titulo": "Formato Condicional y Estilos",
+          "duracionMin": 80,
+          "descripcion": "MANUAL: 1. Crear semáforos de ventas. 2. Usar Estilos de Word para títulos.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Formato Condicional", "url": "https://support.microsoft.com/es-es/office/usar-formato-condicional-para-resaltar-informaci%C3%B3n-fed60dfa-1d3f-4e13-9ecb-f1951ff89d7f"}],
+          "enlaces_de_respaldo": [{"texto": "Estilos en Word", "url": "https://support.microsoft.com/es-es/office/agregar-y-quitar-estilos-de-la-galer%C3%ADa-estilos-r%C3%A1pidos-21c5b9de-b19e-4575-bc87-cb2b55ece224"}],
+          "enlaces_videos": [{"texto": "Visualización de datos", "url": "https://www.youtube.com/watch?v=FP02Lrpzk0E"}]
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Búsqueda e Inteligencia Visual",
+      "descripcion": "Vinculación de datos y gráficos.",
+      "actividades": [
+        {
+          "id": "s1-d3-act1",
+          "titulo": "Función BUSCARV",
+          "duracionMin": 60,
+          "descripcion": "MANUAL: 1. Vincular Catálogo con Ventas usando BUSCARV. 2. Corregir errores #N/A.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Guía BUSCARV", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-buscarv-0bbc8083-26fe-4963-8ab8-93a18ad188a1"}],
+          "enlaces_de_respaldo": [{"texto": "BuscarV rápido", "url": "https://www.youtube.com/watch?v=5BmFpmoBjw8"}],
+          "enlaces_videos": [{"texto": "PORQUE #N/D", "url": "https://www.youtube.com/watch?v=eSWuUeEWLiU"}]
+        },
+        { 
+          "id": "s1-d3-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s1-d3-act2",
+          "titulo": "Dashboard y Vinculación",
+          "duracionMin": 80,
+          "descripcion": "MANUAL: 1. Crear gráfico de columnas. 2. Pegado especial vinculado en Word.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Gráficos Excel", "url": "https://support.microsoft.com/es-es/office/crear-un-gr%C3%A1fico-de-principio-a-fin-0baf399e-dd61-4e18-8a73-b3fd5d5680c2"}],
+          "enlaces_de_respaldo": [{"texto": "Vincular a Word", "url": "https://support.microsoft.com/es-es/office/insertar-un-gr%C3%A1fico-en-word-desde-una-hoja-de-c%C3%A1lculo-de-excel-0b4d40a5-3544-4dcd-b28f-ba82a9b9f1e1"}],
+          "enlaces_videos": [{"texto": "Gráficos desde cero", "url": "https://www.youtube.com/watch?v=KJzOaNGoQ_I"}]
+        }
+      ]
+    },
+    {"soporte": "soporte/Ofimatica1.html"}
+  ],
+  "Semana2": [
+    {
+      "dia": 4,
+      "titulo": "Análisis y Validación",
+      "descripcion": "Cálculos condicionales y listas.",
+      "soporte":"Ofimatica2.html",
+      "actividades": [
+        {
+          "id": "s2-d1-act1",
+          "titulo": "Funciones .SI.CONJUNTO",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Sumar ventas por categoría con SUMAR.SI.CONJUNTO. 2. Contar productos con CONTAR.SI.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "SUMAR.SI.CONJUNTO", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-sumar-si-conjunto-c9e748f5-7ea7-455d-9406-611cebce642b"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Sumar con criterios(condiciones)", "url": "https://www.youtube.com/watch?v=chXHJLaZWr8"}]
+        },
+        {
+          "id": "s2-d1-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s2-d1-act2",
+          "titulo": "Validación de Datos",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Crear listas desplegables. 2. Proteger celdas críticas.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Listas Desplegables", "url": "https://support.microsoft.com/es-es/office/crear-una-lista-desplegable-7693307a-59ef-400a-b769-c5402dce407b"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Validar datos Desplegables", "url": "https://www.youtube.com/watch?v=wQ4wN0iAi7A"}]
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Correspondencia y Diseño",
+      "descripcion": "Generación de documentos masivos.",
+      "actividades": [
+        {
+          "id": "s2-d2-act1",
+          "titulo": "Combinación de Correspondencia",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Vincular Word y Excel. 2. Insertar campos variables.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Correspondencia Word", "url": "https://support.microsoft.com/es-es/office/combinar-correspondencia-con-una-hoja-de-c%C3%A1lculo-de-excel-858c7d7f-5cc0-4ba1-9a7b-0a948fa3d7d3"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Cartas automáticas", "url": "https://www.youtube.com/watch?v=KvhapQ5YHgs"}]
+        },
+        {
+          "id": "s2-d2-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s2-d2-act2",
+          "titulo": "Diseño Corporativo",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Crear plantilla de carta. 2. Configurar márgenes y logos. 3. Crear Portada",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Márgenes en Excel", "url": "https://support.microsoft.com/es-es/office/configurar-los-m%C3%A1rgenes-de-las-p%C3%A1ginas-antes-de-imprimir-una-hoja-de-c%C3%A1lculo-353f52fc-0d2c-4958-9166-99fbd22b963a"}],
+          "enlaces_de_respaldo": [{"texto": "Márgenes en Word", "url": "https://support.microsoft.com/es-es/office/cambiar-los-m%C3%A1rgenes-da21a474-99d8-4e54-b12d-a8a14ea7ce02"}],
+          "enlaces_videos": [{"texto": "Encabezados y Pies de pagina", "url": "https://www.youtube.com/watch?v=-qVy_4wGmYk"}]
+        }
+      ]
+    },
+    {
+      "dia": 6,
+      "titulo": "Resúmenes Dinámicos",
+      "descripcion": "Tablas dinámicas y segmentación.",
+      "actividades": [
+        {
+          "id": "s2-d3-act1",
+          "titulo": "Tablas Dinámicas",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Crear Tabla Dinámica de ventas por mes. 2. Insertar Segmentación de Datos para filtrar rápido.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Tabla Dinámica", "url": "https://support.microsoft.com/es-es/office/crear-una-tabla-din%C3%A1mica-para-analizar-datos-de-una-hoja-de-c%C3%A1lculo-a9a84538-bfe9-40a9-a8e9-f99134456576"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Tablas Dinámicas", "url": "https://www.youtube.com/watch?v=gsxCopOjGZo"}]
+        },
+        {
+          "id": "s2-d3-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s2-d3-act2",
+          "titulo": "Proyecto Integrador",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Consolidar el Reporte Trimestral. 2. Revisión de vínculos de gráficos en Word.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/Ofimatica2.html"}
+  ],
+  "Semana3": [
+    {
+      "dia": 7,
+      "titulo": "Integración y Calidad",
+      "descripcion": "Control de errores y maquetación final.",
+      "soporte":"Ofimatica3.html",
+      "actividades": [
+        {
+          "id": "s3-d1-act1",
+          "titulo": "Auditoría de Datos",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Usar SI.ERROR. 2. Proteger libro con contraseña.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "SI.ERROR", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-si-error-c526fd07-343e-4d07-876a-7483e02f8845"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Control de errores", "url": "https://www.youtube.com/shorts/qC0TqYyH4C8"}]
+        },
+        {
+          "id": "s3-d1-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s3-d1-act2",
+          "titulo": "Maquetación Final",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: 1. Crear Tabla de Contenido. 2. Revisión final del reporte Word.",
+          "tipo": "práctica",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [{"texto": "Tabla Contenido", "url": "https://support.microsoft.com/es-es/office/insertar-una-tabla-de-contenido-882e85c7-1733-4078-a294-dc4fd124444a"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Índices", "url": "https://www.youtube.com/watch?v=R94qB-9HOfU"}]
+        }
+      ]
+    },
+    {
+      "dia": 8,
+      "titulo": "Cierre y Evaluación",
+      "descripcion": "Demostración de competencias.",
+      "actividades": [
+        {
+          "id": "s3-d2-act1",
+          "titulo": "Examen Práctico",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: Realizar un cambio en la base de datos y generar el set de 20 cartas PDF en menos de 15 minutos.",
+          "tipo": "evaluación",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s3-d2-receso",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "s3-d2-act2",
+          "titulo": "Retroalimentación y Cierre",
+          "duracionMin": 70,
+          "descripcion": "MANUAL: Presentación de portafolio de evidencias y entrega de resultados finales según EC0366.",
+          "tipo": "cierre",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/Ofimatica3.html"}
+  ],
+  "metadata": {
+    "fechaCreacion": "2026-02-16",
+    "ultimaActualizacion": "2026-02-21",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

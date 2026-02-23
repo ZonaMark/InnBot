@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMP - Ruta de MaryC: Semana 2</title>
+    <style>
+        :root { --primary: #6c5ce7; --secondary: #00b894; --bg: #f0f3f7; --text: #2d3436; }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); margin: 0; }
+        header { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: white; padding: 3rem 1rem; text-align: center; }
+        .container { max-width: 1000px; margin: -2rem auto 2rem; padding: 0 1rem; }
+        .intro-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); margin-bottom: 2rem; border-top: 5px solid var(--primary); }
+        .day-section { margin-bottom: 4rem; }
+        .day-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .day-badge { background: var(--primary); color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: bold; }
+        .activity-card { background: white; border-radius: 10px; padding: 1.5rem; margin-bottom: 1rem; border-left: 5px solid #ddd; transition: 0.3s; }
+        .activity-card:hover { border-left-color: var(--secondary); transform: translateX(5px); }
+        .meta { font-size: 0.85rem; color: #666; margin-bottom: 0.5rem; display: flex; gap: 15px; }
+        .type-tag { background: #eee; padding: 2px 8px; border-radius: 4px; text-transform: uppercase; font-size: 0.7rem; }
+        .prompt-box { background: #2d3436; color: #55efc4; padding: 1rem; border-radius: 8px; font-family: 'Consolas', monospace; font-size: 0.9rem; margin: 10px 0; border: 1px dashed #00b894; }
+        .btn-link { display: inline-block; margin-top: 10px; color: var(--primary); font-weight: bold; text-decoration: none; border: 1px solid var(--primary); padding: 5px 15px; border-radius: 5px; }
+        .btn-link:hover { background: var(--primary); color: white; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kit de Marketing Profesional</h1>
+    <p>Semana 2: El Éxito Viral de MaryC</p>
+</header>
+
+<div class="container">
+    <div class="intro-card">
+        <h2>La Historia de MaryC: Episodio II</h2>
+        <p>Con su marca definida y fotos de impacto, MaryC ahora debe aprender a contar historias a través del video. El objetivo: <strong>que el mundo vea su proceso artesanal y se enamore de su marca.</strong></p>
+    </div>
+
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-badge">Día 4</span>
+            <h2>Introducción al Video</h2>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d4-act1</span> <span class="type-tag">Teórico</span> <span>⏱ 25 min</span></div>
+            <h3>El lenguaje del video corto</h3>
+            <p>MaryC descubre por qué los Reels de repostería son tan adictivos: música rítmica y tomas rápidas.</p>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d4-act2</span> <span class="type-tag">Práctico</span> <span>⏱ 20 min</span></div>
+            <h3>IA para ideas visuales</h3>
+            <p>Pide ideas a Copilot para grabar sus pasteles de forma creativa.</p>
+            <div class="prompt-box">"Dame 3 ideas de tomas creativas para un video de 15 segundos sobre la decoración de una piñata o pastel."</div>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d4-act3</span> <span class="type-tag">Práctico</span> <span>⏱ 60 min</span></div>
+            <h3>CapCut Básico</h3>
+            <p>MaryC instala CapCut y aprende a cortar el video justo cuando pone la cereza en el pastel.</p>
+            <a href="https://www.capcut.com" class="btn-link">Explorar CapCut</a>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d4-act4</span> <span class="type-tag">Práctico</span> <span>⏱ 45 min</span></div>
+            <h3>Ejemplo práctico: Stop Motion</h3>
+            <p>Crea un video donde un pastel parece armarse solo usando fotos en secuencia.</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-badge" style="background: #a29bfe;">Día 5</span>
+            <h2>IA aplicada al Video</h2>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d5-act1</span> <span class="type-tag">Práctico</span> <span>⏱ 60 min</span></div>
+            <h3>Subtítulos mágicos</h3>
+            <p>MaryC usa la IA para que sus videos se lean aunque el cliente tenga el celular en silencio.</p>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d5-act2</span> <span class="type-tag">Práctico</span> <span>⏱ 30 min</span></div>
+            <h3>Guion corto con IA</h3>
+            <div class="prompt-box">"Escribe un guion de 20 segundos para un video de venta de cupcakes de temporada. Usa un tono persuasivo y alegre."</div>
+            <a href="https://chat.openai.com" class="btn-link">ChatGPT</a>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d5-act4</span> <span class="type-tag">Práctico</span> <span>⏱ 30 min</span></div>
+            <h3>Ejemplo práctico: Tutorial rápido</h3>
+            <p>Graba un video de "Cómo rellenar una piñata" o "Decorar un cupcake" para mostrar su autoridad.</p>
+        </div>
+    </section>
+
+    <section class="day-section">
+        <div class="day-header">
+            <span class="day-badge" style="background: #00b894;">Día 6</span>
+            <h2>Cierre y Autonomía</h2>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d6-act1</span> <span class="type-tag">Teórico</span> <span>⏱ 30 min</span></div>
+            <h3>Formatos según necesidad</h3>
+            <p>Aprende a exportar para WhatsApp (ligero) y Facebook (alta calidad).</p>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d6-act2</span> <span class="type-tag">Práctico</span> <span>⏱ 30 min</span></div>
+            <h3>Estrategia WhatsApp Business</h3>
+            <p>MaryC organiza su catálogo. Ahora sus clientes pueden comprar sin preguntar precios por chat.</p>
+            <a href="https://www.whatsapp.com/business" class="btn-link">WhatsApp Business</a>
+        </div>
+
+        <div class="activity-card">
+            <div class="meta"><span>ID: d6-act3</span> <span class="type-tag">Práctico</span> <span>⏱ 60 min</span></div>
+            <h3>Proyecto Final: Kit Completo</h3>
+            <p>MaryC pule su obra maestra: Flyer + Video + Copy de venta. ¡Está lista para el lanzamiento!</p>
+        </div>
+
+        <div class="activity-card" style="background: #f1f2f6; text-align: center; border: 2px dashed var(--secondary);">
+            <h3>Exhibición de Resultados</h3>
+            <p>MaryC recibe su insignia de <strong>Emprendedora Digital</strong>.</p>
+            <p><em>"De la colonia para el mundo digital".</em></p>
+        </div>
+    </section>
+</div>
+
+</body>
+</html>

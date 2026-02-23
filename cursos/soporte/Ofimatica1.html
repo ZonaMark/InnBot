@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual Maestro TechNova - Certificación EC0366</title>
+    <style>
+        :root { --excel-green: #217346; --excel-light: #e6e6e6; --formula-orange: #d35400; }
+        body { background-color: #d0d0d0; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; color: #333; }
+        
+        /* Barra Superior Excel */
+        .excel-header { background-color: var(--excel-green); color: white; padding: 10px 20px; font-weight: bold; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; }
+        
+        .container { max-width: 1100px; margin: 20px auto; background: white; border: 1px solid #999; box-shadow: 5px 5px 20px rgba(0,0,0,0.2); }
+        
+        /* Pestañas de Navegación */
+        .week-tabs { background: #f3f3f3; display: flex; border-bottom: 1px solid #bbb; }
+        .tab { padding: 10px 20px; border-right: 1px solid #ccc; cursor: default; font-size: 0.9em; font-weight: bold; color: #666; }
+        .tab.active { background: white; color: var(--excel-green); border-bottom: 3px solid var(--excel-green); }
+
+        .content { padding: 40px; }
+        
+        /* Estilo Narrativo */
+        .narrativa { background: #fdfaf0; border-left: 5px solid #f1c40f; padding: 20px; margin-bottom: 25px; font-style: italic; line-height: 1.6; }
+        
+        /* Bloque de Actividad */
+        .actividad-box { border: 1px solid #217346; margin-bottom: 50px; border-radius: 4px; overflow: hidden; }
+        .actividad-header { background: var(--excel-green); color: white; padding: 10px 15px; font-size: 1.1em; display: flex; justify-content: space-between; }
+        .actividad-body { padding: 20px; }
+
+        /* Cuadrícula de Datos */
+        table.excel-table { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 0.85em; }
+        table.excel-table th { background: #e6e6e6; border: 1px solid #bbb; padding: 5px; color: #444; font-weight: normal; text-align: center; }
+        table.excel-table td { border: 1px solid #ccc; padding: 8px; }
+        .row-n { background: #e6e6e6; width: 30px; text-align: center; color: #666; }
+        .col-h { font-weight: bold; background: #f9f9f9; text-align: center; }
+
+        /* Sintaxis de Fórmulas */
+        .sintaxis-box { background: #2d3436; color: #00d2d3; padding: 15px; border-radius: 5px; font-family: 'Consolas', monospace; margin: 10px 0; }
+        .formula-label { color: #fab1a0; font-weight: bold; }
+        
+        .key { background: #eee; border: 1px solid #333; border-radius: 3px; padding: 1px 5px; font-family: monospace; box-shadow: 1px 1px 0 #333; font-size: 0.8em; }
+        footer { text-align: center; padding: 20px; color: #777; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<div class="excel-header">
+    <div>TechNova Solutions S.A. de C.V. - Manual de Certificación Operativa</div>
+    <div>v.2026.02</div>
+</div>
+
+<div class="container">
+    <div class="week-tabs">
+        <div class="tab active">SEMANA 1: FUNDAMENTOS</div>
+        <div class="tab">SEMANA 2: AUTOMATIZACIÓN</div>
+        <div class="tab">SEMANA 3: INTEGRACIÓN</div>
+    </div>
+
+    <div class="content">
+        <h1>Caso de Negocio: La Transformación Digital de TechNova</h1>
+        <p>TechNova es una distribuidora líder, pero sus procesos son manuales. Tu misión como consultor es usar Office para automatizar sus ventas y reportes.</p>
+
+        <div class="actividad-box">
+            <div class="actividad-header">
+                <span>📍 SEMANA 1 - DÍA 1</span>
+                <span>Actividades 1 y 2</span>
+            </div>
+            <div class="actividad-body">
+                <div class="narrativa">
+                    "La empresa necesita, antes que nada, saber qué vende. No existe un control de precios centralizado. El primer paso es construir el <strong>Catálogo Maestro</strong>."
+                </div>
+                <h3>Paso 1: Control de Inventario</h3>
+                <p>Captura los siguientes productos en la hoja <strong>'Catálogo'</strong>. Asegúrate de aplicar formato de tabla y estilo de moneda.</p>
+                
+                <table class="excel-table">
+                    <tr><th></th><th class="col-h">A (ID)</th><th class="col-h">B (Descripción)</th><th class="col-h">C (Categoría)</th><th class="col-h">D (Precio)</th></tr>
+                    <tr><td class="row-n">2</td><td>TN-001</td><td>Laptop Pro 15"</td><td>Hardware</td><td>18500</td></tr>
+                    <tr><td class="row-n">3</td><td>TN-002</td><td>Monitor 4K Ultra</td><td>Hardware</td><td>6200</td></tr>
+                    <tr><td class="row-n">4</td><td>TN-003</td><td>Licencia Office 365</td><td>Software</td><td>1800</td></tr>
+                    <tr><td class="row-n">5</td><td>TN-004</td><td>Teclado Mecánico RGB</td><td>Accesorios</td><td>1200</td></tr>
+                    <tr><td class="row-n">6</td><td>TN-005</td><td>Disco Duro SSD 1TB</td><td>Hardware</td><td>2450</td></tr>
+                    <tr><td class="row-n">7</td><td>TN-006</td><td>Antivirus Premium</td><td>Software</td><td>850</td></tr>
+                    <tr><td class="row-n">8</td><td>TN-007</td><td>Mouse Inalámbrico</td><td>Accesorios</td><td>450</td></tr>
+                    <tr><td class="row-n">9</td><td>TN-008</td><td>Impresora Láser</td><td>Hardware</td><td>4300</td></tr>
+                    <tr><td class="row-n">10</td><td>TN-009</td><td>Licencia Windows 11</td><td>Software</td><td>2100</td></tr>
+                    <tr><td class="row-num">11</td><td>TN-010</td><td>Soporte Ergonómico</td><td>Accesorios</td><td>950</td></tr>
+                </table>
+
+                <h3>Fórmulas a ocupar (Aritmética básica):</h3>
+                <div class="sintaxis-box">
+                    <span class="formula-label">Sintaxis:</span> =SUMA(celda_inicio:celda_fin)<br>
+                    <span class="formula-label">Aplicación:</span> =SUMA(D2:D11) <span style="color:#636e72">// Total del valor de inventario</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="actividad-box">
+            <div class="actividad-header">
+                <span>📍 SEMANA 1 - DÍA 2</span>
+                <span>Actividades 1 y 2</span>
+            </div>
+            <div class="actividad-body">
+                <div class="narrativa">
+                    "Ahora que sabemos qué vendemos, necesitamos saber quién vende. TechNova tiene 5 agentes clave. Debemos preparar sus metas de $25,000 para calcular sus bonos."
+                </div>
+                <h3>Paso 2: Gestión de Agentes</h3>
+                <p>En la hoja <strong>'Agentes'</strong>, captura al equipo y usa funciones de texto para sus expedientes.</p>
+                
+                <table class="excel-table">
+                    <tr><th></th><th class="col-h">A (Nombre)</th><th class="col-h">B (Apellido)</th><th class="col-h">C (Región)</th><th class="col-h">D (Meta)</th></tr>
+                    <tr><td class="row-n">2</td><td>Alberto</td><td>García</td><td>Norte</td><td>25000</td></tr>
+                    <tr><td class="row-n">3</td><td>Beatriz</td><td>Luna</td><td>Centro</td><td>25000</td></tr>
+                    <tr><td class="row-n">4</td><td>Carlos</td><td>Pineda</td><td>Sur</td><td>25000</td></tr>
+                    <tr><td class="row-n">5</td><td>Daniela</td><td>Rivas</td><td>Norte</td><td>25000</td></tr>
+                    <tr><td class="row-n">6</td><td>Eduardo</td><td>Torres</td><td>Centro</td><td>25000</td></tr>
+                </table>
+
+                <h3>Fórmulas a ocupar (Texto y Lógica):</h3>
+                <div class="sintaxis-box">
+                    <span class="formula-label">Concatenar:</span> =A2 & " " & B2 <span style="color:#636e72"> // Une nombre completo</span><br>
+                    <span class="formula-label">Función SI:</span> =SI(Venta >= Meta; "CON BONO"; "SIN BONO")
+                </div>
+            </div>
+        </div>
+
+        <div class="actividad-box">
+            <div class="actividad-header">
+                <span>📍 SEMANA 1 - DÍA 3</span>
+                <span>Actividad 1</span>
+            </div>
+            <div class="actividad-body">
+                <div class="narrativa">
+                    "Es el momento de la verdad. Las transacciones del mes están llegando. Debemos cruzar los IDs de los productos con el catálogo para que los precios se llenen solos."
+                </div>
+                <h3>Paso 3: Registro de Operaciones con BUSCARV</h3>
+                <p>Registra estas transacciones en la hoja <strong>'Ventas'</strong>:</p>
+                <div style="background: #eef2f3; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                    <ul>
+                        <li>Alberto: 2x TN-001 (Laptop)</li>
+                        <li>Beatriz: 15x TN-006 (Antivirus)</li>
+                        <li>Carlos: 1x TN-008 (Impresora) y 2x TN-002 (Monitor)</li>
+                        <li>Daniela: 10x TN-003 (Office)</li>
+                        <li>Eduardo: 5x TN-005 (Disco Duro)</li>
+                    </ul>
+                </div>
+
+                <h3>Fórmulas a ocupar (La joya de la corona):</h3>
+                <div class="sintaxis-box">
+                    <span class="formula-label">Sintaxis BUSCARV:</span> =BUSCARV(valor_id; matriz_catalogo; columna_precio; 0)<br>
+                    <span class="formula-label">Aplicación:</span> =BUSCARV(A2; 'Catálogo'!$A$2:$D$11; 4; 0)
+                </div>
+                <div style="background: #fff3cd; padding: 10px; border: 1px dashed #e67e22; font-size: 0.9em;">
+                    <strong>💡 Tip de Experto:</strong> No olvides presionar <span class="key">F4</span> para fijar el rango del catálogo.
+                </div>
+            </div>
+        </div>
+
+        <div class="actividad-box">
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Proyecto TechNova Solutions | Facilitador: Marcos Moreno Márquez | 2026<br>
+    "Transformando datos en decisiones estratégicas"
+</footer>
+
+</body>
+</html>

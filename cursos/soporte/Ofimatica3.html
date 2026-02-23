@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual TechNova - Semana 3: Blindaje y Cierre</title>
+    <style>
+        :root { --office-dark: #1e3a5f; --excel-green: #217346; --gold: #d4af37; --bg-final: #eceff1; }
+        body { background-color: var(--bg-final); font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+        
+        .header-bar { background: var(--office-dark); color: white; padding: 15px 30px; font-weight: bold; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.3); }
+        
+        .container { max-width: 1000px; margin: 30px auto; background: white; border-radius: 12px; overflow: hidden; border: 1px solid #cfd8dc; }
+        
+        .week-banner { background: linear-gradient(135deg, #1e3a5f 0%, #2b579a 100%); color: white; padding: 30px; display: flex; align-items: center; }
+        .week-number { border: 3px solid white; padding: 10px 20px; border-radius: 50%; font-size: 1.5em; margin-right: 25px; font-weight: bold; }
+
+        .content { padding: 40px; }
+        
+        .narrativa-final { background: #e3f2fd; border-left: 5px solid var(--office-dark); padding: 20px; margin-bottom: 30px; border-radius: 0 8px 8px 0; }
+
+        /* Actividades */
+        .day-block { border: 1px solid #e0e0e0; border-radius: 10px; margin-bottom: 40px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .day-header { background: #f5f5f5; padding: 15px 20px; border-bottom: 1px solid #e0e0e0; font-weight: bold; color: var(--office-dark); display: flex; justify-content: space-between; }
+        .day-body { padding: 25px; }
+
+        /* Estilo de Fórmulas */
+        .formula-card { background: #263238; color: #ffcc80; padding: 15px; border-radius: 6px; font-family: 'Consolas', monospace; margin: 15px 0; border: 1px solid #000; }
+        .comment { color: #90a4ae; font-style: italic; }
+
+        /* Pasos de Validación */
+        .step { margin-bottom: 15px; display: flex; align-items: center; }
+        .step-icon { color: var(--excel-green); margin-right: 10px; font-weight: bold; }
+
+        /* Congratulations Section */
+        .congrats-section { background: linear-gradient(to right, #217346, #27ae60); color: white; padding: 40px; text-align: center; border-radius: 10px; margin-top: 50px; }
+        .congrats-title { font-size: 2em; margin-bottom: 15px; font-family: 'Georgia', serif; }
+        .congrats-text { font-size: 1.1em; line-height: 1.6; opacity: 0.9; }
+        
+        footer { text-align: center; padding: 30px; color: #78909c; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+
+<div class="header-bar">
+    PROYECTO TECHNOVA - FASE FINAL DE CERTIFICACIÓN
+</div>
+
+<div class="container">
+    <div class="week-banner">
+        <div class="week-number">3</div>
+        <div>
+            <h2 style="margin:0;">Calidad, Protección y Auditoría</h2>
+            <p style="margin:0; opacity: 0.8;">Asegurando la integridad de la información.</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="narrativa-final">
+            "El proyecto está casi listo. Sin embargo, un analista profesional sabe que los usuarios pueden cometer errores. En esta última semana, vamos a 'blindar' el archivo para que TechNova tenga una herramienta indestructible."
+        </div>
+
+        <div class="day-block">
+            <div class="day-header">
+                <span>📍 DÍA 1: Manejo de Errores y Limpieza Visual</span>
+                <span>Actividad 1</span>
+            </div>
+            <div class="day-body">
+                <p><strong>El reto:</strong> Eliminar los mensajes <code>#N/D</code> o <code>#VALOR!</code> que aparecen cuando una celda de búsqueda está vacía.</p>
+                
+                <h3>Instrucción Técnica:</h3>
+                <p>Envuelve tus funciones <code>BUSCARV</code> con la función de blindaje <strong>SI.ERROR</strong>.</p>
+
+                <div class="formula-card">
+                    <span style="color: #81d4fa;">=SI.ERROR(</span> BUSCARV(A2; Catálogo!$A$2:$D$11; 2; 0) <span style="color: #81d4fa;">; "Producto no registrado" )</span>
+                    <br><br>
+                    <span class="comment">// Esto hará que en lugar de un error, el usuario vea un mensaje claro.</span>
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-header">
+                <span>📍 DÍA 2: Seguridad de la Información</span>
+                <span>Actividades 1 y 2</span>
+            </div>
+            <div class="day-body">
+                <p><strong>El reto:</strong> Evitar que otros usuarios borren tus fórmulas y restringir la entrada de datos a solo IDs válidos.</p>
+                
+                <h3>Tareas de Seguridad:</h3>
+                <div class="step"><span class="step-icon">✔</span> <strong>Validación de Datos:</strong> Selecciona la columna de ID y ve a <code>Datos > Validación de Datos > Lista</code> para que solo se elijan códigos del catálogo.</div>
+                
+                
+
+                <div class="step"><span class="step-icon">✔</span> <strong>Protección de Hoja:</strong> Desbloquea solo las celdas donde se capturan datos, luego ve a <code>Revisar > Proteger Hoja</code>.</div>
+
+                <div class="formula-card" style="background: #eceff1; color: #333; border: 1px solid #ccc;">
+                    <strong>Tip de Auditoría:</strong> Usa el comando <span style="background:#ddd; padding:2px;">Ctrl + `</span> (acento grave) para ver todas las fórmulas de tu hoja al mismo tiempo y verificar que no haya errores de lógica.
+                </div>
+            </div>
+        </div>
+
+        <div class="congrats-section">
+            <div class="congrats-title">🎉 CONGRATULATIONS! 🎉</div>
+            <div class="congrats-text">
+                ¡Felicidades a todos por completar el Proyecto Maestro de <strong>TechNova Solutions</strong>! 
+                <br><br>
+                Han pasado de capturar datos simples a construir un sistema automatizado, blindado y profesional. Han demostrado que con orden y las herramientas correctas, cualquier caos administrativo tiene solución.
+                <br><br>
+                <strong>El éxito no es solo saber usar el programa, sino saber resolver problemas.</strong> Cuando se encuentren con un desafío similar en su vida profesional, respiren profundo, recuerden lo que construyeron aquí y confíen en su capacidad para salir adelante. 
+                <br><br>
+                ¡Mucho éxito en sus próximos proyectos, expertos en Office!
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Final del Curso: Certificación Operativa Office | Facilitador: Marcos Moreno Márquez | 2026
+</footer>
+
+</body>
+</html>

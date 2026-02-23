@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual TechNova - Semana 2: Automatización y Análisis</title>
+    <style>
+        :root { --office-blue: #2b579a; --excel-green: #217346; --bg-gray: #f3f3f3; }
+        body { background-color: #cfd8dc; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+        
+        .header-bar { background: var(--office-blue); color: white; padding: 15px 30px; font-weight: bold; box-shadow: 0 2px 10px rgba(0,0,0,0.2); }
+        
+        .container { max-width: 1000px; margin: 30px auto; background: white; border: 1px solid #999; border-radius: 8px; overflow: hidden; }
+        
+        .week-banner { background: #e8f0fe; padding: 20px; border-bottom: 2px solid var(--office-blue); display: flex; align-items: center; }
+        .week-number { background: var(--office-blue); color: white; padding: 10px 20px; border-radius: 5px; font-size: 1.2em; margin-right: 20px; }
+
+        .content { padding: 40px; }
+        
+        /* Narrativa */
+        .narrativa-box { background: #fff9c4; border-left: 5px solid #fbc02d; padding: 20px; margin-bottom: 30px; font-style: italic; }
+
+        /* Actividades */
+        .day-block { border: 1px solid #ddd; border-radius: 8px; margin-bottom: 40px; overflow: hidden; }
+        .day-header { background: #f8f9fa; border-bottom: 1px solid #ddd; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+        .day-title { color: var(--office-blue); font-weight: bold; font-size: 1.1em; }
+        .day-body { padding: 20px; }
+
+        /* Tablas estilo Excel */
+        table.excel-data { border-collapse: collapse; width: 100%; margin: 15px 0; font-size: 0.9em; }
+        table.excel-data th { background: #e6e6e6; border: 1px solid #bbb; padding: 8px; color: #333; }
+        table.excel-data td { border: 1px solid #ccc; padding: 8px; text-align: center; }
+
+        /* Fórmulas */
+        .formula-card { background: #263238; color: #81d4fa; padding: 15px; border-radius: 6px; font-family: 'Consolas', monospace; margin: 15px 0; }
+        .syntax { color: #ffab91; }
+
+        .btn-office { display: inline-block; background: var(--office-blue); color: white; padding: 8px 15px; border-radius: 4px; font-size: 0.8em; text-decoration: none; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="header-bar">
+    TechNova Solutions S.A. de C.V. | Fase de Análisis y Comunicación
+</div>
+
+<div class="container">
+    <div class="week-banner">
+        <div class="week-number">SEMANA 2</div>
+        <div>
+            <h2 style="margin:0; color: var(--office-blue);">Automatización e Integración</h2>
+            <p style="margin:0; font-size: 0.9em; color: #666;">Del dato a la estrategia: Tablas Dinámicas y Correspondencia.</p>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="narrativa-box">
+            "TechNova ya tiene sus datos organizados. Ahora, la gerencia necesita reportes rápidos y enviar cartas de resultados a los agentes de forma masiva. ¡Es hora de trabajar de forma inteligente, no pesada!"
+        </div>
+
+        <div class="day-block">
+            <div class="day-header">
+                <span class="day-title">📍 DÍA 1: Análisis con Tablas Dinámicas</span>
+                <span style="font-size: 0.8em; color: #777;">Actividad 1 y 2</span>
+            </div>
+            <div class="day-body">
+                <p><strong>El reto:</strong> Resumir las ventas totales por <strong>Categoría</strong> y por <strong>Región</strong> sin usar fórmulas manuales.</p>
+                
+                <h3>Instrucciones Técnicas:</h3>
+                <ol>
+                    <li>Selecciona tu tabla de ventas de la Semana 1.</li>
+                    <li>Ve a <code>Insertar > Tabla Dinámica</code>.</li>
+                    <li>En el panel derecho, configura:
+                        <ul>
+                            <li><strong>Filas:</strong> Categoría</li>
+                            <li><strong>Valores:</strong> Suma de Venta_Total</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="formula-card">
+                    <span class="syntax">Tip de Visualización:</span><br>
+                    Para que la dirección entienda mejor, inserta un <strong>Gráfico Dinámico</strong> de tipo "Columnas Agrupadas" desde la pestaña Analizar Tabla Dinámica.
+                </div>
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-header">
+                <span class="day-title">📍 DÍA 2: Correspondencia Masiva (Word + Excel)</span>
+                <span style="font-size: 0.8em; color: #777;">Actividad 1</span>
+            </div>
+            <div class="day-body">
+                <p><strong>El reto:</strong> Generar las cartas de notificación para los 5 agentes de TechNova usando los datos de la Semana 1.</p>
+                
+                <div style="border: 1px solid #ccc; padding: 15px; background: #fdfdfd; font-family: 'Times New Roman', serif;">
+                    <p style="text-align: right;">México, 2026</p>
+                    <p>Estimado(a) <strong>«Nombre» «Apellido»</strong>:</p>
+                    <p>Nos es grato comunicarle que sus ventas en la región <strong>«Región»</strong> han sido procesadas. El estatus de su bono es: <strong>«Bono»</strong>.</p>
+                    <p>Atentamente, <br><strong>Dirección TechNova</strong></p>
+                </div>
+
+                <h3>Pasos en Word:</h3>
+                <ul>
+                    <li>Pestaña <strong>Correspondencia</strong> > Seleccionar destinatarios > Usar lista existente.</li>
+                    <li>Selecciona tu archivo Excel de la Semana 1.</li>
+                    <li>Usa <strong>Insertar campo combinado</strong> para colocar los datos en los lugares indicados.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="day-block">
+            <div class="day-header">
+                <span class="day-title">📍 DÍA 3: Reporte de Estadísticas con Criterios</span>
+                <span style="font-size: 0.8em; color: #777;">Actividad 2</span>
+            </div>
+            <div class="day-body">
+                <p><strong>El reto:</strong> Obtener datos específicos como "¿Cuánto se vendió solo en la Región Norte?" o "¿Cuántos productos son de Hardware?".</p>
+                
+                <table class="excel-data">
+                    <tr>
+                        <th>Función</th>
+                        <th>Qué hace</th>
+                        <th>Sintaxis</th>
+                    </tr>
+                    <tr>
+                        <td><strong>CONTAR.SI</strong></td>
+                        <td>Cuenta celdas que cumplen un criterio.</td>
+                        <td><code>=CONTAR.SI(rango; "Software")</code></td>
+                    </tr>
+                    <tr>
+                        <td><strong>SUMAR.SI</strong></td>
+                        <td>Suma valores que cumplen un criterio.</td>
+                        <td><code>=SUMAR.SI(regiones; "Norte"; ventas)</code></td>
+                    </tr>
+                </table>
+
+                <div class="formula-card">
+                    <span class="syntax">Ejemplo TechNova:</span><br>
+                    =SUMAR.SI(C2:C11; "Hardware"; D2:D11) <br>
+                    <span style="color: #90a4ae; font-size: 0.9em;">// Esto sumará solo los precios de los productos categoría Hardware.</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    Proyecto TechNova Solutions | Semana 2: Automatización | Facilitador: Marcos Moreno Márquez
+</footer>
+
+</body>
+</html>

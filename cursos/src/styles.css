@@ -182,6 +182,8 @@ button:disabled {
 .activity-links a { color: #8fd7ff; text-decoration: none; margin-right: 8px; }
 .activity-links a:hover { text-decoration: underline; }
 
+
+/* ******************temporizador*****************/
 .slime-overlay {
   position: fixed;
   inset: 0;
@@ -195,6 +197,81 @@ button:disabled {
 .slime-content { position: relative; z-index: 1001; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 16px; text-align: center; }
 .countdown { font-size: 42px; font-weight: 700; }
 .hidden { display: none !important; }
+
+
+/* Temporizador en esquina superior derecha */
+#slime-overlay.temporizador-activo {
+  position: fixed !important;
+  top: 20px !important;
+  right: 20px !important;
+  left: auto !important;
+  bottom: auto !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+  z-index: 9999 !important;
+}
+
+#slime-overlay.temporizador-activo .slime-content {
+  padding: 15px !important;
+}
+
+#slime-overlay.temporizador-activo h2 {
+  font-size: 1rem !important;
+  margin-bottom: 5px !important;
+}
+
+#slime-overlay.temporizador-activo .countdown {
+  font-size: 1.5rem !important;
+  margin: 5px 0 !important;
+}
+
+#slime-overlay.temporizador-activo .slime-fill {
+  opacity: 0.3 !important;
+}
+
+#slime-overlay.temporizador-completado {
+  border: 2px solid #4CAF50 !important;
+  animation: pulseCompletado 1s infinite !important;
+}
+
+@keyframes pulseCompletado {
+  0% { box-shadow: 0 0 5px #4CAF50; }
+  50% { box-shadow: 0 0 20px #4CAF50; }
+  100% { box-shadow: 0 0 5px #4CAF50; }
+}
+
+/* Manto oscuro que bloquea la pantalla */
+.manto-bloqueo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(3px);
+  z-index: 9998;
+  animation: aparecerManto 0.3s ease;
+}
+
+@keyframes aparecerManto {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* El temporizador en esquina debe estar POR ENCIMA del manto */
+#slime-overlay.temporizador-activo {
+  z-index: 9999 !important;
+}
+
+/* El botón cerrar también por encima */
+#close-slime-btn {
+  position: relative;
+  z-index: 10000;
+}
+
+/* El botón se controla desde JS con style.display */
+
+
 
 .congrats-overlay {
   position: fixed; inset: 0;
@@ -761,3 +838,52 @@ svg#filters { position: absolute; width: 0; height: 0; }
   font-size: 1.1rem;
 }
 
+/* Estilo para el soporte de la semana */
+.soporte-semana {
+  margin-top: 20px;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px dashed rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.03); /* Más traslúcido que los demás */
+  backdrop-filter: blur(2px);
+  border-radius: 0 0 12px 12px;
+}
+
+.soporte-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(76, 175, 80, 0.15); /* Versión traslúcida del verde */
+  color: #a5d6a5;
+  padding: 10px 25px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.soporte-link:hover {
+  background: rgba(76, 175, 80, 0.25);
+  transform: translateY(-2px);
+  border-color: rgba(76, 175, 80, 0.5);
+  box-shadow: 0 5px 15px rgba(76, 175, 80, 0.2);
+}
+
+.soporte-link:active {
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .soporte-semana {
+    padding: 12px;
+  }
+  
+  .soporte-link {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+  }
+}

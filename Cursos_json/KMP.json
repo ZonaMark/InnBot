@@ -32,13 +32,13 @@
         {
           "id": "d1-act1",
           "titulo": "¿Qué vende más: texto o imagen?",
-          "duracionMin": 30,
+          "duracionMin": 15,
           "descripcion": "Ejemplos reales de impacto visual vs. textual en marketing.",
           "tipo": "teórico",
           "niveles": ["Muy básico", "", ""],
-          "enlaces": [],
-          "enlaces_de_respaldo": [],
-          "enlaces_videos": []
+          "enlaces": [{"texto": "Qué vende mas", "url": "https://www.optimizacion-online.com/texto-vs-imagenes-como-alcanzar-un-mayor-porcentaje-de-interaccion-en-redes-sociales/"}],
+          "enlaces_de_respaldo": [{"texto": "Respaldo: Qué vende mas", "url": "https://www.unir.net/revista/marketing-comunicacion/marketing-visual-ejemplos/"}],
+          "enlaces_videos": [{"texto": "Logos", "url": "https://www.youtube.com/shorts/USbXU9sHUso?feature=share"}]
         },
         {
           "id": "d1-act2",
@@ -238,7 +238,8 @@
           "enlaces_videos": []
         }
       ]
-    }
+    },
+    {"soporte": "soporte/KMP1.html"}
   ],
   "Semana2": [
     {
@@ -466,7 +467,8 @@
           "enlaces_videos": []
         }
       ]
-    }
+    },
+    {"soporte": "soporte/KMP2.html"}
   ],
   "metadata": {
     "fechaCreacion": "2026-02-19",

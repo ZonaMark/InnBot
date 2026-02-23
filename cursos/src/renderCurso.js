@@ -98,8 +98,13 @@ function renderTimeline(semanas) {
     const diasContainer = document.createElement("div");
     diasContainer.className = "semana-dias";
     
-    // Renderizar cada día de la semana
-    semana.dias.forEach((dia) => {
+    // Determinar si el último elemento es soporte
+    const ultimoElemento = semana.dias[semana.dias.length - 1];
+    const tieneSoporte = ultimoElemento && ultimoElemento.soporte;
+    const diasARenderizar = tieneSoporte ? semana.dias.slice(0, -1) : semana.dias;
+    
+    // Renderizar cada día de la semana (excluyendo el soporte)
+    diasARenderizar.forEach((dia) => {
       const diaCard = document.createElement("div");
       diaCard.className = "day-card";
       diaCard.dataset.dia = dia.dia;
@@ -133,6 +138,19 @@ function renderTimeline(semanas) {
     });
     
     semanaContainer.appendChild(diasContainer);
+    // ==== AGREGAR SOPORTE SI EXISTE ====
+    if (tieneSoporte) {
+      const soporteDiv = document.createElement("div");
+      soporteDiv.className = "soporte-semana";
+      soporteDiv.innerHTML = `
+        <a href="${ultimoElemento.soporte}" target="_blank" class="soporte-link">
+          📄 Soporte de la semana ${semana.indice}
+        </a>
+      `;
+      semanaContainer.appendChild(soporteDiv);
+    }
+    // ==== FIN SOPORTE ====
+    
     timelineContainer.appendChild(semanaContainer);
   });
 }
@@ -323,21 +341,21 @@ function renderPanelDia(dia, numSemana) {
         iniciarTemporizador(dia.juegoCierre.duracionMin);
       }
     });
+    // ==== BLOQUE DE ENCUESTA (último día REAL de última semana) ====
+    const semanas = obtenerSemanas(datosCursoGlobal);
+    const semanaActual = semanas.find(s => s.indice === numSemana);
+    const esUltimaSemana = numSemana === semanas.length;
 
-    
-const semanas = obtenerSemanas(datosCursoGlobal);
-const semanaActual = semanas.find(s => s.indice === numSemana);
-const esUltimaSemana = numSemana === semanas.length;
+    // Filtrar SOLO los elementos que tienen propiedad 'dia' (ignorar soporte)
+    const diasReales = semanaActual.dias.filter(d => d.hasOwnProperty('dia'));
+    const diasNumeros = diasReales.map(d => d.dia);
+    const ultimoDiaReal = Math.max(...diasNumeros);
 
-// Encontrar el número de día más alto en esta semana
-const diasEnSemana = semanaActual.dias.map(d => d.dia);
-const ultimoDiaReal = Math.max(...diasEnSemana);
-
-const esUltimoDia = esUltimaSemana && dia.dia === ultimoDiaReal;
+    const esUltimoDia = esUltimaSemana && dia.dia === ultimoDiaReal;
 
     if (esUltimoDia) {
       const encuestaURL = localStorage.getItem("cursoEncuesta");
-      console.error("Ecuesta: ", encuestaURL);
+      
       if (encuestaURL) {
         const encuestaCard = document.createElement("div");
         encuestaCard.className = "activity-card encuesta-card";
@@ -353,6 +371,7 @@ const esUltimoDia = esUltimaSemana && dia.dia === ultimoDiaReal;
         activitiesList.appendChild(encuestaCard);
       }
     }
+    // ==== FIN BLOQUE ENCUESTA ====
 }
 
 /**
@@ -410,8 +429,14 @@ function iniciarTemporizador(duracionMin) {
   const fill = document.querySelector(".slime-fill");
   const minSpan = document.getElementById("countdown-min");
   const secSpan = document.getElementById("countdown-sec");
+  const closeBtn = document.getElementById("close-slime-btn");
   
+  // Activar modo esquina
   overlay.classList.remove("hidden");
+  overlay.classList.add("temporizador-activo");
+  
+  // Ocultar botón de cerrar inicialmente
+  closeBtn.style.display = "none";
   
   let segundosTotales = duracionMin * 60;
   let segundosRestantes = segundosTotales;
@@ -419,27 +444,49 @@ function iniciarTemporizador(duracionMin) {
   const intervalo = setInterval(() => {
     segundosRestantes--;
     
-    if (segundosRestantes <= 0) {
-      clearInterval(intervalo);
-      overlay.classList.add("hidden");
-      return;
-    }
-    
     const minutos = Math.floor(segundosRestantes / 60);
     const segundos = segundosRestantes % 60;
     
     minSpan.textContent = minutos.toString().padStart(2, '0');
     secSpan.textContent = segundos.toString().padStart(2, '0');
     
-    // Actualizar barra de progreso
     const progreso = ((segundosTotales - segundosRestantes) / segundosTotales) * 100;
     fill.style.height = `${progreso}%`;
+    
+    // Cuando llegue a cero
+    if (segundosRestantes <= 0) {
+      clearInterval(intervalo);
+      
+      // Mostrar botón de cerrar
+      closeBtn.style.display = "block";
+      overlay.classList.add("temporizador-completado");
+      
+      // ===== CREAR MANTO OSCURO =====
+      const manto = document.createElement("div");
+      manto.className = "manto-bloqueo";
+      manto.id = "manto-temporizador";
+      document.body.appendChild(manto);
+      
+      // Opcional: impedir scroll
+      document.body.style.overflow = "hidden";
+    }
   }, 1000);
   
-  // Botón cerrar
-  document.getElementById("close-slime-btn").onclick = () => {
+  // Botón cerrar - AHORA TAMBIÉN ELIMINA EL MANTO
+  closeBtn.onclick = () => {
     clearInterval(intervalo);
     overlay.classList.add("hidden");
+    overlay.classList.remove("temporizador-activo", "temporizador-completado");
+    closeBtn.style.display = "none";
+    
+    // ===== ELIMINAR MANTO OSCURO =====
+    const manto = document.getElementById("manto-temporizador");
+    if (manto) {
+      manto.remove();
+    }
+    
+    // Restaurar scroll
+    document.body.style.overflow = "";
   };
 }
 
