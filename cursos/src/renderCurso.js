@@ -26,7 +26,7 @@ function limpiarPanelActividades() {
  * @param {Object} curso - Datos del curso
  */
 function renderHeader(curso) {
-  document.getElementById("curso-titulo").textContent = curso.titulo || "No se encontro El titulo dle Curso";
+  document.getElementById("curso-titulo").textContent = (localStorage.getItem("nombreAlumno") + " Estas en el curso: " + curso.titulo) || "No se encontro El titulo dle Curso";
   
   // Descripción con niveles
   const descripcion = document.getElementById("curso-descripcion");
@@ -512,7 +512,7 @@ function renderBienvenida(curso, semanas) {
       
       <div class="bienvenida-content">
         <div class="bienvenida-mensaje">
-          <p>👋 ¡Hola! Te damos la bienvenida a esta experiencia de aprendizaje.</p>
+          <p>👋 ¡Hola! <strong> ${localStorage.getItem("nombreAlumno")} </strong> Te damos la bienvenida a esta experiencia de aprendizaje.</p>
           <p>Este curso está diseñado para que aprendas mientras te diviertes, con actividades interactivas y retos por niveles.</p>
         </div>
         
@@ -548,7 +548,6 @@ function renderBienvenida(curso, semanas) {
       </div>
     </div>
   `;
-  
   // Mostrar el panel
   dayPanel.style.display = "block";
 }

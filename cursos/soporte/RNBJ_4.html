@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 4: <strong class="clase-nombre-alumno">Cargando...</strong> se convierte en experto · Proyecto Final</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #e0ecf5;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-semana {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,40,60,0.3);
+            overflow: hidden;
+            border: 1px solid #8fb9d4;
+        }
+        .cabecera {
+            background: linear-gradient(145deg, #1a4b6e, #022b41);
+            color: white;
+            padding: 28px 32px;
+        }
+        .cabecera h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .cabecera h1 span {
+            background: #f5b042;
+            color: #001f3f;
+            font-size: 1.2rem;
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-left: 16px;
+            vertical-align: middle;
+        }
+        .historia {
+            background: #ffeed5;
+            padding: 24px 32px;
+            border-left: 6px solid #f5b042;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #024d6e;
+            font-weight: 500;
+        }
+        .historia strong {
+            color: #b85e00;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            background: #144b64;
+            color: white;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .timeline-dia {
+            background: #1f6a8c;
+            padding: 8px 22px;
+            border-radius: 40px;
+        }
+        .cuerpo {
+            padding: 32px;
+        }
+        .bloque-dia {
+            background: #f9fdff;
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 2px solid #b7cde0;
+            box-shadow: 0 8px 0 #7fa3c2;
+        }
+        .titulo-dia {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003153;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .badge-dia {
+            background: #f5b042;
+            color: #001f3f;
+            padding: 8px 22px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .duracion-dia {
+            color: #1c6c9c;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            border-left: 3px solid #f5b042;
+            padding-left: 16px;
+            background: #def0ff;
+            border-radius: 0 30px 30px 0;
+            width: fit-content;
+            padding: 6px 24px 6px 16px;
+        }
+        .actividad {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 2px solid #d0deef;
+            box-shadow: 0 4px 0 #a9bed9;
+        }
+        .actividad:hover {
+            border-color: #f5b042;
+        }
+        .actividad-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .actividad-titulo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #003f5f;
+        }
+        .actividad-duracion {
+            background: #d2e6ff;
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #003f5f;
+        }
+        .niveles {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 8px 0 16px;
+        }
+        .nivel {
+            background: #e0e9f5;
+            color: #003f5f;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .tips-tono {
+            background: #fef6e6;
+            border-left: 5px solid #f5b042;
+            padding: 16px 22px;
+            border-radius: 20px;
+            margin: 20px 0 16px;
+            font-size: 1.05rem;
+        }
+        .pregunta-frecuente {
+            background: #edf4fa;
+            border-radius: 18px;
+            padding: 14px 20px;
+            margin: 16px 0 8px;
+            border: 1px solid #b9d0e7;
+            font-weight: 500;
+        }
+        .codigo-ejemplo {
+            background: #1e2b3a;
+            color: #b9f3ff;
+            padding: 18px;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 16px 0;
+            border: 2px solid #0f1a24;
+        }
+        .enlaces-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 16px 0 6px;
+        }
+        .enlace-item {
+            background: #e0eaff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #003f7f;
+            font-weight: 600;
+            border: 1px solid #90b0d0;
+        }
+        .materiales-semana {
+            background: #144b64;
+            color: white;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 40px 0 20px;
+        }
+        .materiales-semana h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5b042;
+        }
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            gap: 16px;
+        }
+        .checklist-item {
+            background: #1f6a8c;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .faq-semana {
+            background: #eef4fa;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        .faq-semana h3 {
+            font-size: 2rem;
+            color: #003f5f;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 16px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #b7cfec;
+        }
+        .faq-pregunta {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #002b46;
+        }
+        .rúbrica {
+            background: #e0f0fa;
+            border-radius: 24px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 2px solid #f5b042;
+        }
+        .rúbrica table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 16px;
+        }
+        .rúbrica th {
+            background: #003f5f;
+            color: white;
+            padding: 10px;
+        }
+        .rúbrica td {
+            border: 1px solid #b0cde0;
+            padding: 10px;
+            background: white;
+        }
+        .cierre-semana {
+            background: #dbeafe;
+            border-radius: 28px;
+            padding: 28px;
+            font-size: 1.2rem;
+            border: 3px solid #f5b042;
+            margin: 32px 0 16px;
+        }
+        .soporte-guia {
+            background: #d1dbe8;
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 32px;
+            border: 2px dashed #2c577c;
+            color: #001a33;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor-semana">
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <h1>Semana 4 · Potencia, Autonomía y Proyecto Final <span><strong class="clase-nombre-alumno">Cargando...</strong> se gradúa</span></h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">🔋 El gran final: alimentación con batería y estación de monitoreo autónoma</p>
+    </div>
+
+    <!-- HISTORIA DE <strong class="clase-nombre-alumno">Cargando...</strong> SEMANA 4 -->
+    <div class="historia">
+        <strong>🏆 <strong class="clase-nombre-alumno">Cargando...</strong>, esto es para ti:</strong> Has llegado a la última semana. Ya sabes controlar luces, leer sensores, comunicarte por I2C y mostrar datos en pantallas. Pero un robot de verdad tiene que ser <strong>autónomo</strong>, sin cables, sin depender de una computadora. Esta semana aprenderás a alimentar tus circuitos con baterías y luego construirás tu propia <strong>Estación de Monitoreo Autónoma</strong>, un proyecto que integra TODO lo aprendido. Cuando termines, podrás decir con orgullo: "Yo construí esto. Yo puedo trabajar con robots." Las fábricas de Juárez te están esperando. ¡Vamos, campeón, esta es tu semana!
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+        <span class="timeline-dia">📆 DÍA 10 · Transistores y reguladores</span>
+        <span class="timeline-dia">📆 DÍA 11 · Diseño y montaje del proyecto</span>
+        <span class="timeline-dia">📆 DÍA 12 · Finalización y presentación</span>
+    </div>
+
+    <div class="cuerpo">
+
+        <!-- ========== DÍA 10 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 10 · 2.5 hrs</span> Transistores y Reguladores (Potencia y Autonomía)
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 horas (receso incluido)</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: El transistor como interruptor</span><span class="actividad-duracion">25 min</span></div>
+                <div class="niveles"><span class="nivel">Electrónica</span><span class="nivel">Potencia</span></div>
+                <div>Un transistor (como el 2N2222) puede actuar como un interruptor controlado por el ESP32. Con una pequeña corriente en la base, puedes encender y apagar cargas más grandes (motores, LEDs de alta potencia, relés). Es como si el ESP32 pudiera mover cosas pesadas sin esfuerzo.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.falstad.com/circuit/e-transistor.html" target="_blank">⚡ Simulador transistor</a>
+                </div>
+                <div class="pregunta-frecuente">❓ ¿Por qué no conectar un motor directo al ESP32? Porque el motor consume mucha corriente y puede dañar el pin. El transistor protege al ESP32.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 15: Control de LED de potencia</span><span class="actividad-duracion">45 min</span></div>
+                <div>Vamos a controlar un LED de alta potencia (o varios LEDs) usando un transistor. Conexión: pin del ESP32 a base (con resistencia 1kΩ), colector a LED+, emisor a GND. El LED se conecta a una fuente externa (puede ser la batería).</div>
+                <div class="codigo-ejemplo">
+// Control de LED de potencia con transistor
+int transistorPin = 4; // pin conectado a la base
+
+void setup() {
+  pinMode(transistorPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(transistorPin, HIGH); // enciende LED
+  delay(2000);
+  digitalWrite(transistorPin, LOW);  // apaga LED
+  delay(2000);
+}
+                </div>
+                <div class="tips-tono">💡 Asegúrate de que la fuente externa comparta GND con el ESP32.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://wokwi.com/projects/321526010180349531" target="_blank">🌐 Simulación transistor</a>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Alimentación autónoma</span><span class="actividad-duracion">20 min</span></div>
+                <div>La batería de 7.4V es perfecta para proyectos portátiles. Pero el ESP32 necesita 5V (por el puerto USB) o 3.3V. Usaremos el módulo regulador <strong>mini560</strong> para convertir 7.4V a 5V estables. Así el ESP32 y los sensores funcionan sin problemas.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.robotics.org.za/MINI560" target="_blank">📄 Datasheet mini560</a>
+                </div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;">
+                <div class="actividad-header"><span class="actividad-titulo">☕ Receso activo</span><span class="actividad-duracion">15 min</span></div>
+                <div>Último receso antes del gran proyecto. Disfrútalo, <strong class="clase-nombre-alumno">Cargando...</strong>. Ya casi eres un experto.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 16: Sistema alimentado por batería</span><span class="actividad-duracion">40 min</span></div>
+                <div>Conecta el mini560 a la batería de 7.4V (entrada + y -). Ajusta el potenciómetro del mini560 con el multímetro hasta que la salida sea exactamente 5V. Luego alimenta el ESP32 desde la salida de 5V del regulador (pin VIN). Verifica que todo funcione sin USB.</div>
+                <div class="codigo-ejemplo">
+// Carga un programa que haga parpadear un LED (el integrado o externo)
+// Desconecta el USB y conecta la batería. ¡Debe parpadear solo!
+                </div>
+                <div class="tips-tono">💡 Si no funciona, revisa que el GND de la batería esté conectado al GND del ESP32. ¡Compartir tierra es obligatorio!</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.youtube.com/watch?v=K9Q7R8B9gHt" target="_blank">📺 Video: alimentar ESP32 con batería</a>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre y presentación del proyecto final</span><span class="actividad-duracion">5 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, mañana empieza tu gran desafío: la <strong>Estación de Monitoreo Autónoma</strong>. Repasa todo lo aprendido. ¡Tú puedes!</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 11 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia"><span class="badge-dia">DÍA 11 · 2.5 hrs</span> Proyecto Integrador - Diseño y Montaje</div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Presentación del Proyecto Final</span><span class="actividad-duracion">30 min</span></div>
+                <div class="rúbrica" style="margin-top:0;">
+                    <strong>🎯 "Estación de Monitoreo Autónoma"</strong>
+                    <p>Requerimientos funcionales:</p>
+                    <ul style="margin-left:20px;">
+                        <li>✅ Funciona con batería (sin USB) usando mini560</li>
+                        <li>✅ Mide temperatura y humedad (AHT20+BMP280)</li>
+                        <li>✅ Mide nivel de luz (LDR)</li>
+                        <li>✅ Muestra en OLED: temperatura, humedad y estado DÍA/NOCHE</li>
+                        <li>✅ Alerta con buzzer si temperatura > umbral O luz muy baja</li>
+                        <li>✅ Pulsador para silenciar alerta por 30 segundos</li>
+                        <li>✅ Código comentado y organizado</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Diseño y planificación</span><span class="actividad-duracion">30 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, saca papel y lápiz. Dibuja el diagrama de conexiones: qué pines usarás para cada componente. Lista todos los materiales. Organiza la protoboard. Piensa en el flujo del programa.</div>
+                <div class="tips-tono">💡 Usa pines claros: por ejemplo, SDA/SCL fijos, LDR en 34, PIR en 14, buzzer en 5, pulsador en 15, etc.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Montaje inicial</span><span class="actividad-duracion">30 min</span></div>
+                <div>Empieza a colocar los componentes en la protoboard siguiendo tu diseño. Conecta la alimentación del regulador, pero aún no conectes la batería. Verifica conexiones.</div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Programación inicial</span><span class="actividad-duracion">40 min</span></div>
+                <div>Escribe el código base. Programa y prueba cada componente por separado antes de integrar: primero el sensor AHT20, luego la LDR, luego la OLED, luego el buzzer, luego el pulsador.</div>
+                <div class="codigo-ejemplo">
+// Estructura sugerida (incompleta, tú la terminas)
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_AHTX0.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+
+Adafruit_AHTX0 aht;
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
+
+int ldrPin = 34;
+int pirPin = 14;
+int buzzer = 5;
+int boton = 15;
+
+void setup() {
+  Serial.begin(115200);
+  Wire.begin();
+  aht.begin();
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  pinMode(ldrPin, INPUT);
+  pinMode(pirPin, INPUT);
+  pinMode(buzzer, OUTPUT);
+  pinMode(boton, INPUT);
+}
+
+void loop() {
+  // Aquí irá la lógica completa
+}
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre y metas</span><span class="actividad-duracion">5 min</span></div>
+                <div>Mañana es el gran día. Termina de pulir tu código y conexiones. ¡El último esfuerzo!</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 12 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia"><span class="badge-dia">DÍA 12 · 2.5 hrs</span> Proyecto Integrador - Finalización y Evaluación</div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Trabajo en proyecto</span><span class="actividad-duracion">60 min</span></div>
+                <div>Última hora de trabajo. Ajustes finales, depuración de código, pruebas de integración. El instructor pasa ayudando individualmente.</div>
+                <div class="tips-tono">💡 Si algo no funciona, ve paso a paso: prueba cada sensor por separado con ejemplos simples.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Preparación de presentación</span><span class="actividad-duracion">15 min</span></div>
+                <div>Prepara una breve explicación: ¿qué hace tu proyecto? ¿cómo lo construiste? ¿qué dificultades tuviste? ¡Presume tu trabajo!</div>
+            </div>
+
+            <!-- RECESO + MONTAJE -->
+            <div class="actividad" style="background:#f9e2cf;">
+                <div class="actividad-header"><span class="actividad-titulo">☕ Receso / Montaje de estaciones</span><span class="actividad-duracion">15 min</span></div>
+                <div>Organiza tu estación para la presentación. Asegura que todo esté visible.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Evaluación Final: Presentaciones</span><span class="actividad-duracion">45 min</span></div>
+                <div>Cada equipo (o <strong class="clase-nombre-alumno">Cargando...</strong> solo) presenta su proyecto. Demostración en vivo con batería. El instructor evalúa con esta rúbrica:</div>
+                <div class="rúbrica">
+                    <table>
+                        <tr><th>Criterio</th><th>Excelente (25)</th><th>Bueno (20)</th><th>Regular (15)</th></tr>
+                        <tr><td>Sensores</td><td>Lecturas estables</td><td>Lecturas con ruido</td><td>Lecturas erráticas</td></tr>
+                        <tr><td>OLED</td><td>Datos claros y actualizados</td><td>Datos visibles</td><td>Datos incompletos</td></tr>
+                        <tr><td>Alertas</td><td>Funcionan y se silencian</td><td>Funcionan parcialmente</td><td>No funcionan</td></tr>
+                        <tr><td>Batería</td><td>Funciona sin USB</td><td>Se reinicia a veces</td><td>No funciona sin USB</td></tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Retroalimentación grupal</span><span class="actividad-duracion">10 min</span></div>
+                <div>El instructor da comentarios generales. <strong class="clase-nombre-alumno">Cargando...</strong>, escucha y siéntete orgulloso: has completado un curso que muy pocos terminan.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre del curso y entrega de constancias</span><span class="actividad-duracion">5 min</span></div>
+                <div>🎓 <strong><strong class="clase-nombre-alumno">Cargando...</strong>, esto es para ti:</strong> Has pasado de no saber nada a construir tu propio dispositivo autónomo. Ahora tienes habilidades reales que las fábricas necesitan. Sigue aprendiendo, el nivel intermedio te espera. ¡Lo lograste, campeón!</div>
+                <div class="tips-tono" style="background:#f5d0a0;">🏅 Constancia: "Por haber completado el curso de Robótica desde Cero con ESP32, demostrando competencias en electrónica, programación y prototipado autónomo."</div>
+            </div>
+        </div>
+
+        <!-- MATERIALES SEMANA 4 -->
+        <div class="materiales-semana">
+            <h3>📦 Materiales que usó <strong class="clase-nombre-alumno">Cargando...</strong> en la Semana 4</h3>
+            <div class="checklist">
+                <span class="checklist-item">✅ ESP32</span>
+                <span class="checklist-item">✅ Batería 7.4V</span>
+                <span class="checklist-item">✅ Módulo mini560</span>
+                <span class="checklist-item">✅ Transistor 2N2222</span>
+                <span class="checklist-item">✅ Sensor AHT20+BMP280</span>
+                <span class="checklist-item">✅ LDR + resistencia 10kΩ</span>
+                <span class="checklist-item">✅ PIR</span>
+                <span class="checklist-item">✅ Buzzer</span>
+                <span class="checklist-item">✅ Pulsador</span>
+                <span class="checklist-item">✅ OLED I2C</span>
+                <span class="checklist-item">✅ Protoboard, cables</span>
+                <span class="checklist-item">✅ Multímetro</span>
+            </div>
+        </div>
+
+        <!-- PREGUNTAS FRECUENTES SEMANA 4 -->
+        <div class="faq-semana">
+            <h3>❓ Preguntas que se hizo <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="faq-item"><span class="faq-pregunta">Mi proyecto no funciona con batería pero sí con USB</span> Revisa que el regulador entregue 5V estables y que la batería esté cargada. Mide el voltaje en VIN del ESP32.</div>
+            <div class="faq-item"><span class="faq-pregunta">El transistor no enciende el LED</span> Verifica la resistencia en base (1kΩ), la polaridad del LED y que el transistor esté bien conectado (colector/emisor).</div>
+            <div class="faq-item"><span class="faq-pregunta">Mi código es muy largo y no sé por dónde empezar</span> Divide y vencerás: prueba cada módulo por separado con ejemplos. Luego intégralos uno a uno.</div>
+        </div>
+
+        <!-- CIERRE MOTIVACIONAL FINAL -->
+        <div class="cierre-semana">
+            <strong>🌟 <strong class="clase-nombre-alumno">Cargando...</strong>, has completado el viaje.</strong> Desde un LED parpadeante hasta una estación autónoma. Las puertas de la tecnología están abiertas para ti. Esto no es un adiós, es un "hasta luego". El nivel intermedio te espera con conectividad WiFi, Bluetooth y proyectos aún más grandes. ¡Gracias por confiar en nosotros, campeón!
+        </div>
+
+        <!-- SOPORTE GUÍA -->
+        <div class="soporte-guia">
+            <h4 style="color:#001f3f; font-size:1.8rem; margin-bottom:12px;">🧭 Notas del guía (soporte)</h4>
+            <p><strong>Historia final:</strong> "<strong class="clase-nombre-alumno">Cargando...</strong>, hoy eres un técnico en robótica básica. Lo que has aprendido es exactamente lo que se usa en la industria: sensores, actuadores, lógica, alimentación autónoma."</p>
+            <p><strong>Para la evaluación:</strong> Sé generoso con la rúbrica pero honesto. El objetivo es que <strong class="clase-nombre-alumno">Cargando...</strong> se sienta capaz y motivado a seguir.</p>
+            <p><strong>Próximos pasos:</strong> Invítalo al Nivel Intermedio, donde aprenderá WiFi, Bluetooth, IoT y control remoto.</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../src/soporte.js" data-v="A"></script>
+</html>

@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 2: <strong class="clase-nombre-alumno">Cargando...</strong> siente el mundo · Robótica desde Cero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #e6eef7;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-semana {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,30,50,0.25);
+            overflow: hidden;
+            border: 1px solid #a0bedb;
+        }
+        .cabecera {
+            background: linear-gradient(145deg, #024d6e, #003153);
+            color: white;
+            padding: 28px 32px;
+        }
+        .cabecera h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .cabecera h1 span {
+            background: #f5b042;
+            color: #001f3f;
+            font-size: 1.2rem;
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-left: 16px;
+            vertical-align: middle;
+        }
+        .historia {
+            background: #fef4e0;
+            padding: 24px 32px;
+            border-left: 6px solid #f5b042;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #024d6e;
+            font-weight: 500;
+            box-shadow: inset 0 0 0 1px #ffeec2;
+        }
+        .historia strong {
+            color: #b64f00;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            background: #163a4f;
+            color: white;
+            padding: 16px 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .timeline-dia {
+            background: #225577;
+            padding: 8px 22px;
+            border-radius: 40px;
+            box-shadow: 0 4px 0 #0a2a3a;
+        }
+        .cuerpo {
+            padding: 32px;
+        }
+        .bloque-dia {
+            background: #f8fcff;
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 2px solid #b8cde0;
+            box-shadow: 0 8px 0 #8faec9;
+        }
+        .titulo-dia {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003153;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .badge-dia {
+            background: #f5b042;
+            color: #001f3f;
+            padding: 8px 22px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .duracion-dia {
+            color: #1c6c9c;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            border-left: 3px solid #f5b042;
+            padding-left: 16px;
+            background: #e0eefa;
+            border-radius: 0 30px 30px 0;
+            width: fit-content;
+            padding: 6px 24px 6px 16px;
+        }
+        .actividad {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 2px solid #d5e0ec;
+            box-shadow: 0 4px 0 #b0c4db;
+            transition: 0.1s ease;
+        }
+        .actividad:hover {
+            border-color: #f5b042;
+        }
+        .actividad-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .actividad-titulo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #003f5f;
+        }
+        .actividad-duracion {
+            background: #d2e6ff;
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #003f5f;
+        }
+        .niveles {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 8px 0 16px;
+        }
+        .nivel {
+            background: #e0e9f5;
+            color: #003f5f;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #9ab0cc;
+        }
+        .tips-toño {
+            background: #fef6e6;
+            border-left: 5px solid #f5b042;
+            padding: 16px 22px;
+            border-radius: 20px;
+            margin: 20px 0 16px;
+            font-size: 1.05rem;
+        }
+        .pregunta-frecuente {
+            background: #edf4fa;
+            border-radius: 18px;
+            padding: 14px 20px;
+            margin: 16px 0 8px;
+            border: 1px solid #b9d0e7;
+            font-weight: 500;
+        }
+        .codigo-ejemplo {
+            background: #1e2b3a;
+            color: #b9f3ff;
+            padding: 18px;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 16px 0;
+            border: 2px solid #0f1a24;
+        }
+        .enlaces-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 16px 0 6px;
+        }
+        .enlace-item {
+            background: #e0eaff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #003f7f;
+            font-weight: 600;
+            border: 1px solid #90b0d0;
+        }
+        .materiales-semana {
+            background: #163a4f;
+            color: white;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 40px 0 20px;
+        }
+        .materiales-semana h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5b042;
+        }
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            gap: 16px;
+        }
+        .checklist-item {
+            background: #225577;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            border: 1px solid #5f8cb0;
+        }
+        .faq-semana {
+            background: #eef4fa;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        .faq-semana h3 {
+            font-size: 2rem;
+            color: #003f5f;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 16px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #b7cfec;
+        }
+        .faq-pregunta {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #002b46;
+        }
+        .cierre-semana {
+            background: #dbeafe;
+            border-radius: 28px;
+            padding: 28px;
+            font-size: 1.2rem;
+            border: 3px solid #f5b042;
+            margin: 32px 0 16px;
+        }
+        .soporte-guia {
+            background: #d1dbe8;
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 32px;
+            border: 2px dashed #2c577c;
+            color: #001a33;
+        }
+        hr {
+            border: 2px solid #b0c7e0;
+            margin: 32px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor-semana">
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <h1>Semana 2 · Sensores y toma de decisiones <span><strong class="clase-nombre-alumno">Cargando...</strong> siente el mundo</span></h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">🖐️ De solo prender luces, ahora <strong class="clase-nombre-alumno">Cargando...</strong> escucha la luz, el movimiento y los botones</p>
+    </div>
+
+    <!-- HISTORIA DE TOÑO SEMANA 2 -->
+    <div class="historia">
+        <strong>🎯 <strong class="clase-nombre-alumno">Cargando...</strong>, esto es para ti:</strong> Ya sabes encender LEDs y hacer sonidos. Pero un robot no solo actúa, también <em>siente</em>. Esta semana vas a conectar sus sentidos: un ojo que ve la luz (LDR), un oído que detecta movimiento (PIR) y un dedo que presiona botones. Imagina que estás programando el cerebro de una máquina que reacciona al mundo. En las fábricas de Juárez, así es como empieza la automatización. ¿Listo para sentir como robot? ¡Vamos!
+    </div>
+
+    <!-- TIMELINE RÁPIDA -->
+    <div class="timeline">
+        <span class="timeline-dia">📆 DÍA 4 · Entradas digitales (pulsador)</span>
+        <span class="timeline-dia">📆 DÍA 5 · Analógicas: LDR y potenciómetro</span>
+        <span class="timeline-dia">📆 DÍA 6 · PIR y proyecto mitad de curso</span>
+    </div>
+
+    <div class="cuerpo">
+        <!-- ========== DÍA 4 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 4 · 2.5 hrs</span> Leyendo el mundo (Entradas Digitales)
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 horas (receso de 15 min incluido)</div>
+
+            <!-- Actividad 1 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Bienvenida Semana 2</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Organización</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, la semana pasada encendiste luces. Ahora vas a leer botones y sensores. Vas a ver que el robot puede responder a ti.</div>
+            </div>
+
+            <!-- Actividad 2 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Teoría: Entradas digitales</span>
+                    <span class="actividad-duracion">20 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Electrónica</span><span class="nivel">Programación</span></div>
+                <div>Un pin digital puede ser ENTRADA. Leerás HIGH (1) o LOW (0). Con un pulsador, conectamos una resistencia pull-down para que cuando no se presione, el pin lea LOW (0).</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.tinkercad.com/things/..." target="_blank">🔧 Simular en Tinkercad</a>
+                </div>
+                <div class="pregunta-frecuente">❓ ¿Qué es pull-down? Una resistencia que asegura que el pin esté en 0V cuando el botón está abierto.</div>
+            </div>
+
+            <!-- Actividad 3 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Práctica 6: Pulsador y LED</span>
+                    <span class="actividad-duracion">55 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Programación</span><span class="nivel">Electrónica</span></div>
+                <div>Conecta un pulsador al pin 15 (con resistencia pull-down de 10kΩ) y un LED al pin 4. Programa: mientras presiones el botón, el LED se enciende.</div>
+                <div class="codigo-ejemplo">
+int boton = 15;
+int led = 4;
+
+void setup() {
+  pinMode(boton, INPUT);
+  pinMode(led, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  int estado = digitalRead(boton);
+  Serial.println(estado);
+  if (estado == HIGH) {
+    digitalWrite(led, HIGH);
+  } else {
+    digitalWrite(led, LOW);
+  }
+}
+                </div>
+                <div class="tips-toño">💡 TIP: Abre el Monitor Serie (115200 baudios) y verás los 1s y 0s cuando presionas.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://wokwi.com/projects/321043234567890" target="_blank">🌐 Wokwi simulación</a>
+                </div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background: #f9e2cf;">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">☕ Receso activo</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div>Descansa 15 minutos, <strong class="clase-nombre-alumno">Cargando...</strong>. Tus neuronas también necesitan su pausa.</div>
+            </div>
+
+            <!-- Actividad 4 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Experimentación: Variaciones con pulsador</span>
+                    <span class="actividad-duracion">30 min</span>
+                </div>
+                <div>Ahora haz que el LED se encienda y apague con cada pulsación (modo toggle). Pista: necesitas recordar el estado anterior. Y cuenta cuántas veces presionas, muéstralo en el Monitor Serie.</div>
+                <div class="codigo-ejemplo">
+// Ejemplo de toggle (estructura básica)
+int estadoBoton;
+int ledEncendido = false;
+int ultimoEstado = LOW;
+
+void loop() {
+  estadoBoton = digitalRead(boton);
+  if (estadoBoton == HIGH && ultimoEstado == LOW) {
+    ledEncendido = !ledEncendido;
+    digitalWrite(led, ledEncendido);
+    delay(50); // antirrebote simple
+  }
+  ultimoEstado = estadoBoton;
+}
+                </div>
+            </div>
+
+            <!-- Actividad 5 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Uso del Monitor Serie</span>
+                    <span class="actividad-duracion">10 min</span>
+                </div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, el Monitor Serie es tu ventana al cerebro del ESP32. Ahí puedes ver lo que el robot "piensa". Úsalo siempre para depurar.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.youtube.com/watch?v=5r3n8LzTNfE" target="_blank">📺 Video: Monitor Serie</a>
+                </div>
+            </div>
+
+            <!-- Actividad 6 Cierre -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Cierre y tarea</span>
+                    <span class="actividad-duracion">5 min</span>
+                </div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, investiga: ¿qué es una señal analógica? Mañana usaremos LDR y potenciómetro.</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 5 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 5 · 2.5 hrs</span> Entradas Analógicas (LDR y Potenciómetro)
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Repaso y tarea</span><span class="actividad-duracion">15 min</span></div>
+                <div>¿Qué encontraste sobre señal analógica? En la naturaleza, casi todo es analógico: la luz, la temperatura, la posición de una perilla.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Entradas analógicas (ADC)</span><span class="actividad-duracion">20 min</span></div>
+                <div>El ESP32 lee voltajes entre 0 y 3.3V y los convierte a un número entre 0 y 4095. Eso es un ADC (Convertidor Analógico-Digital).</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.falstad.com/circuit/e-adc.html" target="_blank">⚡ Simulador ADC</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 7: LDR (Luz Nocturna)</span><span class="actividad-duracion">40 min</span></div>
+                <div>Conecta LDR con un divisor de tensión (LDR + resistencia 10kΩ) al pin 34. Programa: si el valor es menor a 2000 (oscuridad), enciende un LED.</div>
+                <div class="codigo-ejemplo">
+int ldrPin = 34;
+int led = 4;
+int valor;
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(led, OUTPUT);
+}
+
+void loop() {
+  valor = analogRead(ldrPin);
+  Serial.println(valor);
+  if (valor < 2000) {
+    digitalWrite(led, HIGH);  // oscuro -> enciende
+  } else {
+    digitalWrite(led, LOW);
+  }
+  delay(500);
+}
+                </div>
+                <div class="tips-toño">💡 TIP: Ajusta el umbral 2000 según tu luz ambiente. Cúbrelo con la mano para probar.</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://wokwi.com/projects/321525789180349525" target="_blank">🌐 Simulación LDR</a></div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 8: Potenciómetro (control de brillo)</span><span class="actividad-duracion">35 min</span></div>
+                <div>Conecta potenciómetro: patas extremas a 3.3V y GND, la central al pin 35. Usa `analogRead` y convierte a PWM con `map` para controlar brillo de un LED.</div>
+                <div class="codigo-ejemplo">
+int potPin = 35;
+int ledPin = 4;
+int potValor, brillo;
+
+void loop() {
+  potValor = analogRead(potPin);
+  brillo = map(potValor, 0, 4095, 0, 255);
+  analogWrite(ledPin, brillo);
+  delay(50);
+}
+                </div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.youtube.com/watch?v=MfgHqK1OxFk" target="_blank">📺 Video potenciómetro</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre</span><span class="actividad-duracion">10 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, ya sabes leer el mundo analógico. Mañana viene lo más emocionante: detectar movimiento con PIR y tu primer proyecto integrador.</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 6 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 6 · 2.5 hrs</span> Sensor PIR y Evaluación de Mitad de Curso
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Sensor PIR</span><span class="actividad-duracion">20 min</span></div>
+                <div>PIR detecta movimiento por infrarrojos. Tiene tres pines: VCC (5V), GND, y señal (OUT). Al detectar movimiento, la señal se pone HIGH.</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor" target="_blank">📘 Guía PIR</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 9: Alarma de movimiento</span><span class="actividad-duracion">40 min</span></div>
+                <div>Conecta PIR al pin 14, LED al 4 y buzzer al 5. Programa: cuando el PIR detecte movimiento, enciende LED y activa buzzer 2 segundos.</div>
+                <div class="codigo-ejemplo">
+int pirPin = 14;
+int led = 4;
+int buzzer = 5;
+
+void setup() {
+  pinMode(pirPin, INPUT);
+  pinMode(led, OUTPUT);
+  pinMode(buzzer, OUTPUT);
+  Serial.begin(115200);
+}
+
+void loop() {
+  if (digitalRead(pirPin) == HIGH) {
+    Serial.println("Movimiento detectado");
+    digitalWrite(led, HIGH);
+    tone(buzzer, 1000, 2000);
+    delay(2000);
+    digitalWrite(led, LOW);
+  }
+}
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Integración: PIR + LDR</span><span class="actividad-duracion">30 min</span></div>
+                <div>Desafío: la alarma solo debe activarse si es de noche (LDR detecta oscuridad). Combina la lógica de ambos sensores.</div>
+                <div class="codigo-ejemplo">
+// Pista: if (digitalRead(pirPin) == HIGH && analogRead(ldrPin) < 2000) { ... }
+                </div>
+                <div class="tips-toño">💡 Piensa: ¿cómo harías para que el sistema se active solo de noche?</div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Evaluación Parcial: Proyecto "Habitación Inteligente"</span><span class="actividad-duracion">40 min</span></div>
+                <div><strong><strong class="clase-nombre-alumno">Cargando...</strong>, este es tu reto:</strong> Construye un sistema que:
+                <ul style="margin-top:10px; margin-left:20px;">
+                    <li>Encienda un LED si el PIR detecta movimiento Y la LDR detecta oscuridad (noche).</li>
+                    <li>Muestre en el Monitor Serie el estado de ambos sensores.</li>
+                    <li>Use un pulsador para activar/desactivar todo el sistema (enable/disable).</li>
+                </ul>
+                </div>
+                <div class="pregunta-frecuente">❓ ¿Atorado? Revisa conexiones y que el pulsador tenga pull-down.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre Semana 2</span><span class="actividad-duracion">5 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, ya tienes mitad de curso. Ahora tus robots pueden sentir y reaccionar. La siguiente semana: comunicación I2C y pantallas. ¡Grande, campeón!</div>
+            </div>
+        </div>
+
+        <!-- MATERIALES SEMANA 2 -->
+        <div class="materiales-semana">
+            <h3>📦 Materiales que usó <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="checklist">
+                <span class="checklist-item">✅ ESP32</span>
+                <span class="checklist-item">✅ Protoboard</span>
+                <span class="checklist-item">✅ Pulsador</span>
+                <span class="checklist-item">✅ Resistencia 10kΩ</span>
+                <span class="checklist-item">✅ LEDs</span>
+                <span class="checklist-item">✅ LDR</span>
+                <span class="checklist-item">✅ Potenciómetro</span>
+                <span class="checklist-item">✅ Sensor PIR</span>
+                <span class="checklist-item">✅ Buzzer</span>
+                <span class="checklist-item">✅ Multímetro</span>
+            </div>
+        </div>
+
+        <!-- PREGUNTAS FRECUENTES SEMANA 2 -->
+        <div class="faq-semana">
+            <h3>❓ Preguntas que se hizo <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="faq-item"><span class="faq-pregunta">¿Por qué mi botón no funciona bien?</span> Probablemente falta resistencia pull-down o el código no maneja rebotes. Revisa conexiones y agrega un pequeño delay.</div>
+            <div class="faq-item"><span class="faq-pregunta">Mi LDR siempre da valores extremos</span> Revisa el divisor de tensión. Usa resistencias de 10kΩ. Conecta bien los cables.</div>
+            <div class="faq-item"><span class="faq-pregunta">El PIR se activa solo todo el tiempo</span> Ajusta los potenciómetros del sensor (sensibilidad y tiempo). Aléjalo de corrientes de aire.</div>
+        </div>
+
+        <!-- CIERRE MOTIVACIONAL -->
+        <div class="cierre-semana">
+            <strong>🎯 <strong class="clase-nombre-alumno">Cargando...</strong>, Semana 2 completada.</strong> Ya puedes sentir el mundo como un robot: luz, movimiento, botones. La siguiente semana te convertirás en un experto en comunicación I2C y mostrarás datos en pantallas. ¡Te espero en la Semana 3, campeón!
+        </div>
+
+        <!-- SOPORTE GUÍA -->
+        <div class="soporte-guia">
+            <h4 style="color:#001f3f; font-size:1.8rem; margin-bottom:12px;">🧭 Notas del guía (soporte)</h4>
+            <p><strong>Historia para mantener:</strong> "<strong class="clase-nombre-alumno">Cargando...</strong>, en una fábrica automatizada, los sensores como el PIR detectan presencia, los LDR controlan luces, los botones son interfaces. Estás aprendiendo justo lo que se usa en la industria."</p>
+            <p><strong>Posibles dificultades:</strong> El antirrebote del pulsador puede ser tricky. Explica que los botones mecánicos rebotan y causan múltiples lecturas. Un pequeño delay o una librería resuelve.</p>
+            <p><strong>Para el proyecto parcial:</strong> Guía a <strong class="clase-nombre-alumno">Cargando...</strong> a dividir el problema: primero probar cada sensor por separado, luego combinarlos.</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../src/soporte.js" data-v="A"></script>
+</html>

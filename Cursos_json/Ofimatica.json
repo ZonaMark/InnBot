@@ -1,8 +1,8 @@
 {
   "curso": {
     "id": "OFFICE-INTER-TECHNOVA",
-    "titulo": "Certificación Práctica: Office TechNova (Excel y Word)",
-    "descripcion": "Curso 100% práctico basado en el estándar EC0366. Gestión de empresa ficticia TechNova de cero a intermedio.",
+    "titulo": "OFIMATICA: Office(Excel y Word)",
+    "descripcion": "Curso 100% práctico basado en el estándar EC0366. Gestión de empresa ficticia de cero a intermedio.",
     "edad": "Jóvenes y adultos",
     "Objetivo": "Al finalizar el curso, el participante operará de manera integral las herramientas de Excel y Word para la gestión de datos administrativos y comunicación corporativa, cumpliendo con los estándares de desempeño del EC0366.",
     "Objetivo1": "Dominar 14 funciones de Excel y tablas dinámicas para el análisis de ventas.",
@@ -12,7 +12,7 @@
     "version": "1.1",
     "constancia": {
       "titulo": "Constancia de participación",
-      "texto": "Por haber completado el proyecto integrador de gestión administrativa TechNova."
+      "texto": "Por haber completado el proyecto integrador de gestión administrativa."
     }
   },
   "configuracion": {

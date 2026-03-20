@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 3: <strong class="clase-nombre-alumno">Cargando...</strong> domina I2C y las pantallas · Robótica desde Cero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #e3f0f5;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-semana {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,40,60,0.25);
+            overflow: hidden;
+            border: 1px solid #9bc2d9;
+        }
+        .cabecera {
+            background: linear-gradient(145deg, #0d4b6e, #012b44);
+            color: white;
+            padding: 28px 32px;
+        }
+        .cabecera h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .cabecera h1 span {
+            background: #f5b042;
+            color: #001f3f;
+            font-size: 1.2rem;
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-left: 16px;
+            vertical-align: middle;
+        }
+        .historia {
+            background: #fff1d7;
+            padding: 24px 32px;
+            border-left: 6px solid #f5b042;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #024d6e;
+            font-weight: 500;
+        }
+        .historia strong {
+            color: #b64f00;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            background: #124257;
+            color: white;
+            padding: 16px 24px;
+            font-weight: 600;
+        }
+        .timeline-dia {
+            background: #1e6182;
+            padding: 8px 22px;
+            border-radius: 40px;
+        }
+        .cuerpo {
+            padding: 32px;
+        }
+        .bloque-dia {
+            background: #f9fdff;
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 2px solid #b7d0e3;
+            box-shadow: 0 8px 0 #87abc9;
+        }
+        .titulo-dia {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #003153;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+        .badge-dia {
+            background: #f5b042;
+            color: #001f3f;
+            padding: 8px 22px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .duracion-dia {
+            color: #1c6c9c;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            border-left: 3px solid #f5b042;
+            padding-left: 16px;
+            background: #def0ff;
+            border-radius: 0 30px 30px 0;
+            width: fit-content;
+            padding: 6px 24px 6px 16px;
+        }
+        .actividad {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 2px solid #d0deef;
+            box-shadow: 0 4px 0 #a9bed9;
+        }
+        .actividad:hover {
+            border-color: #f5b042;
+        }
+        .actividad-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .actividad-titulo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #003f5f;
+        }
+        .actividad-duracion {
+            background: #d2e6ff;
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #003f5f;
+        }
+        .niveles {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 8px 0 16px;
+        }
+        .nivel {
+            background: #e0e9f5;
+            color: #003f5f;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .tips-tono {
+            background: #fef6e6;
+            border-left: 5px solid #f5b042;
+            padding: 16px 22px;
+            border-radius: 20px;
+            margin: 20px 0 16px;
+            font-size: 1.05rem;
+        }
+        .pregunta-frecuente {
+            background: #edf4fa;
+            border-radius: 18px;
+            padding: 14px 20px;
+            margin: 16px 0 8px;
+            border: 1px solid #b9d0e7;
+            font-weight: 500;
+        }
+        .codigo-ejemplo {
+            background: #1e2b3a;
+            color: #b9f3ff;
+            padding: 18px;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 16px 0;
+            border: 2px solid #0f1a24;
+        }
+        .enlaces-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 16px 0 6px;
+        }
+        .enlace-item {
+            background: #e0eaff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #003f7f;
+            font-weight: 600;
+            border: 1px solid #90b0d0;
+        }
+        .materiales-semana {
+            background: #124257;
+            color: white;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 40px 0 20px;
+        }
+        .materiales-semana h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5b042;
+        }
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            gap: 16px;
+        }
+        .checklist-item {
+            background: #1e6182;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+        .faq-semana {
+            background: #eef4fa;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        .faq-semana h3 {
+            font-size: 2rem;
+            color: #003f5f;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 16px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #b7cfec;
+        }
+        .faq-pregunta {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #002b46;
+        }
+        .cierre-semana {
+            background: #dbeafe;
+            border-radius: 28px;
+            padding: 28px;
+            font-size: 1.2rem;
+            border: 3px solid #f5b042;
+            margin: 32px 0 16px;
+        }
+        .soporte-guia {
+            background: #d1dbe8;
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 32px;
+            border: 2px dashed #2c577c;
+            color: #001a33;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor-semana">
+    <!-- CABECERA -->
+    <div class="cabecera">
+        <h1>Semana 3 · Comunicación I2C y Visualización <span><strong class="clase-nombre-alumno">Cargando...</strong> muestra datos</span></h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">📟 El robot ya siente, ahora también te habla con números y letras</p>
+    </div>
+
+    <!-- HISTORIA DE SEMANA 3 -->
+    <div class="historia">
+        <strong>🚀 <strong class="clase-nombre-alumno">Cargando...</strong>, esto es para ti:</strong> Ya sabes hacer que el robot sienta luz, movimiento y botones. Pero un robot de verdad necesita <strong>comunicarse</strong> contigo. Esta semana vas a descubrir el protocolo I2C: con solo dos cables, conectarás sensores inteligentes (temperatura, humedad, presión) y les pedirás datos. Además, vas a mostrar esos datos en displays de 7 segmentos y pantallas OLED. Imagina en la fábrica: máquinas que te dicen su temperatura, contadores que ves a simple vista. ¡Vamos a ello, campeón!
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="timeline">
+        <span class="timeline-dia">📆 DÍA 7 · I2C y sensor AHT20+BMP280</span>
+        <span class="timeline-dia">📆 DÍA 8 · Display 7 segmentos</span>
+        <span class="timeline-dia">📆 DÍA 9 · Pantalla OLED I2C</span>
+    </div>
+
+    <div class="cuerpo">
+
+        <!-- ========== DÍA 7 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 7 · 2.5 hrs</span> Introducción a I2C y Sensor AHT20+BMP280
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 horas (receso incluido)</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Protocolo I2C</span><span class="actividad-duracion">20 min</span></div>
+                <div class="niveles"><span class="nivel">Comunicación</span><span class="nivel">Protocolos</span></div>
+                <div>I2C usa solo dos cables: SDA (datos) y SCL (reloj). Cada dispositivo tiene una dirección única. Con estos dos cables puedes conectar muchos sensores. Es como el bus de la ciudad: muchos pasajeros, una sola ruta.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.falstad.com/circuit/e-i2c.html" target="_blank">⚡ Simulador I2C</a>
+                </div>
+                <div class="tips-tono">💡 El ESP32 tiene pines I2C por defecto: SDA GPIO21, SCL GPIO22.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Presentación del sensor AHT20+BMP280</span><span class="actividad-duracion">20 min</span></div>
+                <div>Este pequeño sensor te da temperatura, humedad y presión. Usa I2C. Solo 4 pines: VCC, GND, SDA, SCL. <strong class="clase-nombre-alumno">Cargando...</strong>, es como tener una estación meteorológica en miniatura.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://cdn-shop.adafruit.com/product-files/4566/4566_datasheet.pdf" target="_blank">📄 Datasheet</a>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 10: Conexión y primera lectura</span><span class="actividad-duracion">50 min</span></div>
+                <div>Conecta AHT20+BMP280 al ESP32: VCC a 3.3V, GND a GND, SDA a GPIO21, SCL a GPIO22. Instala las librerías <strong>Adafruit AHTX0</strong> y <strong>Adafruit BMP280</strong> desde el gestor de librerías.</div>
+                <div class="codigo-ejemplo">
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_AHTX0.h&gt;
+#include &lt;Adafruit_BMP280.h&gt;
+
+Adafruit_AHTX0 aht;
+Adafruit_BMP280 bmp;
+
+void setup() {
+  Serial.begin(115200);
+  Wire.begin();
+  if (!aht.begin()) Serial.println("Error AHT20");
+  if (!bmp.begin()) Serial.println("Error BMP280");
+}
+
+void loop() {
+  sensors_event_t humidity, temp;
+  aht.getEvent(&humidity, &temp);
+  Serial.print("Temp: "); Serial.print(temp.temperature);
+  Serial.print(" °C, Hum: "); Serial.print(humidity.relative_humidity);
+  Serial.print(" %, Pres: "); Serial.println(bmp.readPressure() / 100.0F);
+  delay(2000);
+}
+                </div>
+                <div class="pregunta-frecuente">❓ ¿No encuentra el sensor? Revisa cables, dirección I2C, y que las librerías estén instaladas.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://wokwi.com/projects/321525890180349529" target="_blank">🌐 Simulación Wokwi</a>
+                </div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;">
+                <div class="actividad-header"><span class="actividad-titulo">☕ Receso activo</span><span class="actividad-duracion">15 min</span></div>
+                <div>Respira hondo, <strong class="clase-nombre-alumno">Cargando...</strong>. Ya casi dominas I2C. Tu robot ahora puede saber si hace calor o frío.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Experimentación: Calibración y límites</span><span class="actividad-duracion">30 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, prueba a calentar el sensor con los dedos, o sopla para aumentar la humedad. Observa cómo cambian los números en el Monitor Serie. Esto es un robot meteorólogo.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Registro de datos</span><span class="actividad-duracion">15 min</span></div>
+                <div>Modifica el código para que muestre las lecturas cada 5 segundos con etiquetas claras. Ejemplo: "Temperatura: 25.3°C".</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 8 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia"><span class="badge-dia">DÍA 8 · 2.5 hrs</span> Display de 7 Segmentos</div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Display de 7 segmentos</span><span class="actividad-duracion">20 min</span></div>
+                <div>Un display de 7 segmentos tiene 8 LEDs (7 para el número, 1 para el punto). Puede ser de cátodo común (todos los negativos juntos) o ánodo común. Para encender un número, debes prender la combinación correcta de segmentos.</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.falstad.com/circuit/e-7segment.html" target="_blank">⚡ Simulador 7 segmentos</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 11: Conexión y prueba individual</span><span class="actividad-duracion">55 min</span></div>
+                <div>Conecta cada segmento (a, b, c, d, e, f, g) a pines del ESP32 con resistencias de 220Ω. Programa para encender cada segmento uno por uno y entender cuál es cuál.</div>
+                <div class="codigo-ejemplo">
+// Ejemplo para cátodo común (enciende con HIGH)
+int segA = 13, segB = 12, segC = 14, segD = 27, segE = 26, segF = 25, segG = 33;
+
+void setup() {
+  pinMode(segA, OUTPUT); pinMode(segB, OUTPUT); // ... todos
+}
+
+void loop() {
+  digitalWrite(segA, HIGH); delay(500); digitalWrite(segA, LOW); delay(500);
+  digitalWrite(segB, HIGH); delay(500); digitalWrite(segB, LOW); delay(500);
+  // ... y así con todos
+}
+                </div>
+                <div class="tips-tono">💡 Para ánodo común, enciendes con LOW. Revisa la hoja de datos de tu display.</div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Librería para display</span><span class="actividad-duracion">15 min</span></div>
+                <div>Para simplificar, usa la librería <strong>SevSeg</strong>. Instálala desde el gestor de librerías. Esta librería maneja la multiplexación por ti.</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://github.com/DeanIsMe/SevSeg" target="_blank">📚 GitHub SevSeg</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 12: Contador con display</span><span class="actividad-duracion">40 min</span></div>
+                <div>Usando SevSeg, programa un contador de 0 a 9 que se incremente cada segundo y se muestre en el display.</div>
+                <div class="codigo-ejemplo">
+#include "SevSeg.h"
+SevSeg sevseg;
+
+void setup() {
+  byte numDigits = 1;
+  byte digitPins[] = {}; // sin digitos múltiples
+  byte segmentPins[] = {13,12,14,27,26,25,33}; // orden: a,b,c,d,e,f,g
+  bool resistorsOnSegments = true;
+  bool updateWithDelays = false;
+  byte hardwareConfig = COMMON_CATHODE; // o COMMON_ANODE
+  sevseg.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
+  sevseg.setBrightness(90);
+}
+
+int contador = 0;
+void loop() {
+  sevseg.setNumber(contador, 0);
+  sevseg.refreshDisplay();
+  contador++;
+  if (contador > 9) contador = 0;
+  delay(1000);
+}
+                </div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.youtube.com/watch?v=1Np3x7b8rKU" target="_blank">📺 Video contador</a></div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 9 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia"><span class="badge-dia">DÍA 9 · 2.5 hrs</span> Pantalla OLED I2C</div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Repaso y tarea</span><span class="actividad-duracion">15 min</span></div>
+                <div>¿Qué ventajas tiene una pantalla OLED sobre un display de 7 segmentos? Puede mostrar texto, gráficos, números grandes, todo en una pantallita de bajo consumo.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: Pantallas OLED</span><span class="actividad-duracion">20 min</span></div>
+                <div>Usan I2C (mismo SDA/SCL). Resolución común: 128x32 o 128x64. Dirección típica 0x3C. Con librerías de Adafruit dibujarás texto y figuras fácilmente.</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://randomnerdtutorials.com/esp32-oled-display-ssd1306/" target="_blank">📘 Guía OLED</a></div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 13: Hola Mundo en OLED</span><span class="actividad-duracion">55 min</span></div>
+                <div>Conecta OLED: VCC a 3.3V, GND, SDA a GPIO21, SCL a GPIO22. Instala librerías <strong>Adafruit SSD1306</strong> y <strong>Adafruit GFX</strong>.</div>
+                <div class="codigo-ejemplo">
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, -1);
+
+void setup() {
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println("No se encuentra OLED");
+    while(1);
+  }
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+  display.setCursor(10, 20);
+  display.println("Hola Bienvenido!");
+  display.display();
+}
+
+void loop() {}
+                </div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://wokwi.com/projects/321525950180349530" target="_blank">🌐 Simulación OLED</a></div>
+            </div>
+
+            <!-- RECESO -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 14: Datos dinámicos en OLED</span><span class="actividad-duracion">35 min</span></div>
+                <div>Combina el potenciómetro (o el sensor AHT20) y muestra su valor en la OLED en tiempo real. Cada medio segundo se actualiza.</div>
+                <div class="codigo-ejemplo">
+#include &lt;Wire.h&gt;
+#include &lt;Adafruit_SSD1306.h&gt;
+#include &lt;Adafruit_GFX.h&gt;
+
+Adafruit_SSD1306 display(128, 64, &Wire, -1);
+int potPin = 35;
+
+void setup() {
+  display.begin(SSD1306_SWITCHCAPVCC, 0x3C);
+  display.clearDisplay();
+  display.setTextSize(2);
+  display.setTextColor(WHITE);
+}
+
+void loop() {
+  int valor = analogRead(potPin);
+  display.clearDisplay();
+  display.setCursor(10, 20);
+  display.print("Valor:");
+  display.println(valor);
+  display.display();
+  delay(500);
+}
+                </div>
+                <div class="tips-tono">💡 Puedes mostrar también temperatura si conectas el sensor AHT20.</div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre de semana</span><span class="actividad-duracion">10 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, ya dominas I2C, displays y sensores digitales. La siguiente semana es la GRAN FINAL: alimentación autónoma con batería y el proyecto integrador donde unirás TODO. ¡Prepárate!</div>
+            </div>
+        </div>
+
+        <!-- MATERIALES SEMANA 3 -->
+        <div class="materiales-semana">
+            <h3>📦 Materiales que usó <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="checklist">
+                <span class="checklist-item">✅ ESP32</span>
+                <span class="checklist-item">✅ Sensor AHT20+BMP280</span>
+                <span class="checklist-item">✅ Display 7 segmentos</span>
+                <span class="checklist-item">✅ Resistencias 220Ω (8)</span>
+                <span class="checklist-item">✅ Pantalla OLED I2C</span>
+                <span class="checklist-item">✅ Potenciómetro</span>
+                <span class="checklist-item">✅ Protoboard y cables</span>
+                <span class="checklist-item">✅ Multímetro</span>
+            </div>
+        </div>
+
+        <!-- PREGUNTAS FRECUENTES SEMANA 3 -->
+        <div class="faq-semana">
+            <h3>❓ Preguntas que se hizo <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="faq-item"><span class="faq-pregunta">¿Por qué no funciona el sensor AHT20?</span> Verifica que las librerías estén instaladas y que las conexiones SDA/SCL sean correctas. A veces hay que soldar pines si el sensor viene sin cabezal.</div>
+            <div class="faq-item"><span class="faq-pregunta">Mi display 7 segmentos no muestra bien los números</span> Revisa la configuración de ánodo/cátodo común y el orden de los pines en la librería SevSeg.</div>
+            <div class="faq-item"><span class="faq-pregunta">La OLED no muestra nada</span> Verifica dirección I2C (puede ser 0x3C o 0x3D). Ejecuta un scanner I2C para confirmar.</div>
+        </div>
+
+        <!-- CIERRE MOTIVACIONAL -->
+        <div class="cierre-semana">
+            <strong>🎓 <strong class="clase-nombre-alumno">Cargando...</strong>, Semana 3 completada.</strong> Ya sabes comunicarte con sensores inteligentes y mostrar datos en pantallas. Estás a un paso de convertirte en un experto. La próxima semana: alimentación con batería y el gran proyecto final. ¡Te espero en la Semana 4, campeón!
+        </div>
+
+        <!-- SOPORTE GUÍA -->
+        <div class="soporte-guia">
+            <h4 style="color:#001f3f; font-size:1.8rem; margin-bottom:12px;">🧭 Notas del guía (soporte)</h4>
+            <p><strong>Historia:</strong> "<strong class="clase-nombre-alumno">Cargando...</strong>, en las fábricas modernas, los sensores se comunican por I2O o buses similares. Estás aprendiendo estándares reales."</p>
+            <p><strong>Posibles dificultades:</strong> Instalación de librerías. Guiar paso a paso: Herramientas → Gestor de librerías → buscar Adafruit AHTX0, Adafruit BMP280, SevSeg, Adafruit SSD1306, Adafruit GFX.</p>
+            <p><strong>Scanner I2C:</strong> Tener a mano un sketch de escaneo I2C para resolver direcciones.</p>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../src/soporte.js" data-v="A"></script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapa de Expertis: Tu Celular Fácil y Seguro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #020617;
+            --sem1: #00d4ff; /* Cimientos */
+            --sem2: #00ff88; /* Operación */
+            --sem3: #ffcc00; /* Blindaje */
+            --danger: #ff4d4d;
+            --card: #1e293b;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: #f1f5f9;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header { text-align: center; margin-bottom: 30px; }
+        h1 { font-family: 'Orbitron', sans-serif; color: var(--sem1); letter-spacing: 2px; }
+
+        .tree-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        /* El Jefe: El Celular */
+        .ceo-node {
+            background: linear-gradient(135deg, #1e3a8a, #1e40af);
+            border: 2px solid var(--sem1);
+            padding: 20px 40px;
+            border-radius: 15px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+            z-index: 10;
+        }
+
+        /* Líneas y Flechas */
+        .arrow-main { color: var(--sem1); font-size: 2rem; margin: 10px 0; }
+        .branch-line { width: 80%; height: 2px; background: #334155; position: relative; margin-bottom: 40px; }
+        
+        .row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        /* Tarjetas de Áreas */
+        .node-card {
+            background: var(--card);
+            border-top: 5px solid #475569;
+            border-radius: 12px;
+            padding: 20px;
+            width: 320px;
+            position: relative;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+        }
+
+        .node-card h3 { font-family: 'Orbitron', sans-serif; font-size: 0.9rem; margin-top: 0; }
+        
+        /* Cuadros de Diálogo (Ejemplos) */
+        .dialog-box {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .dialog-box b { color: #f1f5f9; display: block; margin-bottom: 5px; border-bottom: 1px solid #334155; }
+
+        /* Colores por Etapa */
+        .border-sem1 { border-color: var(--sem1) !important; }
+        .border-sem2 { border-color: var(--sem2) !important; }
+        .border-sem3 { border-color: var(--sem3) !important; }
+        .border-danger { border-color: var(--danger) !important; }
+
+        .arrow-v { text-align: center; width: 100%; margin: 10px 0; font-size: 1.5rem; }
+
+        .legend {
+            margin-top: 50px;
+            background: #1e293b;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: flex;
+            gap: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>MAPA ESTRATÉGICO DE CAPACITACIÓN</h1>
+        <p><strong class="clase-nombre-alumno">Cargando...</strong> Usted es el CEO. Esta es la estructura de su imperio digital.</p>
+    </div>
+
+    <div class="tree-container">
+        <div class="ceo-node">📱 DISPOSITIVO ANDROID</div>
+        <div class="arrow-main">▼</div>
+
+        <div class="row">
+            <div class="node-card border-sem1">
+                <h3 style="color: var(--sem1);">📩 GERENCIA DE IDENTIDAD</h3>
+                <p>El origen de todo el acceso.</p>
+                <div class="dialog-box">
+                    <b>📂 Ejemplo de Herramientas:</b>
+                    • Gmail (Correo Principal)<br>
+                    • Google Drive (Fotos y Documentos)<br>
+                    • Cuenta de Recuperación (Teléfono alterno)
+                </div>
+            </div>
+
+            <div class="node-card border-sem1">
+                <h3 style="color: var(--sem1);">🔒 ACCESO FÍSICO</h3>
+                <p>La puerta de entrada a la oficina.</p>
+                <div class="dialog-box">
+                    <b>🔑 Métodos de Bloqueo:</b>
+                    • Biometría (Huella, Rostro)<br>
+                    • PIN Seguro (No 1234)<br>
+                    • Bloqueo Remoto (Encontrar mi móvil)
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-v" style="color: var(--sem2);">▼</div>
+
+        <div class="row">
+            <div class="node-card border-sem2">
+                <h3 style="color: var(--sem2);">📦 DPTO. DE ADQUISICIONES</h3>
+                <p>Instalación y software seguro.</p>
+                <div class="dialog-box">
+                    <b>📲 Dónde y Cómo:</b>
+                    • Play Store (Oficial)<br>
+                    • APK Mirror (Solo expertos)<br>
+                    • Gestor de Permisos (Cámara, Micrófono)
+                </div>
+            </div>
+
+            <div class="node-card border-sem2">
+                <h3 style="color: var(--sem2);">🌐 NAVEGACIÓN Y REDES</h3>
+                <p>Salida al mundo exterior.</p>
+                <div class="dialog-box">
+                    <b>🌍 Herramientas Seguras:</b>
+                    • Google Chrome, Firefox, DuckDuckGo<br>
+                    • WhatsApp (Privacidad de estados)<br>
+                    • Facebook (Quién ve mi perfil)
+                </div>
+            </div>
+
+            <div class="node-card border-sem2">
+                <h3 style="color: var(--sem2);">🛡️ DIVISIÓN DE DEFENSA</h3>
+                <p>Filtros de protección constante.</p>
+                <div class="dialog-box">
+                    <b>🛡️ App Recomendadas:</b>
+                    • Antivirus: Bitdefender, Avast Free<br>
+                    • Antispam: TrueCaller (Llamadas)<br>
+                    • AdBlockers: uBlock Origin
+                </div>
+            </div>
+        </div>
+
+        <div class="arrow-v" style="color: var(--sem3);">▼</div>
+
+        <div class="row">
+            <div class="node-card border-sem3">
+                <h3 style="color: var(--sem3);">🗝️ GESTIÓN DE LLAVES</h3>
+                <p>Protección de alto nivel.</p>
+                <div class="dialog-box">
+                    <b>🔐 Bóvedas de Seguridad:</b>
+                    • Bitwarden o Keepass<br>
+                    • Google Authenticator (2FA)<br>
+                    • Verificación de dos pasos en WhatsApp
+                </div>
+            </div>
+
+            <div class="node-card border-sem3">
+                <h3 style="color: var(--sem3);">💰 TESORERÍA (BANCA)</h3>
+                <p>Protección del patrimonio real.</p>
+                <div class="dialog-box">
+                    <b>💳 Finanzas Seguras:</b>
+                    • Apps Oficiales (BBVA, Santander, etc.)<br>
+                    • Pagos NFC (Google Wallet)<br>
+                    • Compras con Tarjetas Digitales
+                </div>
+            </div>
+
+            <div class="node-card border-danger">
+                <h3 style="color: var(--danger);">⚠️ INTELIGENCIA ANTI-FRAUDE</h3>
+                <p>Detección de enemigos externos.</p>
+                <div class="dialog-box">
+                    <b>🚫 Qué vigilar:</b>
+                    • Phishing (Correos de falsos bancos)<br>
+                    • Smishing (Mensajes de texto con links)<br>
+                    • Estafas de "Hijo en problemas" (WhatsApp)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="legend">
+        <div style="display:flex; align-items:center; gap:5px;"><span style="color:var(--sem1)">●</span> Sem. 1: Cimientos</div>
+        <div style="display:flex; align-items:center; gap:5px;"><span style="color:var(--sem2)">●</span> Sem. 2: Uso Diario</div>
+        <div style="display:flex; align-items:center; gap:5px;"><span style="color:var(--sem3)">●</span> Sem. 3: Blindaje Total</div>
+    </div>
+
+</body>
+    <script src="../src/soporte.js" data-v="A"></script>
+</html>

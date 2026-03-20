@@ -1,0 +1,1462 @@
+{
+  "curso": {
+    "id": "ESP32-BASICO-001",
+    "titulo": "Robótica desde Cero: Domina la Electrónica y la Lógica con ESP32",
+    "descripcion": "Curso introductorio de robótica con enfoque laboral. Aprende los fundamentos de electrónica, programación y prototipado utilizando el microcontrolador ESP32. Desarrolla proyectos prácticos desde cero y construye una estación de monitoreo autónoma como proyecto final.",
+    "edad": "16+",
+    "Objetivo1": "Desarrollar prototipos electrónicos funcionales utilizando el microcontrolador ESP32, integrando sensores y actuadores básicos, programando la lógica de control en Arduino IDE y alimentando los circuitos de forma autónoma.",
+    "Objetivo2": "Al finalizar el curso, el participante será capaz de desarrollar prototipos electrónicos funcionales utilizando el microcontrolador ESP32, integrando sensores y actuadores básicos, programando la lógica de control en Arduino IDE y alimentando sus circuitos de forma autónoma, sentando las bases para su inserción laboral en áreas de soporte técnico y prototipado electrónico.",
+    "PerfilEgre": "El egresado del curso <Robótica desde Cero: Nivel Básico> será capaz de comprender los fundamentos de electricidad y electrónica, programar microcontroladores ESP32 en Arduino IDE, y desarrollar prototipos electrónicos funcionales integrando sensores y actuadores. Podrá medir, diagnosticar y corregir fallas en circuitos básicos, documentar sus proyectos y presentar soluciones simples de automatización.",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Por haber completado satisfactoriamente el curso 'Robótica desde Cero: Domina la Electrónica y la Lógica con ESP32' (Nivel Básico), demostrando competencias en electrónica fundamental, programación de microcontroladores, integración de sensores y actuadores, y desarrollo de prototipos funcionales con alimentación autónoma."
+    }
+  },
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 15,
+    "unidadTiempo": "minutos"
+  },
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "La Caja de Herramientas y el Primer Latido",
+      "descripcion": "Primer contacto con los materiales, el multímetro y la programación básica del ESP32.",
+      "actividades": [
+        {
+          "id": "s1d1-act1",
+          "titulo": "Bienvenida y presentación",
+          "duracionMin": 15,
+          "descripcion": "Presentación del instructor, los participantes y los objetivos del curso. Explicación de la salida laboral y la estructura del curso.",
+          "tipo": "introduccion",
+          "niveles": ["Organización", "Presentación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d1-act2",
+          "titulo": "Introducción a los materiales",
+          "duracionMin": 15,
+          "descripcion": "Revisión de la lista de materiales. Identificación de cada componente: ESP32, resistencias, LEDs, sensores, protoboard, cables, multímetro, baterías, etc.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Identificación"],
+          "enlaces": [
+            {
+              "texto": "Guía de componentes electrónicos básicos",
+              "url": "https://mecatronix0.webnode.mx/guia-de-componentes-electronicos-basicos/?utm_source=chatgpt.com"
+            }
+],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de componentes electrónicos básicos",
+              "url": "https://www.electronics-tutorials.ws/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Componentes electrónicos básicos",
+              "url": "https://www.youtube.com/watch?v=ZMVh1-L6f2w"
+            }
+          ]
+        },
+        {
+          "id": "s1d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d1-act3",
+          "titulo": "Teoría: Conceptos básicos de electricidad",
+          "duracionMin": 15,
+          "descripcion": "Explicación de voltaje, corriente y resistencia. Analogía del agua. Uso de unidades (V, A, Ω).",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Fundamentos"],
+          "enlaces": [
+            {
+              "texto": "Simulador de circuitos Falstad",
+              "url": "https://www.falstad.com/circuit/"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Ley de Ohm explicada",
+              "url": "https://www.electronicshub.org/ohms-law/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Ley de Ohm para principiantes",
+              "url": "https://www.youtube.com/watch?v=Az9YgKQ_UH4"
+            }
+          ]
+        },
+        {
+          "id": "s1d1-act4",
+          "titulo": "Práctica 1: Uso del multímetro",
+          "duracionMin": 45,
+          "descripcion": "Medición de voltaje de la batería (7.4V). Medición de resistencia de la LDR con y sin luz. Prueba de continuidad en cables.",
+          "tipo": "practica",
+          "niveles": ["Herramientas", "Medición", "Electrónica"],
+          "enlaces": [
+            {
+              "texto": "Simulador de multímetro",
+              "url": "https://dcaclab.com/es/experiments/78330-multimeter-13"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Tipo de multímetro",
+              "url": "https://tiposyvariantes.com/tipos-de-multimetro/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo usar el multímetro - Guía completa",
+              "url": "https://www.youtube.com/watch?v=r2H0Z1zlxGo"
+            }
+          ]
+        },
+        {
+          "id": "s1d1-act5",
+          "titulo": "Introducción al ESP32 y Arduino IDE",
+          "duracionMin": 15,
+          "descripcion": "Identificación de partes del ESP32. Instalación de drivers. Conexión a la PC. Configuración del IDE.",
+          "tipo": "teoria",
+          "niveles": ["Programación", "Configuración", "Herramientas"],
+          "enlaces": [
+            {
+              "texto": "Simulador Wokwi ESP32",
+              "url": "https://wokwi.com/projects/new/esp32"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Instalación de Arduino IDE para ESP32",
+              "url": "https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo programar ESP32 por primera vez",
+              "url": "https://www.youtube.com/watch?v=9Tg8LQ8m6-o"
+            }
+          ]
+        },
+        {
+          "id": "s1d1-act6",
+          "titulo": "Práctica 2: Hola Mundo (LED integrado)",
+          "duracionMin": 25,
+          "descripcion": "Programar el LED integrado del ESP32 para que parpadee. Explicación de setup(), loop(), pinMode(), digitalWrite(), delay().",
+          "tipo": "practica",
+          "niveles": ["Programación", "Lógica", "Salidas digitales"],
+          "enlaces": [
+            {
+              "texto": "Simulación LED parpadeante en Wokwi",
+              "url": "https://wokwi.com/projects/457320373429579777"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "ESP32 Blink Tutorial",
+              "url": "https://iotdesignpro-com.translate.goog/projects/getting-started-with-esp32-program-it-using-arduino-ide-blinking-led?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Primer programa en ESP32: Blink",
+              "url": "https://www.youtube.com/watch?v=BQBFJ8qc3z4"
+            }
+          ]
+        },
+        {
+          "id": "s1d1-act7",
+          "titulo": "Cierre y tarea",
+          "duracionMin": 5,
+          "descripcion": "Resumen de lo aprendido. Tarea: Investigar qué es una protoboard y cómo funciona.",
+          "tipo": "cierre",
+          "niveles": ["Investigación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Controlando la Luz (Salidas Digitales)",
+      "descripcion": "Aprendemos a controlar LEDs externos en protoboard y programamos un semáforo.",
+      "actividades": [
+        {
+          "id": "s1d2-act1",
+          "titulo": "Repaso y revisión de tarea",
+          "duracionMin": 15,
+          "descripcion": "Preguntas sobre la sesión anterior. Discusión sobre la protoboard: estructura y funcionamiento.",
+          "tipo": "repaso",
+          "niveles": ["Electrónica", "Participación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Cómo funciona una protoboard",
+              "url": "https://www.build-electronic-circuits.com/breadboard/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo usar una protoboard",
+              "url": "https://www.tinkercad.com/things/4lqMxmCUKsO-protoboard"
+            }
+          ]
+        },
+        {
+          "id": "s1d2-act2",
+          "titulo": "Teoría: La protoboard y pines digitales",
+          "duracionMin": 15,
+          "descripcion": "Explicación detallada de cómo funciona una protoboard (pistas internas, conexiones). Pines digitales del ESP32 como salidas.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Hardware"],
+          "enlaces": [
+            {
+              "texto": "Simulador Tinkercad Circuits",
+              "url": "https://www.tinkercad.com/circuits"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "GPIO del ESP32 explicados",
+              "url": "https://randomnerdtutorials.com/esp32-pinout-reference-gpios/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Pines digitales del ESP32",
+              "url": "https://www.youtube.com/watch?v=Ei-7oGo_NxE"
+            }
+          ]
+        },
+        {
+          "id": "s1d2-act3",
+          "titulo": "Demostración: Conexión de un LED externo",
+          "duracionMin": 15,
+          "descripcion": "Conexión de un LED con resistencia en protoboard. Explicación del resistor limitador de corriente.",
+          "tipo": "demostracion",
+          "niveles": ["Electrónica", "Conexiones"],
+          "enlaces": [
+            {
+              "texto": "Simulación LED con resistencia en Wokwi",
+              "url": "https://wokwi.com/projects/457320373429579777"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "LEDs y resistencias: cómo elegir la correcta",
+              "url": "https://www.electronics-tutorials.ws/diode/diode_8.html"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo conectar un LED correctamente",
+              "url": "https://www.youtube.com/watch?v=csUS4HXe8NE"
+            }
+          ]
+        },
+        {
+          "id": "s1d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d2-act4",
+          "titulo": "Práctica 3: Semáforo simple",
+          "duracionMin": 45,
+          "descripcion": "Conectar 3 LEDs (rojo, amarillo, verde). Programar la secuencia de un semáforo: rojo (3s), verde (3s), amarillo (1s).",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "Lógica"],
+          "enlaces": [
+            {
+              "texto": "Simulación de semáforo en Tinkercad-ArduinoUNO",
+              "url": "https://www.tinkercad.com/things/8GXjMxPOARb-circuito-basico-led?sharecode=egzLNLvtcUMHORtc-SkoUz4tzuOQVhM7etpyF2rbS5U"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Ejemplo de semáforo con wokwi",
+              "url": "https://wokwi.com/projects/457324302302596097"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo hacer un semáforo con ESP32",
+              "url": "https://www.youtube.com/watch?v=rhPXdZNEvv0"
+            }
+          ]
+        },
+        {
+          "id": "s1d2-act5",
+          "titulo": "Experimentación: Modificando el semáforo",
+          "duracionMin": 30,
+          "descripcion": "Desafíos: Cambiar tiempos, agregar un LED adicional, hacer que el amarillo parpadee, crear una secuencia personalizada.",
+          "tipo": "experimentacion",
+          "niveles": ["Creatividad", "Programación", "Resolución"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d2-act6",
+          "titulo": "Socialización de resultados",
+          "duracionMin": 10,
+          "descripcion": "Cada participante muestra su semáforo modificado y explica los cambios realizados.",
+          "tipo": "socializacion",
+          "niveles": ["Comunicación", "Presentación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d2-act7",
+          "titulo": "Cierre",
+          "duracionMin": 5,
+          "descripcion": "Resumen. Tarea: Traer 3 ideas de cosas que se puedan controlar con luces.",
+          "tipo": "cierre",
+          "niveles": ["Creatividad"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "El Sonido y la Magia del PWM",
+      "descripcion": "Introducción al PWM para controlar intensidad de luz y generar tonos con el buzzer.",
+      "actividades": [
+        {
+          "id": "s1d3-act1",
+          "titulo": "Repaso y revisión de tarea",
+          "duracionMin": 15,
+          "descripcion": "Compartir ideas de cosas controladas con luces. Discusión grupal.",
+          "tipo": "repaso",
+          "niveles": ["Participación", "Creatividad"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d3-act2",
+          "titulo": "Teoría: PWM (Modulación por Ancho de Pulso)",
+          "duracionMin": 20,
+          "descripcion": "Explicación de cómo simular voltajes variables. Concepto de ciclo de trabajo. Pines PWM en ESP32.",
+          "tipo": "teoria",
+          "niveles": ["Programación", "Electrónica", "Fundamentos"],
+          "enlaces": [
+            {
+              "texto": "Simulador de PWM en tinkerCad",
+              "url": "https://www.tinkercad.com/things/hT4YWuCWS6P-pwmconosciloscopio?sharecode=HgX5vSVepV10KEBuwSJVQy6-U8Gy2Il3RcGyDrwZom4"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Simulador de PWM en falstad",
+              "url": "https://www-falstad-com.translate.goog/circuit/e-555pulsemod.html?_x_tr_sl=en&_x_tr_tl=es&_x_tr_hl=es&_x_tr_pto=tc"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "¿Qué es PWM?",
+              "url": "https://www.youtube.com/watch?v=GnlmVMHA_wQ"
+            }
+          ]
+        },
+        {
+          "id": "s1d3-act3",
+          "titulo": "Práctica 4: Control de LED RGB",
+          "duracionMin": 55,
+          "descripcion": "Conectar LED RGB (identificar cátodo/ánodo común). Programar colores mezclando PWM en cada pin. Crear secuencia de colores.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "PWM"],
+          "enlaces": [
+            {
+              "texto": "Simulación PWM en Wokwi",
+              "url": "https://wokwi.com/projects/457340608306461697"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de LED PWM con tinkerCad",
+              "url": "https://www.tinkercad.com/things/e47zDV6Quff-ledpwm?sharecode=93N5UnT2eVFvSy3Z6k8ygYrq2dgDdkLWBbxhf_3w7Pg"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo usar LED RGB con ESP32",
+              "url": "https://www.youtube.com/watch?v=wsxB74gzBfs"
+            }
+          ]
+        },
+        {
+          "id": "s1d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [
+            {
+              "texto": "Simulación LED RGB en Wokwi",
+              "url": "https://wokwi.com/projects/457352120208175105"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de LED RGB con tinkerCad",
+              "url":"https://www.tinkercad.com/things/5iWdjvaZfm5-ledrgb?sharecode=AYjXTtcqRYmT2rbLubtopZuNLSju2TpeUZQVlnEAlek"
+            }
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s1d3-act4",
+          "titulo": "Teoría: El buzzer y las frecuencias",
+          "duracionMin": 20,
+          "descripcion": "Explicación de frecuencia (Hz). Cómo generar tonos con tone(). Diferencia entre buzzer activo y pasivo.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Sonido", "Programación"],
+          "enlaces": [
+            {
+              "texto": "Generador de tonos en Wokwi",
+              "url": "https://wokwi.com/projects/457356589429177345"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de buzzer con ESP32",
+              "url": "https://esp32io.com/tutorials/esp32-buzzer"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Generador de tonos en TinkerCad ArduinoUNO",
+              "url": "https://www.tinkercad.com/things/el0eFheTfTT-practicabuzzertone?sharecode=2z3nf5P1GZ6jLAbqWuX11VJ4lPjF64mYRn06UBG51k8"
+            }
+          ]
+        },
+        {
+          "id": "s1d3-act5",
+          "titulo": "Práctica 5: Melodía con buzzer",
+          "duracionMin": 20,
+          "descripcion": "Conectar buzzer. Programar una melodía simple (ej. 'Timbre', 'Estrellita', 'Canciones populares').",
+          "tipo": "practica",
+          "niveles": ["Programación", "Creatividad", "Sonido"],
+          "enlaces": [{
+              "texto": "Notas musicales y frecuencias",
+              "url": "https://www.espboards.dev/tools/audio-grid-sequencer/"
+            }],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Momento de divertirse",
+              "url": "https://musiclab.chromeexperiments.com/Song-Maker/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "De basico a profesional con microPython",
+              "url": "https://www.youtube.com/watch?v=DdtRuiaaIeo"
+            }
+          ]
+        },
+        {
+          "id": "s1d3-act6",
+          "titulo": "Cierre y evaluación parcial",
+          "duracionMin": 5,
+          "descripcion": "Retroalimentación rápida. Recordatorio de lo aprendido en la semana.",
+          "tipo": "cierre",
+          "niveles": ["Evaluación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/RNBJ_1.html"}
+  ],
+  "Semana2": [
+    {
+      "dia": 4,
+      "titulo": "Leyendo el Mundo (Entradas Digitales)",
+      "descripcion": "Introducción a las entradas digitales con pulsadores. Aprendemos a leer botones y tomar decisiones.",
+      "actividades": [
+        {
+          "id": "s2d4-act1",
+          "titulo": "Bienvenida Semana 2",
+          "duracionMin": 15,
+          "descripcion": "Resumen de Semana 1. Introducción a los nuevos temas de la semana.",
+          "tipo": "introduccion",
+          "niveles": ["Organización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d4-act2",
+          "titulo": "Teoría: Entradas digitales",
+          "duracionMin": 20,
+          "descripcion": "Diferencia entre entrada y salida. Concepto de HIGH/LOW. Resistencia pull-up y pull-down. Debounce (rebotes).",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Programación", "Fundamentos"],
+          "enlaces": [
+            {
+              "texto": "Simulación de pulsador en Tinkercad",
+              "url": "https://www.tinkercad.com/things/43vnFFLMQlC-pulsador?sharecode=tOrTLOMm_1z39PGmt0kKYGeh39L8k5pcng0u-1FXVKI"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de resistencias pull-up",
+              "url": "https://naylampmechatronics.com/blog/39_resistencias-pull-up-y-pull-down.html"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Pulsadores y resistencias pull-up/down",
+              "url": "https://www.youtube.com/watch?v=nyLv7y3FoMM"
+            }
+          ]
+        },
+        {
+          "id": "s2d4-act3",
+          "titulo": "Práctica 6: Pulsador y LED",
+          "duracionMin": 55,
+          "descripcion": "Conectar pulsador con resistencia pull-down. Programar: LED se enciende mientras se presiona el botón. Explicación de digitalRead().",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "Entradas digitales"],
+          "enlaces": [
+            {
+              "texto": "Simulación pulsador + LED en Wokwi",
+              "url": "https://wokwi.com/projects/458053825615539201"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "ESP32 Digital Inputs",
+              "url": "https://randomnerdtutorials.com/esp32-digital-inputs-outputs-arduino/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Leer pulsadores con ESP32",
+              "url": "https://www.youtube.com/watch?v=US3aFqL0BRA"
+            }
+          ]
+        },
+        {
+          "id": "s2d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d4-act4",
+          "titulo": "Experimentación: Variaciones con pulsador",
+          "duracionMin": 30,
+          "descripcion": "Desafíos: LED se enciende y apaga con cada pulsación (toggle). Contar cuántas veces se presiona y mostrar en Monitor Serie.",
+          "tipo": "experimentacion",
+          "niveles": ["Programación", "Lógica", "Resolución"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d4-act5",
+          "titulo": "Uso del Monitor Serie",
+          "duracionMin": 10,
+          "descripcion": "Explicación de Serial.begin(), Serial.println(). Mostrar datos de pulsaciones en tiempo real.",
+          "tipo": "teoria",
+          "niveles": ["Programación", "Depuración"],
+          "enlaces": [{
+              "texto": "Monitor Serie en TinkerCad",
+              "url": "https://www.arduino.cc/en/Guide/Environment#serial-monitor"
+            }],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Monitor Serie en Wokwi",
+              "url": "https://www.arduino.cc/en/Guide/Environment#serial-monitor"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo usar el Monitor Serie",
+              "url": "https://www.youtube.com/watch?v=5r3n8LzTNfE"
+            }
+          ]
+        },
+        {
+          "id": "s2d4-act6",
+          "titulo": "Cierre",
+          "duracionMin": 5,
+          "descripcion": "Tarea: Investigar qué es una señal analógica y ejemplos en la vida cotidiana.",
+          "tipo": "cierre",
+          "niveles": ["Investigación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Entradas Analógicas (LDR y Potenciómetro)",
+      "descripcion": "Exploramos las entradas analógicas para leer sensores de luz y potenciómetros.",
+      "actividades": [
+        {
+          "id": "s2d5-act1",
+          "titulo": "Repaso y tarea",
+          "duracionMin": 15,
+          "descripcion": "Discusión sobre señal analógica vs digital. Ejemplos cotidianos.",
+          "tipo": "repaso",
+          "niveles": ["Participación", "Conceptos"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d5-act2",
+          "titulo": "Teoría: Entradas analógicas",
+          "duracionMin": 20,
+          "descripcion": "ADC (Convertidor Analógico-Digital). Rango de valores (0-4095 en ESP32). Resolución y precisión.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Programación", "Fundamentos"],
+          "enlaces": [
+            {
+              "texto": "Simulador ADC en Falstad",
+              "url": "https://www.falstad.com/circuit/e-adc.html"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "ADC en ESP32",
+              "url": "https://randomnerdtutorials.com/esp32-adc-analog-read-arduino-ide/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Entradas analógicas en ESP32",
+              "url": "https://www.youtube.com/watch?v=Qx7U7nX5zOc"
+            }
+          ]
+        },
+        {
+          "id": "s2d5-act3",
+          "titulo": "Práctica 7: LDR (Luz Nocturna)",
+          "duracionMin": 40,
+          "descripcion": "Conectar LDR con divisor de tensión (LDR + resistencia 10kΩ). Leer valor. Encender LED cuando el valor supere un umbral (oscuro).",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "Sensores"],
+          "enlaces": [
+            {
+              "texto": "Simulación LDR en Wokwi",
+              "url": "https://wokwi.com/projects/321525789180349525"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de LDR con ESP32",
+              "url": "https://esp32io.com/tutorials/esp32-light-sensor"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Sensor LDR con ESP32",
+              "url": "https://www.youtube.com/watch?v=K9Q7R8B9gHs"
+            }
+          ]
+        },
+        {
+          "id": "s2d5-act4",
+          "titulo": "Mostrar valores en Monitor Serie",
+          "duracionMin": 15,
+          "descripcion": "Visualizar los cambios de la LDR en tiempo real. Ajustar umbral según condiciones de luz.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Depuración"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d5-act5",
+          "titulo": "Práctica 8: Potenciómetro (Control de brillo)",
+          "duracionMin": 35,
+          "descripcion": "Conectar potenciómetro (patas: VCC, GND, señal). Leer valor. Usar map() para convertir a PWM. Controlar brillo de LED.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "Control"],
+          "enlaces": [
+            {
+              "texto": "Simulación potenciómetro en Wokwi",
+              "url": "https://wokwi.com/projects/321525798180349526"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Potenciómetro con ESP32",
+              "url": "https://esp32io.com/tutorials/esp32-potentiometer"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Controlar LED con potenciómetro",
+              "url": "https://www.youtube.com/watch?v=MfgHqK1OxFk"
+            }
+          ]
+        },
+        {
+          "id": "s2d5-act6",
+          "titulo": "Cierre",
+          "duracionMin": 10,
+          "descripcion": "Reflexión sobre aplicaciones: controles de volumen, dimmers, interfaces de usuario.",
+          "tipo": "cierre",
+          "niveles": ["Aplicaciones"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 6,
+      "titulo": "Sensor PIR y Evaluación de Mitad de Curso",
+      "descripcion": "Trabajamos con sensor de movimiento PIR y realizamos el primer proyecto integrador.",
+      "actividades": [
+        {
+          "id": "s2d6-act1",
+          "titulo": "Teoría: Sensor PIR",
+          "duracionMin": 20,
+          "descripcion": "¿Qué es un PIR? Cómo detecta movimiento. Ajustes de sensibilidad y tiempo. Ángulo de detección.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Sensores"],
+          "enlaces": [
+            {
+              "texto": "Simulador de PIR",
+              "url": "https://wokwi.com/projects/321525814180349527"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de sensor PIR",
+              "url": "https://learn.adafruit.com/pir-passive-infrared-proximity-motion-sensor"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Sensor PIR explicado",
+              "url": "https://www.youtube.com/watch?v=0FzFgdqT8vI"
+            }
+          ]
+        },
+        {
+          "id": "s2d6-act2",
+          "titulo": "Práctica 9: Alarma de movimiento",
+          "duracionMin": 40,
+          "descripcion": "Conectar PIR. Programar: al detectar movimiento, encender LED y activar buzzer por 2 segundos.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Electrónica", "Sensores"],
+          "enlaces": [
+            {
+              "texto": "Simulación PIR + LED + Buzzer",
+              "url": "https://wokwi.com/projects/321525830180349528"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "PIR con ESP32",
+              "url": "https://randomnerdtutorials.com/esp32-pir-motion-sensor/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Alarma con PIR y ESP32",
+              "url": "https://www.youtube.com/watch?v=JdG0w0e5Y0M"
+            }
+          ]
+        },
+        {
+          "id": "s2d6-act3",
+          "titulo": "Integración: PIR + LDR",
+          "duracionMin": 30,
+          "descripcion": "Desafío: La alarma solo debe activarse si es de noche (LDR detecta oscuridad). Combinar lógica de sensores.",
+          "tipo": "experimentacion",
+          "niveles": ["Lógica", "Integración", "Programación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d6-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d6-act4",
+          "titulo": "Evaluación Parcial: Proyecto 'Habitación Inteligente'",
+          "duracionMin": 40,
+          "descripcion": "Sistema que: 1) Enciende un LED si el PIR detecta movimiento Y la LDR detecta oscuridad. 2) Muestra en Monitor Serie el estado de ambos sensores. 3) Usa un pulsador para activar/desactivar el sistema.",
+          "tipo": "evaluacion",
+          "niveles": ["Integración", "Programación", "Electrónica"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s2d6-act5",
+          "titulo": "Cierre Semana 2",
+          "duracionMin": 5,
+          "descripcion": "Feedback de la evaluación. Avance del curso. Preparación para Semana 3.",
+          "tipo": "cierre",
+          "niveles": ["Retroalimentación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/RNBJ_2.html"}
+  ],
+  "Semana3": [
+    {
+      "dia": 7,
+      "titulo": "Introducción a I2C y Sensor AHT20+BMP280",
+      "descripcion": "Aprendemos el protocolo I2C y trabajamos con sensores de temperatura, humedad y presión.",
+      "actividades": [
+        {
+          "id": "s3d7-act1",
+          "titulo": "Teoría: Protocolo I2C",
+          "duracionMin": 20,
+          "descripcion": "¿Qué es I2C? Líneas SDA y SCL. Direcciones. Ventajas: pocos cables, múltiples dispositivos. Velocidades.",
+          "tipo": "teoria",
+          "niveles": ["Comunicación", "Protocolos", "Electrónica"],
+          "enlaces": [
+            {
+              "texto": "Simulación I2C",
+              "url": "https://www.falstad.com/circuit/e-i2c.html"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "I2C explicado",
+              "url": "https://learn.sparkfun.com/tutorials/i2c/all"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Protocolo I2C - Así funciona",
+              "url": "https://www.youtube.com/watch?v=6IAkYpmA1DQ"
+            }
+          ]
+        },
+        {
+          "id": "s3d7-act2",
+          "titulo": "Presentación del sensor AHT20+BMP280",
+          "duracionMin": 20,
+          "descripcion": "Características: temperatura, humedad, presión. Identificación de pines. Dirección I2C. Hoja de datos.",
+          "tipo": "teoria",
+          "niveles": ["Sensores", "Electrónica"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Datasheet AHT20",
+              "url": "https://cdn-shop.adafruit.com/product-files/4566/4566_datasheet.pdf"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Sensor AHT20+BMP280 review",
+              "url": "https://www.youtube.com/watch?v=1o3zQ7n8X9w"
+            }
+          ]
+        },
+        {
+          "id": "s3d7-act3",
+          "titulo": "Práctica 10: Conexión y primera lectura",
+          "duracionMin": 50,
+          "descripcion": "Conectar sensor I2C al ESP32 (VCC, GND, SDA, SCL). Instalar librerías necesarias (Adafruit). Leer y mostrar datos en Monitor Serie.",
+          "tipo": "practica",
+          "niveles": ["Programación", "I2C", "Sensores"],
+          "enlaces": [
+            {
+              "texto": "Simulación AHT20 en Wokwi",
+              "url": "https://wokwi.com/projects/321525890180349529"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "AHT20 con ESP32",
+              "url": "https://randomnerdtutorials.com/esp32-aht20-temperature-humidity-sensor/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Leer AHT20 con ESP32",
+              "url": "https://www.youtube.com/watch?v=8j5lQ5n5Q5s"
+            }
+          ]
+        },
+        {
+          "id": "s3d7-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d7-act4",
+          "titulo": "Experimentación: Calibración y límites",
+          "duracionMin": 30,
+          "descripcion": "Someter el sensor a cambios: calentar con los dedos, soplar (humedad). Observar cambios en tiempo real.",
+          "tipo": "experimentacion",
+          "niveles": ["Investigación", "Sensores"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d7-act5",
+          "titulo": "Registro de datos",
+          "duracionMin": 15,
+          "descripcion": "Programar lectura cada 2 segundos. Mostrar con etiquetas claras. Formateo de salida.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Organización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 8,
+      "titulo": "Display de 7 Segmentos",
+      "descripcion": "Aprendemos a controlar displays de 7 segmentos para mostrar números.",
+      "actividades": [
+        {
+          "id": "s3d8-act1",
+          "titulo": "Teoría: Display de 7 segmentos",
+          "duracionMin": 20,
+          "descripcion": "Estructura interna: cátodo común vs ánodo común. Tabla de segmentos para números 0-9. Resistencias limitadoras.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Visualización"],
+          "enlaces": [
+            {
+              "texto": "Simulador de 7 segmentos",
+              "url": "https://www.falstad.com/circuit/e-7segment.html"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Display 7 segmentos explicado",
+              "url": "https://www.electronics-tutorials.ws/blog/7-segment-display-tutorial.html"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Cómo funciona un display 7 segmentos",
+              "url": "https://www.youtube.com/watch?v=9QpQ0ZkLq2Y"
+            }
+          ]
+        },
+        {
+          "id": "s3d8-act2",
+          "titulo": "Práctica 11: Conexión y prueba individual",
+          "duracionMin": 55,
+          "descripcion": "Conectar cada segmento con resistencias. Programar encendido de segmentos uno por uno para entender funcionamiento.",
+          "tipo": "practica",
+          "niveles": ["Electrónica", "Programación"],
+          "enlaces": [
+            {
+              "texto": "Simulación display en Tinkercad",
+              "url": "https://www.tinkercad.com/things/..."
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Display 7 segmentos con ESP32",
+              "url": "https://esp32io.com/tutorials/esp32-7-segment-display"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Controlar display 7 segmentos con ESP32",
+              "url": "https://www.youtube.com/watch?v=H2lCJ1c5w4M"
+            }
+          ]
+        },
+        {
+          "id": "s3d8-act3",
+          "titulo": "Librería para display",
+          "duracionMin": 15,
+          "descripcion": "Introducción a librerías (SevSeg). Ventajas: simplifica el código. Instalación y ejemplos.",
+          "tipo": "teoria",
+          "niveles": ["Programación", "Librerías"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Librería SevSeg",
+              "url": "https://github.com/DeanIsMe/SevSeg"
+            }
+          ],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d8-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d8-act4",
+          "titulo": "Práctica 12: Contador con display",
+          "duracionMin": 40,
+          "descripcion": "Usar librería. Programar contador de 0 a 9 con tiempo de 1 segundo. Mostrar en display.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Visualización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [
+            {
+              "texto": "Contador con display 7 segmentos",
+              "url": "https://www.youtube.com/watch?v=1Np3x7b8rKU"
+            }
+          ]
+        },
+        {
+          "id": "s3d8-act5",
+          "titulo": "Cierre",
+          "duracionMin": 5,
+          "descripcion": "Tarea: Investigar pantallas OLED y sus ventajas sobre displays de 7 segmentos.",
+          "tipo": "cierre",
+          "niveles": ["Investigación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 9,
+      "titulo": "Pantalla OLED I2C",
+      "descripcion": "Trabajamos con pantallas OLED por I2C para mostrar texto y datos dinámicos.",
+      "actividades": [
+        {
+          "id": "s3d9-act1",
+          "titulo": "Repaso y tarea",
+          "duracionMin": 15,
+          "descripcion": "Discusión sobre OLED: ventajas, usos, comparación con 7 segmentos.",
+          "tipo": "repaso",
+          "niveles": ["Participación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d9-act2",
+          "titulo": "Teoría: Pantallas OLED",
+          "duracionMin": 20,
+          "descripcion": "Características: I2C, bajo consumo, resolución. Identificación de pines. Dirección I2C.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Visualización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Guía de OLED SSD1306",
+              "url": "https://randomnerdtutorials.com/esp32-oled-display-ssd1306/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Pantallas OLED con ESP32",
+              "url": "https://www.youtube.com/watch?v=1Yqj76Q4j6U"
+            }
+          ]
+        },
+        {
+          "id": "s3d9-act3",
+          "titulo": "Práctica 13: Hola Mundo en OLED",
+          "duracionMin": 55,
+          "descripcion": "Conectar OLED. Instalar librerías (Adafruit SSD1306, GFX). Mostrar texto estático: 'Hola, [nombre]' y figuras simples (línea, círculo, rectángulo).",
+          "tipo": "practica",
+          "niveles": ["Programación", "I2C", "Visualización"],
+          "enlaces": [
+            {
+              "texto": "Simulación OLED en Wokwi",
+              "url": "https://wokwi.com/projects/321525950180349530"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "OLED con ESP32 - Guía",
+              "url": "https://randomnerdtutorials.com/esp32-oled-display-ssd1306/"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Mostrar texto en OLED con ESP32",
+              "url": "https://www.youtube.com/watch?v=3qT8gLQ8m7o"
+            }
+          ]
+        },
+        {
+          "id": "s3d9-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d9-act4",
+          "titulo": "Práctica 14: Datos dinámicos en OLED",
+          "duracionMin": 35,
+          "descripcion": "Mostrar valor de potenciómetro en tiempo real en la OLED. El valor debe actualizarse continuamente. Incluir unidades.",
+          "tipo": "practica",
+          "niveles": ["Programación", "Tiempo real", "Visualización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s3d9-act5",
+          "titulo": "Cierre",
+          "duracionMin": 10,
+          "descripcion": "Preparación para proyecto integrador. Explicación de lo que viene.",
+          "tipo": "cierre",
+          "niveles": ["Organización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/RNBJ_3.html"}
+  ],
+  "Semana4": [
+    {
+      "dia": 10,
+      "titulo": "Transistores y Reguladores (Potencia y Autonomía)",
+      "descripcion": "Aprendemos a controlar cargas mayores y alimentar circuitos con baterías.",
+      "actividades": [
+        {
+          "id": "s4d10-act1",
+          "titulo": "Teoría: El transistor como interruptor",
+          "duracionMin": 25,
+          "descripcion": "¿Qué es un transistor? Zonas: corte y saturación. Controlar cargas mayores con pines de ESP32. Transistor NPN vs PNP.",
+          "tipo": "teoria",
+          "niveles": ["Electrónica", "Potencia"],
+          "enlaces": [
+            {
+              "texto": "Simulador de transistor",
+              "url": "https://www.falstad.com/circuit/e-transistor.html"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Transistor como interruptor",
+              "url": "https://www.electronics-tutorials.ws/transistor/tran_4.html"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "El transistor explicado",
+              "url": "https://www.youtube.com/watch?v=J4oO7PTLzV8"
+            }
+          ]
+        },
+        {
+          "id": "s4d10-act2",
+          "titulo": "Práctica 15: Control de LED de potencia",
+          "duracionMin": 45,
+          "descripcion": "Conectar transistor para encender un LED de alta potencia (o varios LEDs) desde pin digital. Explicar resistencia base. Calcular valores.",
+          "tipo": "practica",
+          "niveles": ["Electrónica", "Cálculo", "Potencia"],
+          "enlaces": [
+            {
+              "texto": "Simulación transistor + LED",
+              "url": "https://wokwi.com/projects/321526010180349531"
+            }
+          ],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Controlar LED con transistor",
+              "url": "https://www.electronics-tutorials.ws/transistor/transistor_4.html"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Usar transistor con ESP32",
+              "url": "https://www.youtube.com/watch?v=8j5lQ5n5Q5t"
+            }
+          ]
+        },
+        {
+          "id": "s4d10-act3",
+          "titulo": "Teoría: Alimentación autónoma",
+          "duracionMin": 20,
+          "descripcion": "La batería de 7.4V. Necesidad de regular a 5V y 3.3V. Presentación del módulo mini560. Especificaciones.",
+          "tipo": "teoria",
+          "niveles": ["Energía", "Electrónica"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [
+            {
+              "texto": "Regulador mini560",
+              "url": "https://www.robotics.org.za/MINI560"
+            }
+          ],
+          "enlaces_videos": [
+            {
+              "texto": "Reguladores de voltaje DC-DC",
+              "url": "https://www.youtube.com/watch?v=J0cE2l0X5tY"
+            }
+          ]
+        },
+        {
+          "id": "s4d10-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d10-act4",
+          "titulo": "Práctica 16: Sistema alimentado por batería",
+          "duracionMin": 40,
+          "descripcion": "Conectar mini560 a batería (7.4V). Ajustar salida a 5V con multímetro. Alimentar ESP32 y protoboard desde el regulador. Verificar voltajes.",
+          "tipo": "practica",
+          "niveles": ["Energía", "Medición", "Autonomía"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [
+            {
+              "texto": "Alimentar ESP32 con batería",
+              "url": "https://www.youtube.com/watch?v=K9Q7R8B9gHt"
+            }
+          ]
+        },
+        {
+          "id": "s4d10-act5",
+          "titulo": "Cierre y presentación del proyecto final",
+          "duracionMin": 5,
+          "descripcion": "Presentación del proyecto final. Explicación general. Materiales necesarios.",
+          "tipo": "cierre",
+          "niveles": ["Organización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 11,
+      "titulo": "Proyecto Integrador - Diseño y Montaje",
+      "descripcion": "Iniciamos el desarrollo del proyecto final 'Estación de Monitoreo Autónoma'.",
+      "actividades": [
+        {
+          "id": "s4d11-act1",
+          "titulo": "Presentación del Proyecto Final",
+          "duracionMin": 30,
+          "descripcion": "'Estación de Monitoreo Autónoma'. Especificaciones completas. Entrega de rúbrica. Requerimientos funcionales.",
+          "tipo": "introduccion",
+          "niveles": ["Organización", "Proyecto"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d11-act2",
+          "titulo": "Diseño y planificación",
+          "duracionMin": 30,
+          "descripcion": "Cada estudiante (o equipo) dibuja el diagrama de conexiones. Identifica pines a utilizar. Lista los materiales. Distribución en protoboard.",
+          "tipo": "diseño",
+          "niveles": ["Diseño", "Planificación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d11-act3",
+          "titulo": "Montaje inicial",
+          "duracionMin": 30,
+          "descripcion": "Comenzar montaje en protoboard siguiendo el diseño. Verificar conexiones. Organizar componentes.",
+          "tipo": "practica",
+          "niveles": ["Electrónica", "Montaje"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d11-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d11-act4",
+          "titulo": "Programación inicial",
+          "duracionMin": 40,
+          "descripcion": "Escribir código base. Probar componentes individualmente antes de integrar. Crear funciones separadas.",
+          "tipo": "programacion",
+          "niveles": ["Programación", "Estructura"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d11-act5",
+          "titulo": "Cierre y metas",
+          "duracionMin": 5,
+          "descripcion": "Revisión del avance. Metas para la última sesión. Resolver dudas.",
+          "tipo": "cierre",
+          "niveles": ["Organización"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 12,
+      "titulo": "Proyecto Integrador - Finalización y Evaluación",
+      "descripcion": "Completamos los proyectos, presentamos resultados y evaluamos el aprendizaje.",
+      "actividades": [
+        {
+          "id": "s4d12-act1",
+          "titulo": "Trabajo en proyecto",
+          "duracionMin": 60,
+          "descripcion": "Tiempo para ajustes finales, depuración de código, pruebas de integración. Asistencia personalizada del instructor.",
+          "tipo": "practica",
+          "niveles": ["Integración", "Depuración"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d12-act2",
+          "titulo": "Preparación de presentación",
+          "duracionMin": 15,
+          "descripcion": "Cada equipo prepara una breve explicación de su proyecto: qué hace, cómo lo hicieron, dificultades enfrentadas.",
+          "tipo": "organizacion",
+          "niveles": ["Comunicación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d12-receso1",
+          "titulo": "Receso / Montaje de estaciones",
+          "duracionMin": 15,
+          "descripcion": "Organizar las estaciones para las presentaciones. Últimos ajustes.",
+          "tipo": "receso",
+          "niveles": [],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d12-act3",
+          "titulo": "Evaluación Final: Presentaciones",
+          "duracionMin": 45,
+          "descripcion": "Cada equipo (5-7 min c/u) presenta su proyecto. Demostración en vivo. Preguntas del instructor y compañeros.",
+          "tipo": "evaluacion",
+          "niveles": ["Presentación", "Demostración"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d12-act4",
+          "titulo": "Retroalimentación grupal",
+          "duracionMin": 10,
+          "descripcion": "Comentarios generales del instructor. Logros del grupo. Áreas de mejora. Reflexión final.",
+          "tipo": "retroalimentacion",
+          "niveles": ["Evaluación"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "s4d12-act5",
+          "titulo": "Cierre del curso y entrega de constancias",
+          "duracionMin": 5,
+          "descripcion": "Palabras finales. Motivación para continuar al Nivel Intermedio. Entrega de constancias simbólicas. Foto grupal.",
+          "tipo": "cierre",
+          "niveles": ["Celebración"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/RNBJ_4.html"}
+  ],
+  "metadata": {
+    "fechaCreacion": "2025-02-17",
+    "ultimaActualizacion": "2025-02-17",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

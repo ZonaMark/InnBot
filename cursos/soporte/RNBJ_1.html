@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana 1: <strong class="clase-nombre-alumno">Cargando...</strong> da el primer paso · Robótica desde Cero</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 10;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+        body {
+            background: #f0f4f8;
+            padding: 24px 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contenedor-semana {
+            max-width: 1200px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 40px rgba(0,20,40,0.2);
+            overflow: hidden;
+            border: 1px solid #c0d2e2;
+        }
+        .cabecera {
+            background: linear-gradient(145deg, #003153, #001f3f);
+            color: white;
+            padding: 28px 32px;
+        }
+        .cabecera h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .cabecera h1 span {
+            background: #f5b042;
+            color: #001f3f;
+            font-size: 1.2rem;
+            padding: 4px 12px;
+            border-radius: 40px;
+            margin-left: 16px;
+            vertical-align: middle;
+            font-weight: 500;
+        }
+        .historia {
+            background: #e6f0fa;
+            padding: 24px 32px;
+            border-left: 6px solid #f5b042;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #003153;
+            font-weight: 500;
+            box-shadow: inset 0 0 0 1px #ffffff80;
+        }
+        .historia strong {
+            color: #b85e00;
+        }
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            background: #1e2f4a;
+            color: white;
+            padding: 16px 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .timeline-dia {
+            background: #2c3f5c;
+            padding: 8px 22px;
+            border-radius: 40px;
+            box-shadow: 0 4px 0 #0f1a2b;
+        }
+        .cuerpo {
+            padding: 32px;
+        }
+        .bloque-dia {
+            background: #f9fcff;
+            border-radius: 28px;
+            padding: 24px;
+            margin-bottom: 40px;
+            border: 2px solid #cbdae9;
+            box-shadow: 0 8px 0 #a0b8cf;
+        }
+        .titulo-dia {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #001f3f;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .titulo-dia .badge-dia {
+            background: #f5b042;
+            color: #001f3f;
+            padding: 8px 22px;
+            border-radius: 60px;
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+        .duracion-dia {
+            color: #2e5a88;
+            font-weight: 600;
+            margin-bottom: 24px;
+            font-size: 1.1rem;
+            border-left: 3px solid #f5b042;
+            padding-left: 16px;
+            background: #ecf3fa;
+            border-radius: 0 30px 30px 0;
+            width: fit-content;
+            padding: 6px 24px 6px 16px;
+        }
+        .actividad {
+            background: white;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 24px;
+            border: 2px solid #dde5f0;
+            transition: all 0.1s ease;
+            box-shadow: 0 4px 0 #b8c9dd;
+        }
+        .actividad:hover {
+            border-color: #f5b042;
+        }
+        .actividad-header {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        .actividad-titulo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #003f5f;
+        }
+        .actividad-duracion {
+            background: #d2e6ff;
+            padding: 6px 16px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #003f5f;
+        }
+        .niveles {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 8px 0 16px 0;
+        }
+        .nivel {
+            background: #e9ecf3;
+            color: #1d3557;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid #adc1d9;
+        }
+        .tips-tono{
+            background: #fef6e6;
+            border-left: 5px solid #f5b042;
+            padding: 16px 22px;
+            border-radius: 20px;
+            margin: 20px 0 16px 0;
+            font-size: 1.05rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+        .pregunta-frecuente {
+            background: #edf4fa;
+            border-radius: 18px;
+            padding: 14px 20px;
+            margin: 16px 0 8px 0;
+            border: 1px solid #b9d0e7;
+            font-weight: 500;
+        }
+        .codigo-ejemplo {
+            background: #1e2b3a;
+            color: #b9f3ff;
+            padding: 18px;
+            border-radius: 18px;
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-size: 0.95rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-word;
+            margin: 16px 0;
+            border: 2px solid #0f1a24;
+        }
+        .enlaces-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px 20px;
+            margin: 16px 0 6px;
+        }
+        .enlace-item {
+            background: #e0eaff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: #003f7f;
+            font-weight: 600;
+            border: 1px solid #90b0d0;
+        }
+        .materiales-semana {
+            background: #1f344b;
+            color: white;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 40px 0 20px;
+        }
+        .materiales-semana h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #f5b042;
+        }
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+            gap: 16px;
+        }
+        .checklist-item {
+            background: #2d405b;
+            padding: 10px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+            border: 1px solid #6080aa;
+        }
+        .faq-semana {
+            background: #eef4fa;
+            border-radius: 28px;
+            padding: 28px;
+            margin: 32px 0;
+        }
+        .faq-semana h3 {
+            font-size: 2rem;
+            color: #003f5f;
+            margin-bottom: 24px;
+        }
+        .faq-item {
+            background: white;
+            border-radius: 20px;
+            padding: 16px 24px;
+            margin-bottom: 16px;
+            border: 1px solid #b7cfec;
+        }
+        .faq-pregunta {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: #002b46;
+        }
+        .cierre-semana {
+            background: #dbeafe;
+            border-radius: 28px;
+            padding: 28px;
+            font-size: 1.2rem;
+            border: 3px solid #f5b042;
+            margin: 32px 0 16px;
+        }
+        .soporte-guia {
+            background: #d1dbe8;
+            border-radius: 20px;
+            padding: 22px;
+            margin-top: 32px;
+            border: 2px dashed #2c577c;
+            color: #001a33;
+        }
+        hr {
+            border: 2px solid #b0c7e0;
+            margin: 32px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="contenedor-semana">
+    <!-- CABECERA PRINCIPAL -->
+    <div class="cabecera">
+        <h1>Semana 1 · Fundamentos y Primeros Pasos <span>historia de <strong class="clase-nombre-alumno">Cargando...</strong></span></h1>
+        <p style="font-size: 1.2rem; opacity: 0.9;">⚡ De Juárez al mundo: arrancamos desde cero, sin miedo</p>
+    </div>
+
+    <!-- HISTORIA SEMANA 1 (<strong class="clase-nombre-alumno">Cargando...</strong>) -->
+    <div class="historia">
+        <strong>🎒 <strong class="clase-nombre-alumno">Cargando...</strong>, esto es para ti:</strong> Acabas de llegar a Ciudad Juárez. Las fábricas, los talleres, todo mundo habla de robots, sensores, automatización. No estudiaste una ingeniería, pero tienes hambre de salir adelante. Te encontré en el taller de la esquina y te dije: <em>"Vamos paso a paso, desde encender una luz. Si dominas esto, las puertas se abren."</em> Esta semana verás que tú también puedes. Respira, conecta tu ESP32, y prepárate: vas a crear tu primer latido electrónico. ¡Vamos, campeón!
+    </div>
+
+    <!-- TIMELINE VISUAL RÁPIDA -->
+    <div class="timeline">
+        <span class="timeline-dia">📆 DÍA 1 · Caja de herramientas</span>
+        <span class="timeline-dia">📆 DÍA 2 · Luces y semáforo</span>
+        <span class="timeline-dia">📆 DÍA 3 · Colores y sonidos</span>
+    </div>
+
+    <!-- CUERPO: DÍAS CON ACTIVIDADES (extraído del JSON) -->
+    <div class="cuerpo">
+
+        <!-- ========== DÍA 1 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 1 · 2.5 hrs</span> La Caja de Herramientas y el Primer Latido
+            </div>
+            <div class="duracion-dia">⏱️ 2 horas 30 minutos (con receso incluido)</div>
+
+            <!-- Actividad 1 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Bienvenida y presentación</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Organización</span><span class="nivel">Presentación</span></div>
+                <div>Nos presentamos, cuéntame tu meta, <strong class="clase-nombre-alumno">Cargando...</strong>. Te explico por qué esto cambiará tu futuro laboral.</div>
+                <div class="tips-tono">Cargando...</strong>">💡 TIP: Tú no eres menos que nadie. Todos empezamos así.</div>
+            </div>
+
+            <!-- Actividad 2 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Introducción a los materiales</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Electrónica</span><span class="nivel">Identificación</span></div>
+                <div>Vamos a destapar el kit: ESP32, resistencias, LEDs, sensores, protoboard, cables… <strong class="clase-nombre-alumno">Cargando...</strong>, toca cada pieza. Esto es como armar un rompecabezas.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.electronics-tutorials.ws/" target="_blank">📘 Guía componentes</a>
+                </div>
+                <div class="pregunta-frecuente">❓ ¿Para qué sirve cada cosa? Tranquilo, lo irás descubriendo al usarlas.</div>
+            </div>
+
+            <!-- Receso 1 (siempre 15 min) -->
+            <div class="actividad" style="background: #f9e2cf; border-color: #f5b042;">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">☕ Receso activo</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div>Estira las piernas, toma agua, descansa la vista. Esto también es parte del aprendizaje.</div>
+            </div>
+
+            <!-- Actividad 3 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Teoría: Conceptos básicos de electricidad</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Electrónica</span><span class="nivel">Fundamentos</span></div>
+                <div>Voltaje (V), corriente (A), resistencia (Ω). Usamos la analogía del agua: la presión es voltaje, el caudal es corriente, la piedra es resistencia. Lo entenderás en un dos por tres.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.falstad.com/circuit/" target="_blank">⚡ Simulador Falstad</a>
+                    <a class="enlace-item" href="https://www.electronicshub.org/ohms-law/" target="_blank">🔎 Ley de Ohm</a>
+                </div>
+                <iframe width="100%" height="180" src="https://www.youtube.com/embed/Z4uNQ1_3T14" title="Ley de Ohm" frameborder="0" allowfullscreen style="border-radius:16px; margin-top:12px;"></iframe>
+            </div>
+
+            <!-- Actividad 4 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Práctica 1: Uso del multímetro</span>
+                    <span class="actividad-duracion">45 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Herramientas</span><span class="nivel">Medición</span></div>
+                <div><strong><strong class="clase-nombre-alumno">Cargando...</strong>, toma el multímetro.</strong> Mide el voltaje de la batería (debe dar ~7.4V). Mide la resistencia de la LDR: tápala y verás que cambia. Prueba continuidad con un cable. ¡Ya eres técnico!</div>
+                <div class="codigo-ejemplo">
+// No necesitas código aún. Solo práctica con multímetro.
+                </div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://www.youtube.com/watch?v=TSKbnF2Y1hE" target="_blank">📺 Ver video: cómo usar multímetro</a>
+                </div>
+            </div>
+
+            <!-- Actividad 5 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Introducción al ESP32 y Arduino IDE</span>
+                    <span class="actividad-duracion">15 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Programación</span><span class="nivel">Configuración</span></div>
+                <div>Conecta tu ESP32 a la PC. Instalamos drivers, abrimos Arduino IDE. Elegimos la placa ESP32 Dev Module y el puerto correcto. ¡Es más fácil de lo que crees!</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://wokwi.com/projects/new/esp32" target="_blank">🌐 Simulador Wokwi</a>
+                    <a class="enlace-item" href="https://randomnerdtutorials.com/installing-the-esp32-board-in-arduino-ide-windows-instructions/" target="_blank">📖 Guía instalación</a>
+                    <a class="enlace-item" href="https://docs.sitodrive.com/1.2/download/windows-ch340-driver" target="_blank">📖 Driver CH340</a>
+                    <a class="enlace-item" href="https://www.silabs.com/software-and-tools/usb-to-uart-bridge-vcp-drivers?utm_source=chatgpt.com&tab=downloads" target="_blank">📖 Driver CP2102 o CP2104</a>
+                </div>
+            </div>
+
+            <!-- Actividad 6 -->
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Práctica 2: Hola Mundo (LED integrado)</span>
+                    <span class="actividad-duracion">25 min</span>
+                </div>
+                <div class="niveles"><span class="nivel">Programación</span><span class="nivel">Salidas digitales</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, vas a hacer parpadear el LED de la tarjeta (pin 2). Crea un nuevo sketch, escribe esto y carga:</div>
+                <div class="codigo-ejemplo">
+// los // indican que lo que esta adelante son comentarios y no codigo
+// Solo se ejecutara una sola ves cuando recibe corriente el ep32
+void setup() {
+  pinMode(2, OUTPUT); // se configura el puerto como un puerto de salidad
+}
+
+// una ves que ejecuta setup, se quedara dentro de loop repitiendo el ciclo cada vez.
+void loop() { //void -> vacio | loop bucle infinito ()-sin parametros { corchete  de apertura para abrazar el contenido de la funcion loop
+  digitalWrite(2, HIGH); // se eleva el interrutor del puerto para darle una salida de voltaje de 3.3v
+  delay(500); // se hace una pausa general de 1/2 segundo
+  digitalWrite(2, LOW); // se baja el interruptor del puerto para dejar de pasar voltaje
+  delay(500); // se hace una pausa general de 1/2 segundo
+} // } corchete  de cierre indica el cierre del contenido de la funcion loop
+                </div>
+                <div>✅ Si parpadea, ¡ya lo lograste! Ese es tu primer programa.</div>
+                <div class="pregunta-frecuente">❓ ¿Por qué no parpadea? Revisa que seleccionaste bien el puerto y la placa.</div>
+                <div class="enlaces-flex">
+                    <a class="enlace-item" href="https://wokwi.com/projects/321525769180349524" target="_blank">🔗 Simulación Wokwi</a>
+                    <a class="enlace-item" href="https://www.youtube.com/watch?v=GWKCgI6L6P4" target="_blank">📺 Video: primer Blink</a>
+                </div>
+            </div>
+
+            <div class="actividad">
+                <div class="actividad-header">
+                    <span class="actividad-titulo">Cierre y tarea</span>
+                    <span class="actividad-duracion">5 min</span>
+                </div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, hoy viste: multímetro, LED parpadeante. Investiga: ¿cómo se conecta un LED externo en la protoboard? Mañana lo haremos juntos.</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 2 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia">
+                <span class="badge-dia">DÍA 2 · 2.5 hrs</span> Controlando la Luz (Salidas Digitales)
+            </div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+            <!-- Actividades condensadas pero completas, mismo estilo -->
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Repaso y tarea</span><span class="actividad-duracion">15 min</span></div>
+                <div>Comparte lo que investigaste sobre la protoboard. Te explico las pistas internas.</div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: protoboard y pines digitales</span><span class="actividad-duracion">15 min</span></div>
+                <div class="niveles"><span class="nivel">Electrónica</span></div>
+                <div>La protoboard conecta filas y columnas. Los pines digitales del ESP32 pueden dar HIGH (3.3V) o LOW (0V).</div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.tinkercad.com/circuits" target="_blank">Tinkercad</a></div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Demostración: LED externo</span><span class="actividad-duracion">15 min</span></div>
+                <div>Conectamos un LED con resistencia de 220Ω a la protoboard. Ánodo (+) al pin, cátodo (-) a GND. El resistor protege el LED.</div>
+            </div>
+            <!-- Receso -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 3: Semáforo simple</span><span class="actividad-duracion">45 min</span></div>
+                <div>3 LEDs (rojo, amarillo, verde). Secuencia: rojo 3s, verde 3s, amarillo 1s.</div>
+                <div class="codigo-ejemplo">
+int rojo = 13, amarillo = 12, verde = 14;
+void setup() {
+  pinMode(rojo, OUTPUT); pinMode(amarillo, OUTPUT); pinMode(verde, OUTPUT);
+}
+void loop() {
+  digitalWrite(rojo, HIGH); delay(3000); digitalWrite(rojo, LOW);
+  digitalWrite(verde, HIGH); delay(3000); digitalWrite(verde, LOW);
+  digitalWrite(amarillo, HIGH); delay(1000); digitalWrite(amarillo, LOW);
+}
+                </div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.youtube.com/watch?v=qxO4yC2bO-I" target="_blank">📺 Video semáforo</a></div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Experimentación y socialización</span><span class="actividad-duracion">30+10 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, cambia tiempos, haz que el amarillo parpadee, añade otro LED. Muéstranos tu creación.</div>
+            </div>
+        </div>
+
+        <!-- ========== DÍA 3 ========= -->
+        <div class="bloque-dia">
+            <div class="titulo-dia"><span class="badge-dia">DÍA 3 · 2.5 hrs</span> El Sonido y la Magia del PWM</div>
+            <div class="duracion-dia">⏱️ 2.5 hrs</div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Repaso de tarea (ideas con luces)</span><span class="actividad-duracion">15 min</span></div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría PWM</span><span class="actividad-duracion">20 min</span></div>
+                <div>PWM simula voltajes variables. ciclo de trabajo 0% apagado, 100% encendido. En ESP32 se usa `analogWrite` (pero en realidad `ledc`). Usaremos ejemplos.</div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 4: LED RGB</span><span class="actividad-duracion">55 min</span></div>
+                <div>Conecta LED RGB (cátodo común a GND). Usa PWM en cada pin para crear colores. Ejemplo: rojo (255,0,0), magenta (255,0,255).</div>
+                <div class="codigo-ejemplo">
+// Ánodo común requiere lógica inversa. Si es cátodo común:
+int r=25, g=26, b=27;
+void setup() { pinMode(r,OUTPUT); pinMode(g,OUTPUT); pinMode(b,OUTPUT); }
+void loop() {
+  analogWrite(r,255); analogWrite(g,0); analogWrite(b,0); delay(1000);
+  analogWrite(r,0); analogWrite(g,255); analogWrite(b,0); delay(1000);
+  analogWrite(r,0); analogWrite(g,0); analogWrite(b,255); delay(1000);
+}
+                </div>
+            </div>
+            <!-- receso -->
+            <div class="actividad" style="background:#f9e2cf;"><span class="actividad-titulo">☕ Receso</span><span class="actividad-duracion">15 min</span></div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Teoría: buzzer y frecuencias</span><span class="actividad-duracion">20 min</span></div>
+                <div>El buzzer convierte señales en sonido. Con `tone(pin, frecuencia)` generamos tonos.</div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Práctica 5: Melodía con buzzer</span><span class="actividad-duracion">20 min</span></div>
+                <div>Programa "Estrellita" o un timbre.</div>
+                <div class="codigo-ejemplo">
+void setup() {}
+void loop() {
+  tone(4, 262, 500); delay(500); // Do
+  tone(4, 294, 500); delay(500); // Re
+  tone(4, 330, 500); delay(500); // Mi
+  // ... más notas
+}
+                </div>
+                <div class="enlaces-flex"><a class="enlace-item" href="https://www.youtube.com/watch?v=O7rG7rE6r8I" target="_blank">🎵 Melodías</a></div>
+            </div>
+            <div class="actividad">
+                <div class="actividad-header"><span class="actividad-titulo">Cierre de semana</span><span class="actividad-duracion">5 min</span></div>
+                <div><strong class="clase-nombre-alumno">Cargando...</strong>, esta semana diste tus primeros pasos: electricidad, LED, semáforo, colores y sonido. ¡Ya eres un principiante con poder!</div>
+            </div>
+        </div>
+
+        <!-- MATERIALES DE LA SEMANA (CHECKLIST) -->
+        <div class="materiales-semana">
+            <h3>📦 Materiales que usó <strong class="clase-nombre-alumno">Cargando...</strong> esta semana</h3>
+            <div class="checklist">
+                <span class="checklist-item">✅ Tarjeta ESP32</span>
+                <span class="checklist-item">✅ Protoboard</span>
+                <span class="checklist-item">✅ LEDs varios</span>
+                <span class="checklist-item">✅ LED RGB</span>
+                <span class="checklist-item">✅ Resistencias 220Ω</span>
+                <span class="checklist-item">✅ Buzzer</span>
+                <span class="checklist-item">✅ Pulsador (día 2)</span>
+                <span class="checklist-item">✅ Multímetro</span>
+                <span class="checklist-item">✅ Batería 7.4V</span>
+                <span class="checklist-item">✅ Cables y pinzas</span>
+            </div>
+        </div>
+
+        <!-- PREGUNTAS FRECUENTES DE LA SEMANA -->
+        <div class="faq-semana">
+            <h3>❓ Preguntas que se hizo <strong class="clase-nombre-alumno">Cargando...</strong> (y sus respuestas)</h3>
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Por qué mi LED no enciende?</div>
+                <div>Revisa polaridad (ánodo largo al pin, corto a GND), la resistencia, que el pin sea el correcto y esté en OUTPUT.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">No encuentro el puerto COM del ESP32</div>
+                <div>Instala el driver CP210x o CH340 según tu modelo. Reinicia Arduino IDE.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">¿Puedo dañar el ESP32?</div>
+                <div>Si no conectas 5V en pines equivocados, es difícil. Respeta voltajes (3.3V en pines).</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-pregunta">Mi código compila pero no parpadea</div>
+                <div>Verifica que el pin del LED sea 2 (o el que usaste). Algunas placas usan LED en GPIO2, otras en GPIO13, checa tu modelo.</div>
+            </div>
+        </div>
+
+        <!-- CIERRE DE SEMANA (mensaje a <strong class="clase-nombre-alumno">Cargando...</strong>) -->
+        <div class="cierre-semana">
+            <strong>🎉 <strong class="clase-nombre-alumno">Cargando...</strong>, esto fue Semana 1.</strong> Ya sabes encender luces, hacer sonidos, medir voltajes. La siguiente semana te convertirás en un maestro de los sensores. ¡Nos vemos en la Semana 2, donde sentirás el mundo como un robot!
+        </div>
+
+        <!-- SOPORTE / NOTAS DEL GUÍA (el campo "soporte" del JSON) -->
+        <div class="soporte-guia">
+            <h4 style="color:#001f3f; font-size:1.8rem; margin-bottom:12px;">🧭 Notas del guía (soporte)</h4>
+            <p><strong>Historia para mantener viva:</strong> "<strong class="clase-nombre-alumno">Cargando...</strong>, vas bien. Las fábricas de Juárez usan estos mismos principios: sensores, luces, alarmas. Estás aprendiendo lo que un técnico necesita."</p>
+            <p><strong>Posibles distracciones:</strong> Si alguien se atrasa, recordarle que el receso es para relajarse, no para adelantar. Reforzar con preguntas frecuentes.</p>
+            <p><strong>Librerías a futuro:</strong> Esta semana no usamos librerías externas. Todo nativo.</p>
+            <p><strong>Documentación extra:</strong> https://randomnerdtutorials.com, https://wokwi.com/esp32</p>
+        </div>
+
+    </div> <!-- fin cuerpo -->
+</div> <!-- fin contenedor semana -->
+</body>
+<script src="../src/soporte.js" data-v="A"></script>
+</html>

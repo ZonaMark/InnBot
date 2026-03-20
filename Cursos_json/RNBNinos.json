@@ -1,0 +1,631 @@
+{
+  "curso": {
+    "id": "robotica-creativa-jovenes-adultos",
+    "titulo": "Robótica Creativa: Diseña, Crea y Programa Tu Futuro",
+    "descripcion": "Curso práctico de robótica básica orientado a jóvenes y adultos para el diseño y construcción de un robot móvil funcional utilizando ESP32, sensores y actuadores.",
+    "edad": "14 años en adelante",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Se otorga la presente constancia por haber concluido satisfactoriamente el curso Robótica Creativa: Diseña, Crea y Programa Tu Futuro, con una duración total de 30 horas."
+    }
+  },
+
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 15,
+    "unidadTiempo": "minutos"
+  },
+
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "Introducción a la Robótica y Electrónica Básica",
+      "descripcion": "Fundamentos de robótica y circuitos electrónicos.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "¿Qué es la robótica?",
+          "duracionMin": 30,
+          "descripcion": "Conceptos básicos, aplicaciones reales y tipos de robots.",
+          "tipo": "teoria",
+          "niveles": ["comprender", "analizar", "contextualizar"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "Simulación LED en Tinkercad",
+          "duracionMin": 60,
+          "descripcion": "Encender y apagar un LED usando protoboard virtual.",
+          "tipo": "practica",
+          "niveles": ["aplicar", "experimentar", "verificar"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        },
+        {
+          "id": "d1-receso",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Montaje físico en protoboard",
+          "duracionMin": 45,
+          "descripcion": "Ensamblaje de LED fuera del chasis.",
+          "tipo": "practica",
+          "niveles": ["aplicar", "analizar", "construir"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        }
+      ]
+    },
+
+    {
+      "dia": 2,
+      "titulo": "Control Analógico",
+      "descripcion": "Uso de potenciómetros y control de intensidad.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Potenciómetros y señales",
+          "duracionMin": 75,
+          "descripcion": "Señales analógicas y control gradual.",
+          "tipo": "teoria",
+          "niveles": ["comprender", "interpretar", "relacionar"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        },
+        {
+          "id": "d2-receso",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "Lámpara con potenciómetro",
+          "duracionMin": 90,
+          "descripcion": "Proyecto: control de intensidad lumínica.",
+          "tipo": "proyecto",
+          "niveles": ["aplicar", "integrar", "optimizar"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        }
+      ]
+    },
+
+    {
+      "dia": 3,
+      "titulo": "Cierre de Electrónica Básica",
+      "descripcion": "Validación de aprendizajes.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Pruebas y ajustes",
+          "duracionMin": 120,
+          "descripcion": "Verificación de circuitos y correcciones.",
+          "tipo": "evaluacion",
+          "niveles": ["evaluar", "mejorar", "consolidar"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        },
+        {
+          "id": "d3-receso",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "Reflexión técnica",
+          "duracionMin": 15,
+          "descripcion": "Análisis de errores comunes.",
+          "tipo": "reflexion",
+          "niveles": ["analizar", "concluir", "aprender"],
+          "enlaces": [{ "texto": "", "url": "" }],
+          "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+          "enlaces_videos": [{ "texto": "", "url": "" }]
+        }
+      ]
+    }
+  ],
+  "Semana2": [
+  {
+    "dia": 1,
+    "titulo": "Scratch – Eventos y Control",
+    "descripcion": "Uso de eventos y bloques de control para crear proyectos interactivos en Scratch.",
+    "actividades": [
+      {
+        "id": "d1-act1",
+        "titulo": "Repaso y concepto de eventos",
+        "duracionMin": 30,
+        "descripcion": "Repaso de conceptos de la semana anterior y explicación de qué es un evento en programación (clic, teclado, bandera verde).",
+        "tipo": "teoria",
+        "niveles": ["recordar", "comprender", "identificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-act2",
+        "titulo": "Eventos y bloques de control",
+        "duracionMin": 60,
+        "descripcion": "Uso de bloques de eventos, secuencias, bucles y tiempos de espera mediante prácticas guiadas en Scratch.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "experimentar", "organizar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d1-act3",
+        "titulo": "Proyecto interactivo en Scratch",
+        "duracionMin": 45,
+        "descripcion": "Creación de un proyecto donde un personaje responde a eventos del teclado o clic del mouse.",
+        "tipo": "practica",
+        "niveles": ["crear", "aplicar", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 2,
+    "titulo": "Hora del Código – Condicionales y Bucles",
+    "descripcion": "Introducción al uso de condicionales y bucles para la resolución de problemas.",
+    "actividades": [
+      {
+        "id": "d2-act1",
+        "titulo": "Introducción a condicionales",
+        "duracionMin": 30,
+        "descripcion": "Explicación de condicionales (si / entonces) utilizando ejemplos cotidianos.",
+        "tipo": "teoria",
+        "niveles": ["comprender", "analizar", "relacionar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-act2",
+        "titulo": "Actividades de Hora del Código",
+        "duracionMin": 60,
+        "descripcion": "Resolución de actividades que integran condicionales y bucles en la plataforma Hora del Código.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "resolver", "experimentar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d2-act3",
+        "titulo": "Retos de lógica",
+        "duracionMin": 45,
+        "descripcion": "Resolución de retos prácticos, optimización de soluciones y comparación de diferentes estrategias.",
+        "tipo": "practica",
+        "niveles": ["analizar", "evaluar", "mejorar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 3,
+    "titulo": "Crocodile Clips – Circuitos Básicos y Control",
+    "descripcion": "Diseño y simulación de circuitos electrónicos básicos con interruptores.",
+    "actividades": [
+      {
+        "id": "d3-act1",
+        "titulo": "Repaso de circuitos simples",
+        "duracionMin": 30,
+        "descripcion": "Revisión de circuitos básicos y explicación del funcionamiento de interruptores.",
+        "tipo": "teoria",
+        "niveles": ["recordar", "comprender", "identificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-act2",
+        "titulo": "Diseño de circuitos con interruptores",
+        "duracionMin": 60,
+        "descripcion": "Creación de circuitos que permiten encender y apagar dispositivos mediante interruptores.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "ensamblar", "verificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d3-act3",
+        "titulo": "Aplicaciones reales de circuitos",
+        "duracionMin": 45,
+        "descripcion": "Análisis de aplicaciones reales como timbres, luces domésticas y sistemas de encendido.",
+        "tipo": "analisis",
+        "niveles": ["analizar", "relacionar", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  }
+  ],
+  "Semana3": [
+  {
+    "dia": 1,
+    "titulo": "Sensores Ambientales y Lectura de Datos",
+    "descripcion": "Introducción al uso de sensores para obtener datos del entorno y visualizarlos mediante el ESP32.",
+    "actividades": [
+      {
+        "id": "d1-act1",
+        "titulo": "Introducción a los sensores",
+        "duracionMin": 30,
+        "descripcion": "Explicación de qué es un sensor, tipos de sensores (analógicos y digitales) y presentación del DHT11 y LDR.",
+        "tipo": "teoria",
+        "niveles": ["comprender", "identificar", "analizar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-act2",
+        "titulo": "Lectura de temperatura y humedad con DHT11",
+        "duracionMin": 60,
+        "descripcion": "Conexión y programación del sensor DHT11 para obtener temperatura y humedad y mostrarlas en el monitor serie.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "experimentar", "interpretar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d1-act3",
+        "titulo": "Lectura de luminosidad con LDR",
+        "duracionMin": 45,
+        "descripcion": "Conexión del LDR, lectura de valores de luz y ajuste de rangos para interpretar condiciones de iluminación.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "analizar", "ajustar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 2,
+    "titulo": "Interpretación de Datos y Respuesta del Sistema",
+    "descripcion": "Uso de condiciones para que el robot responda automáticamente a los datos de los sensores.",
+    "actividades": [
+      {
+        "id": "d2-act1",
+        "titulo": "Umbrales y lógica condicional",
+        "duracionMin": 30,
+        "descripcion": "Explicación de umbrales, condiciones y toma de decisiones automáticas con estructuras if.",
+        "tipo": "teoria",
+        "niveles": ["comprender", "analizar", "decidir"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-act2",
+        "titulo": "Acciones automáticas con sensores",
+        "duracionMin": 60,
+        "descripcion": "Programación de respuestas automáticas: encendido de LED por temperatura y buzzer por baja iluminación.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "programar", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d2-act3",
+        "titulo": "Integración y depuración",
+        "duracionMin": 45,
+        "descripcion": "Integración de múltiples sensores, pruebas del sistema y corrección de errores.",
+        "tipo": "practica",
+        "niveles": ["integrar", "evaluar", "mejorar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 3,
+    "titulo": "Integración de Sensores en el Robot",
+    "descripcion": "Montaje físico de sensores y pruebas completas en el robot móvil.",
+    "actividades": [
+      {
+        "id": "d3-act1",
+        "titulo": "Diseño del montaje de sensores",
+        "duracionMin": 30,
+        "descripcion": "Planeación de la ubicación y cableado correcto de sensores en el chasis del robot.",
+        "tipo": "planificacion",
+        "niveles": ["analizar", "diseñar", "organizar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-act2",
+        "titulo": "Montaje físico de sensores",
+        "duracionMin": 60,
+        "descripcion": "Instalación del DHT11, LDR y sensor óptico en el chasis y pruebas individuales.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "ensamblar", "verificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d3-act3",
+        "titulo": "Pruebas funcionales completas",
+        "duracionMin": 45,
+        "descripcion": "Programación final integrada, simulación de escenarios reales y validación del funcionamiento.",
+        "tipo": "evaluacion",
+        "niveles": ["integrar", "evaluar", "optimizar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  }
+  ],
+  "Semana4": [
+  {
+    "dia": 1,
+    "titulo": "Scratch – Mejora y Optimización de Proyectos",
+    "descripcion": "Revisión, mejora y optimización de proyectos desarrollados durante el curso.",
+    "actividades": [
+      {
+        "id": "d1-act1",
+        "titulo": "Revisión de aprendizajes y proyectos",
+        "duracionMin": 30,
+        "descripcion": "Análisis de los proyectos desarrollados durante el curso y reflexión sobre los aprendizajes obtenidos.",
+        "tipo": "reflexion",
+        "niveles": ["recordar", "analizar", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-act2",
+        "titulo": "Incorporación de mejoras",
+        "duracionMin": 60,
+        "descripcion": "Incorporación de mejoras, nuevas ideas y ajustes funcionales a los proyectos en Scratch.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "mejorar", "crear"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d1-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d1-act3",
+        "titulo": "Presentación de mejoras",
+        "duracionMin": 45,
+        "descripcion": "Presentación de los proyectos mejorados y retroalimentación grupal.",
+        "tipo": "presentacion",
+        "niveles": ["comunicar", "evaluar", "reflexionar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 2,
+    "titulo": "Hora del Código – Desafíos de Integración",
+    "descripcion": "Resolución de desafíos que integran lógica, secuencias y toma de decisiones.",
+    "actividades": [
+      {
+        "id": "d2-act1",
+        "titulo": "Introducción a nuevos desafíos",
+        "duracionMin": 30,
+        "descripcion": "Presentación de desafíos avanzados y análisis de estrategias de solución.",
+        "tipo": "teoria",
+        "niveles": ["comprender", "analizar", "planificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-act2",
+        "titulo": "Resolución de desafíos prácticos",
+        "duracionMin": 60,
+        "descripcion": "Resolución guiada e independiente de desafíos que requieren lógica, bucles y condicionales.",
+        "tipo": "practica",
+        "niveles": ["aplicar", "resolver", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d2-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d2-act3",
+        "titulo": "Reflexión sobre soluciones",
+        "duracionMin": 45,
+        "descripcion": "Comparación de distintas soluciones y reflexión sobre el proceso de pensamiento utilizado.",
+        "tipo": "reflexion",
+        "niveles": ["analizar", "comparar", "reflexionar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  },
+  {
+    "dia": 3,
+    "titulo": "Crocodile Clips – Simulación, Ajustes y Cierre",
+    "descripcion": "Optimización final de proyectos electrónicos y cierre del nivel básico.",
+    "actividades": [
+      {
+        "id": "d3-act1",
+        "titulo": "Revisión de proyectos electrónicos",
+        "duracionMin": 30,
+        "descripcion": "Revisión del funcionamiento de los circuitos desarrollados y detección de áreas de mejora.",
+        "tipo": "analisis",
+        "niveles": ["analizar", "identificar", "evaluar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-act2",
+        "titulo": "Ajustes y optimización",
+        "duracionMin": 60,
+        "descripcion": "Realización de ajustes, optimización de circuitos y simulaciones finales.",
+        "tipo": "practica",
+        "niveles": ["mejorar", "optimizar", "verificar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      },
+      {
+        "id": "d3-receso1",
+        "titulo": "Receso",
+        "duracionMin": 15,
+        "descripcion": "Descanso activo.",
+        "tipo": "receso",
+        "niveles": ["", "", ""],
+        "enlaces": [],
+        "enlaces_de_respaldo": [],
+        "enlaces_videos": []
+      },
+      {
+        "id": "d3-act3",
+        "titulo": "Cierre del curso y reflexión final",
+        "duracionMin": 45,
+        "descripcion": "Reflexión final del curso, retroalimentación general y cierre del nivel básico.",
+        "tipo": "cierre",
+        "niveles": ["reflexionar", "evaluar", "comunicar"],
+        "enlaces": [{ "texto": "", "url": "" }],
+        "enlaces_de_respaldo": [{ "texto": "", "url": "" }],
+        "enlaces_videos": [{ "texto": "", "url": "" }]
+      }
+    ]
+  }
+  ],
+
+  "metadata": {
+    "fechaCreacion": "2025-02-18",
+    "ultimaActualizacion": "2025-02-18",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

@@ -1,0 +1,486 @@
+{
+  "curso": {
+    "id": "CEL-SEG-MARIO-01",
+    "titulo": "Tu celular fácil y seguro",
+    "descripcion": "Curso integral de alfabetización digital y ciberseguridad diseñado para adultos, enfocado en el dominio del dispositivo Android como una fortaleza personal.",
+    "edad": "50+",
+    "Objetivo1": "Al finalizar el curso, el usuario operará su dispositivo móvil con autonomía, configurando los niveles de seguridad, identidad y administración de datos bajo estándares de protección profesional.",
+    "Objetivo2": "El usuario será capaz de gestionar cuentas de correo, instalar aplicaciones seguras, utilizar herramientas de banca móvil y detectar intentos de fraude o phishing de manera proactiva.",
+    "PerfilEgre": "Egresado con competencias técnicas en seguridad digital móvil, capaz de proteger su información sensible, navegar de forma privada y administrar su identidad digital sin dependencia de terceros.",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Se otorga la presente a Don Mario por haber completado con éxito el blindaje total de su identidad y tesoro digital."
+    }
+  },
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 10,
+    "unidadTiempo": "minutos"
+  },
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "El Acta de Nacimiento Digital",
+      "descripcion": "Configuración de la Cuenta Google como eje central del dispositivo.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "Encuadre y Sensibilización",
+          "duracionMin": 30,
+          "descripcion": "Explicación del organigrama del celular y por qué el correo es el 'Gerente General'.",
+          "tipo": "teoria",
+          "niveles": ["Basico", "Introduccion", "Concepto"],
+          "enlaces": [{"texto": "Importancia de Cuenta Google", "url": "https://support.google.com/accounts/answer/27441?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "Creación y Blindaje de Gmail",
+          "duracionMin": 55,
+          "descripcion": "Alta de cuenta, vinculación de teléfono de recuperación y ajuste de nombre real.",
+          "tipo": "practica",
+          "niveles": ["Identidad", "Cimientos", "Seguridad"],
+          "enlaces": [{"texto": "Guía de creación", "url": "https://support.google.com/accounts/answer/27441?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Tutorial Paso a Paso", "url": "https://youtu.be/6sdQBF3IDc4"}]
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Explorando el Reino (Sincronización)",
+          "duracionMin": 55,
+          "descripcion": "Vinculación de contactos y configuración de la copia de seguridad inicial.",
+          "tipo": "practica",
+          "niveles": ["Datos", "Respaldo", "Nube"],
+          "enlaces": [{"texto": "Sincronizar contactos", "url": "https://support.google.com/contacts/answer/2753077?hl=es&co=GENIE.Platform%3DAndroid&sjid=1113026081162255918-NC"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Los Cerrojos de la Casa",
+      "descripcion": "Protección física y biométrica del dispositivo.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Repaso de Identidad",
+          "duracionMin": 20,
+          "descripcion": "Prueba de inicio de sesión autónoma por parte del alumno.",
+          "tipo": "repaso",
+          "niveles": ["Autonomia", "Memoria"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "Biometría y Código Maestro",
+          "duracionMin": 60,
+          "descripcion": "Registro de huella digital, rostro y creación de PIN de 6 dígitos seguro.",
+          "tipo": "practica",
+          "niveles": ["Biometria", "Acceso", "Fisico"],
+          "enlaces": [{"texto": "Configurar bloqueo", "url": "https://support.google.com/android/answer/9079129?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act3",
+          "titulo": "Bloqueo Automático",
+          "duracionMin": 60,
+          "descripcion": "Configuración de tiempos de espera y bloqueo instantáneo con botón de encendido.",
+          "tipo": "practica",
+          "niveles": ["Seguridad", "Hardware"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "La Nube y el Rastreo",
+      "descripcion": "Asegurar la ubicación del dispositivo y el respaldo de recuerdos.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Encontrar mi dispositivo",
+          "duracionMin": 45,
+          "descripcion": "Activación del rastreo satelital y prueba de sonido remoto.",
+          "tipo": "practica",
+          "niveles": ["Rastreo", "GPS", "Emergencia"],
+          "enlaces": [{"texto": "Localizar mi equipo", "url": "https://www.google.com/android/find"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "El Baúl Infinito (Google Fotos)",
+          "duracionMin": 55,
+          "descripcion": "Configuración de la copia de seguridad de fotos y videos en alta calidad.",
+          "tipo": "practica",
+          "niveles": ["Nube", "Fotos", "Memoria"],
+          "enlaces": [{"texto": "Copia de seguridad", "url": "https://support.google.com/photos/answer/6193313?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act3",
+          "titulo": "Evaluación de Cimientos",
+          "duracionMin": 40,
+          "descripcion": "Examen práctico: El alumno debe demostrar el bloqueo y la ubicación de su cuenta.",
+          "tipo": "evaluacion",
+          "niveles": ["Competencia", "EC0366"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/Celular_1.html"}
+  ],
+  "Semana2": [
+    {
+      "dia": 4,
+      "titulo": "El Mercado Seguro y Permisos",
+      "descripcion": "Gestión de aplicaciones y seguridad en la instalación.",
+      "actividades": [
+        {
+          "id": "d4-act1",
+          "titulo": "Play Store vs APK",
+          "duracionMin": 40,
+          "descripcion": "Identificación del sello Play Protect y riesgos de instalar fuera de la tienda oficial.",
+          "tipo": "teoria",
+          "niveles": ["Seguridad", "Software"],
+          "enlaces": [{"texto": "Google Play Protect", "url": "https://support.google.com/googleplay/answer/2812853?hl=es&sjid=1113026081162255918-NC"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act2",
+          "titulo": "Instalación y Desinstalación",
+          "duracionMin": 50,
+          "descripcion": "Práctica de búsqueda, lectura de reseñas y limpieza de aplicaciones innecesarias.",
+          "tipo": "practica",
+          "niveles": ["Uso", "Mantenimiento"],
+          "enlaces": [{"texto": "Descargar apps", "url": "https://support.google.com/googleplay/answer/113409?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d4-act3",
+          "titulo": "El Semáforo de Permisos",
+          "duracionMin": 50,
+          "descripcion": "Auditoría de qué aplicaciones tienen acceso a cámara, micrófono y ubicación.",
+          "tipo": "practica",
+          "niveles": ["Privacidad", "Control"],
+          "enlaces": [{"texto": "Gestionar permisos", "url": "https://support.google.com/android/answer/9431959?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "La Ventana al Mundo (Navegadores)",
+      "descripcion": "Navegación web segura y eliminación de publicidad engañosa.",
+      "actividades": [
+        {
+          "id": "d5-act1",
+          "titulo": "Navegación sin Trampas",
+          "duracionMin": 45,
+          "descripcion": "Identificación de HTTPS, uso de pestañas de incógnito y gestión de historial.",
+          "tipo": "practica",
+          "niveles": ["Web", "Privacidad"],
+          "enlaces": [{"texto": "Navegar en incógnito", "url": "https://support.google.com/chrome/answer/95464?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act2",
+          "titulo": "Instalación de Escudos (AdBlock)",
+          "duracionMin": 50,
+          "descripcion": "Configuración de bloqueadores para evitar anuncios intrusivos y alertas falsas de virus.",
+          "tipo": "practica",
+          "niveles": ["Defensa", "Filtros"],
+          "enlaces": [{"texto": "Seguridad en Chrome", "url": "https://support.google.com/chrome/answer/95617?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d5-act3",
+          "titulo": "Detección de Pop-ups",
+          "duracionMin": 45,
+          "descripcion": "Simulacro de búsqueda de información evitando clics en banners engañosos.",
+          "tipo": "practica",
+          "niveles": ["Analisis", "Navegacion"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Pop-UPS", "url": "https://youtu.be/AtsNt7CiIFA"}]
+        }
+      ]
+    },
+    {
+      "dia": 6,
+      "titulo": "Defensa Activa y Redes",
+      "descripcion": "Protección contra malware y configuración de privacidad en redes sociales.",
+      "actividades": [
+        {
+          "id": "d6-act1",
+          "titulo": "Antivirus y Antispam",
+          "duracionMin": 50,
+          "descripcion": "Instalación de Bitdefender Free y configuración de filtro de llamadas de Google.",
+          "tipo": "practica",
+          "niveles": ["Antivirus", "Spam"],
+          "enlaces": [{"texto": "Bloquear spam", "url": "https://support.google.com/search?q=bloquear+spam"}],
+          "enlaces_de_respaldo": [{"texto": "Bloquear spam", "url": "https://www.avast.com/es-mx/free-mobile-security#pc"}],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act2",
+          "titulo": "Privacidad en WhatsApp",
+          "duracionMin": 50,
+          "descripcion": "Ocultar foto de perfil, estados y última conexión a desconocidos.",
+          "tipo": "practica",
+          "niveles": ["Redes", "Privacidad"],
+          "enlaces": [{"texto": "Privacidad WhatsApp", "url": "https://www.argentina.gob.ar/justicia/convosenlaweb/situaciones/como-configurar-la-privacidad-de-whatsapp"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d6-act3",
+          "titulo": "Auditoría de Seguridad",
+          "duracionMin": 40,
+          "descripcion": "Escaneo general del sistema y verificación de escudos activos.",
+          "tipo": "evaluacion",
+          "niveles": ["Mantenimiento", "EC0366"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"texto": "Virus-Total", "url": "https://www.youtube.com/watch?v=eP8KFkfG47k"}]
+        }
+      ]
+    }
+  ],
+  "Semana3": [
+    {
+      "dia": 7,
+      "titulo": "Gestión de Llaves Maestras",
+      "descripcion": "Uso de bóvedas de contraseñas y doble factor de autenticación.",
+      "actividades": [
+        {
+          "id": "d7-act1",
+          "titulo": "Bóveda Bitwarden",
+          "duracionMin": 60,
+          "descripcion": "Instalación y creación de la cuenta maestra para gestionar claves sin papel.",
+          "tipo": "practica",
+          "niveles": ["Contraseñas", "Boveda"],
+          "enlaces": [{"texto": "Sitio Bitwarden", "url": "https://play.google.com/store/apps/details?id=com.x8bit.bitwarden&hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d7-act2",
+          "titulo": "Doble Factor (2FA)",
+          "duracionMin": 50,
+          "descripcion": "Activación de la verificación en dos pasos en Gmail y WhatsApp.",
+          "tipo": "practica",
+          "niveles": ["Blindaje", "2FA"],
+          "enlaces": [{"texto": "2FA Google", "url": "https://support.google.com/accounts/answer/185839?hl=es-419&co=GENIE.Platform%3DDesktop"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"video": "2FA que es", "url": "https://www.youtube.com/watch?v=PISNMBy0d3I"}]
+        },
+        {
+          "id": "d7-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d7-act3",
+          "titulo": "Limpieza de Claves",
+          "duracionMin": 30,
+          "descripcion": "Identificación de contraseñas débiles y actualización en la bóveda.",
+          "tipo": "practica",
+          "niveles": ["Seguridad", "Analisis"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"video": "CÓMO usar BITWARDEN en ANDROID", "url": "https://www.youtube.com/watch?v=UIZOns2OwBc&list=PL8s5cnuI4fXewE_ZvVDYT1FCkK58dyrTi&index=4"}]
+        }
+      ]
+    },
+    {
+      "dia": 8,
+      "titulo": "Banca Móvil y Finanzas",
+      "descripcion": "Uso seguro de aplicaciones bancarias y transacciones.",
+      "actividades": [
+        {
+          "id": "d8-act1",
+          "titulo": "Configuración Bancaria",
+          "duracionMin": 50,
+          "descripcion": "Validación de apps oficiales y configuración de notificaciones de gastos en tiempo real.",
+          "tipo": "practica",
+          "niveles": ["Finanzas", "Banca"],
+          "enlaces": [{"texto": "Seguridad Bancaria", "url": "https://www.bbva.mx/educacion-financiera/banca-digital/ciberseguridad/seguridad-digital.html"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d8-act2",
+          "titulo": "Tarjetas Digitales y CVV",
+          "duracionMin": 50,
+          "descripcion": "Práctica de generación de CVV dinámico para compras seguras en internet.",
+          "tipo": "practica",
+          "niveles": ["Pagos", "Ecommerce"],
+          "enlaces": [{"texto": "CCV Dinamicos", "url": "https://www.bbva.mx/educacion-financiera/banca-digital/ciberseguridad/cuenta-digital-que-es-un-cvv-dinamico.html"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d8-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d8-act3",
+          "titulo": "Riesgos de Wi-Fi Público",
+          "duracionMin": 40,
+          "descripcion": "Análisis de por qué no usar redes abiertas para transacciones de dinero.",
+          "tipo": "teoria",
+          "niveles": ["Redes", "Riesgos"],
+          "enlaces": [{"texto": "Riesgos de las redes Wi-Fi Publicas", "url": "https://flashstart.com/es/son-seguras-las-redes-wifi-descubre-los-riesgos-y-vulnerabilidades/?gad_source=2&gad_campaignid=23224246985&gclid=CjwKCAiA2PrMBhA4EiwAwpHyC4oRlNGJZzl-Aw5K73-gttKorSsS-9KUp-kc8pXq_Xw3AufTnH_aixoCfHAQAvD_BwE"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": [{"video": "Riesgos de las redes Wi-Fi Publicas", "url": "https://www.youtube.com/watch?v=VxbL1TlwWZA"}]
+        }
+      ]
+    },
+    {
+      "dia": 9,
+      "titulo": "Inteligencia Anti-Fraude",
+      "descripcion": "Simulacros de ataques y protocolo de emergencia.",
+      "actividades": [
+        {
+          "id": "d9-act1",
+          "titulo": "Caza de Phishing",
+          "duracionMin": 60,
+          "descripcion": "Simulacro interactivo para identificar correos y SMS falsos.",
+          "tipo": "practica",
+          "niveles": ["Fraude", "Phishing"],
+          "enlaces": [{"texto": "Google Phishing Quiz", "url": "https://phishingquiz.withgoogle.com/?hl=es"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d9-act2",
+          "titulo": "Protocolo de Emergencia",
+          "duracionMin": 50,
+          "descripcion": "Qué hacer ante robo: Bloqueo de SIM, IMEI y borrado remoto de datos.",
+          "tipo": "practica",
+          "niveles": ["Emergencia", "Robo"],
+          "enlaces": [{"texto": "Reportar robo WhatsApp", "url": "https://faq.whatsapp.com/5431109606275851/?locale=es_LA"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d9-receso1",
+          "titulo": "Receso",
+          "duracionMin": 10,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["Descanso"],
+          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+        },
+        {
+          "id": "d9-act3",
+          "titulo": "Evaluación Final y Graduación",
+          "duracionMin": 30,
+          "descripcion": "Cierre del curso y validación de competencias adquiridas por el egresado.",
+          "tipo": "evaluacion",
+          "niveles": ["Certificacion", "Egresado"],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    }
+  ],
+  "metadata": {
+    "fechaCreacion": "2026-02-24",
+    "ultimaActualizacion": "2026-02-24",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  },
+  "soporte": "Marcos Moreno Márquez - Facilitador de habilidades en Ciberseguridad"
+}
