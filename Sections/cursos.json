@@ -6,7 +6,7 @@
         "instagram": "https://instagram.com",
         "youtube": "https://youtube.com",
         "linkedIn": "https://www.linkedin.com/in/marcosmoreno3m",
-        "formato_fecha": "El formato de Fecha en los cursos es 12/25/2025 al 01/15/2026"
+        "formato_fecha": "El formato de Fecha en los cursos es M12/D25/2025 al M01/D15/2026"
     },
 
     "cursos": [
@@ -16,10 +16,10 @@
             "frase": "Para niños de 12 en adelante. Aprende electrónica y programación con TinkerCad y Crocodile Clips.",
             "duracion": "⏱ Duración: 20 horas",
             "material": "🧰 Material digital incluido",
-            "Fecha": "Periodo de Registro",
+            "Fecha": "02/22/2026 al 03/22/2026",
             "modalidad": "Presencial",
             "lugar": "FBSM",
-            "ID": "RNB",
+            "ID": "RNBJ",
             "acceso": "Codigo",
             "gid": "1290549952",
             "Encuesta": "url"
@@ -182,15 +182,15 @@
             "titulo": "Tu celular fácil y seguro",
             "imagen": "img/celular.png",
             "frase": "Aprende a usar tu celular sin complicaciones, Pierde el miedo al celular, gana confianza y conécta con tu familia de forma segura y fácil",
-            "duracion": "⏱ Duración: 10 horas",
+            "duracion": "⏱ Duración: 15 horas",
             "material": "Celular propio",
-            "Fecha": "Periodo de Registro",
+            "Fecha": "02/02/2026 al 03/12/2026",
             "modalidad": "Presencial",
             "lugar": "FBSM",
             "ID": "Celular",
             "acceso": "Codigo",
             "gid": "99605463",
-            "Encuesta": "url"
+            "Encuesta": "https://docs.google.com/forms/d/e/1FAIpQLSdwqxxVNG63Fkblktl-gCRGnnDao1VOMUiIGIZYijyUYe-hHg/viewform?usp=header"
         },
         {
             "titulo": "Kit de Marketing Profesional",
