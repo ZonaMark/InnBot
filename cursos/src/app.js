@@ -41,7 +41,8 @@ async function iniciarAplicacion() {
         if (link) {
             XO1O1_GEN();           
         }
-    }); 
+    });
+    generarCintilloCursos();
   } catch (error) {
     console.error(error);
     mostrarError(error.message);
@@ -122,4 +123,33 @@ function XO1O1_GEN() {
     const llaveFinal = prefijo + cuerpoCifrado + firma;
     const expiracion = Date.now() + 5 * 1000;
     localStorage.setItem("codigoSoporte", JSON.stringify({ llave: llaveFinal, expiracion }));
+}
+
+// Función para obtener y procesar los cursos
+async  function generarCintilloCursos() {
+    try {
+        const response = await fetch(`${basePath}/Sections/cursos.json`);
+        const data = await response.json();
+        
+        // Filtrar cursos que NO tengan "Periodo de registro" en la fecha
+        const cursosFiltrados = data.cursos.filter(curso => {
+            const tieneFormatoFecha = /\d{2}\/\d{2}\/\d{4} al \d{2}\/\d{2}\/\d{4}/.test(curso.Fecha);
+            return tieneFormatoFecha;
+        });
+       // Generar los spans con la información de cada curso
+        const cursosHTML = cursosFiltrados.map(curso => `
+            <span class="cintillo-item">
+                ${curso.titulo} &nbsp;|&nbsp; 📅 ${curso.Fecha} &nbsp;&nbsp;✦&nbsp;&nbsp;
+            </span>
+        `).join('');
+        
+        // Insertar en el DOM (duplicado 3 veces para efecto infinito)
+        const cintilloTrack = document.querySelector('.cintillo-track');
+        if (cintilloTrack) {
+            // Repetir 3 veces para que el desplazamiento sea continuo
+            cintilloTrack.innerHTML = cursosHTML + cursosHTML + cursosHTML;
+        }   
+    } catch (error) {
+        console.error("Error al cargar los cursos:", error);
+    }
 }

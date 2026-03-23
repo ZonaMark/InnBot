@@ -417,10 +417,9 @@ body.light-mode .feature-sitios:hover {
     font-weight: 900;
     margin-bottom: 20px;
     background: linear-gradient(135deg, var(--accent-primary), var(--accent-tertiary));
-    -webkit-background-clip: text;
+    background-clip: text;  /* ← Agrega esta línea */
     -webkit-text-fill-color: transparent;
     line-height: 1.2;
-
 }
 
 .hero-manto{
@@ -1345,6 +1344,106 @@ body.light-mode .who-modal-content {
 	color: white;
   text-indent: 40px;
 }
+
+.cintillo {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    margin: 0 auto;
+    
+    /* Efecto cristal */
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); /* ← Agrega esta línea para Safari */
+    border: 1px solid rgba(255, 255, 255, 0.3);   
+    overflow: hidden;
+    z-index: 9999;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.cintillo:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 -6px 20px rgba(0,0,0,0.3);
+}
+
+.cintillo-contenido {
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    padding: 12px 0;
+}
+
+.cintillo-track {
+    display: inline-flex;
+    animation: desplazarInfinito 30s linear infinite;
+}
+
+.cintillo-item {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: Arial, sans-serif;
+    padding-right: 50px;
+}
+
+@keyframes desplazarInfinito {
+    0% {
+    transform: translateX(0);
+    }
+    100% {
+    transform: translateX(-50%);
+    }
+}
+
+.cintillo:hover .cintillo-track {
+    animation-play-state: paused;
+}
+
+.cintillo::after {
+    content: "🔗";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    background: rgba(0,0,0,0.3);
+    padding: 5px 10px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.cintillo:hover::after {
+    opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .cintillo {
+    width: 95%;
+    }
+    .cintillo-item {
+    font-size: 12px;
+    }
+    .cintillo-track {
+    animation-duration: 20s;
+    }
+    .cintillo::after {
+    font-size: 14px;
+    right: 8px;
+    padding: 3px 8px;
+    }
+}
+
 /* ==========================
    MEDIA QUERIES
 ========================== */

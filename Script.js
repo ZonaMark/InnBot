@@ -10,6 +10,7 @@ export function iniciarSitio() {
   cargarContactofooter();
   navigateToSection("Inicio");
   initSidebar();
+  generarCintilloCursos();
   actualizarFechaHora();
   setInterval(actualizarFechaHora, 1000);
   document.getElementById("overlaySecun").addEventListener("click", ocultarModal);
@@ -90,7 +91,7 @@ function cargarCursos() {
             const fin = new Date(finStr);
             const hoy = new Date();
             const diffDias = Math.floor((inicio - hoy) / (1000 * 60 * 60 * 24));
-			if (diffDias >= 0 && diffDias <= 2) {
+			  if (diffDias >= 0 && diffDias <= 2) {
                 // Crear cuenta regresiva en tiempo real
                 function actualizarCuenta() {
                     const ahora = new Date();
@@ -866,4 +867,32 @@ function initSidebar() {
       mainContent.classList.remove("shifted");
     }
   });
+}
+
+// Función para obtener y procesar los cursos
+async  function generarCintilloCursos() {
+    try {
+        const response = await fetch("Sections/cursos.json");
+        const data = await response.json();
+        
+        // Filtrar cursos que NO tengan "Periodo de registro" en la fecha
+        const cursosFiltrados = data.cursos.filter(curso => {
+            const tieneFormatoFecha = /\d{2}\/\d{2}\/\d{4} al \d{2}\/\d{2}\/\d{4}/.test(curso.Fecha);
+            return tieneFormatoFecha;
+        });
+        // Generar los spans con la información de cada curso
+        const cursosHTML = cursosFiltrados.map(curso => `
+            <span class="cintillo-item">
+              ${curso.titulo} &nbsp;|&nbsp; 📅 ${curso.Fecha} &nbsp;&nbsp;✦&nbsp;&nbsp;
+            </span>
+        `).join('');
+        // Insertar en el DOM (duplicado 3 veces para efecto infinito)
+        const cintilloTrack = document.querySelector('.cintillo-track');
+        if (cintilloTrack) {
+            // Repetir 3 veces para que el desplazamiento sea continuo
+            cintilloTrack.innerHTML = cursosHTML + cursosHTML + cursosHTML;
+        }   
+    } catch (error) {
+        console.error("Error al cargar los cursos:", error);
+    }
 }
