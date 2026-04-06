@@ -85,7 +85,7 @@
           "tipo": "práctica",
           "niveles": ["Intermedio", "", ""],
           "enlaces": [{"texto": "Función SI", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-si-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2"}],
-          "enlaces_de_respaldo": [],.
+          "enlaces_de_respaldo": [],
           "enlaces_videos": [{"texto": "Función SI lógica", "url": "https://www.youtube.com/watch?v=MYV5IMVXbgI"}]
         },
         {
