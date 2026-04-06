@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Soporte Examen Integral - Proyecto TechNova</title>
+    <style>
+        :root { --primary: #2b5797; --secondary: #1e7145; --bg: #f4f7f9; }
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--bg); margin: 0; color: #333; }
+        header { background: var(--primary); color: white; padding: 30px; text-align: center; border-bottom: 6px solid var(--secondary); }
+        .container { max-width: 1100px; margin: 20px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h2 { color: var(--primary); border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 35px; }
+        .grid-data { display: grid; grid-template-columns: 1fr 1.5fr; gap: 20px; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.85em; margin-bottom: 15px; }
+        th { background: #e1e1e1; padding: 10px; text-align: left; border: 1px solid #ccc; }
+        td { padding: 8px; border: 1px solid #ccc; }
+        .scroll-area { height: 400px; overflow-y: auto; border: 2px solid #ddd; border-radius: 5px; }
+        .instrucciones { background: #fdfae3; border-left: 6px solid #f1c40f; padding: 25px; margin-top: 40px; }
+        .checklist { list-style: none; padding: 0; }
+        .checklist li { margin-bottom: 12px; padding-left: 30px; position: relative; }
+        .checklist li::before { content: '✔️'; position: absolute; left: 0; }
+        .carta-base { border: 2px dashed #999; padding: 40px; margin-top: 20px; font-family: 'Times New Roman', serif; background: #fff; }
+        .badge { background: #27ae60; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8em; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>PROYECTO TECHNOVA SOLUTIONS</h1>
+    <p>Examen Práctico de Certificación - Instructor: Marcos Moreno Márquez</p>
+</header>
+
+<div class="container">
+    <div style="background: #ebf5fb; padding: 20px; border-radius: 8px; border: 1px solid #aed6f1;">
+        <strong>SITUACIÓN:</strong> La empresa requiere cerrar la nómina del mes. Tu labor es procesar los datos de ventas para identificar a los agentes que recibirán bono y generar sus cartas de notificación de forma automatizada.
+    </div>
+
+    <div class="grid-data">
+        <div>
+            <h2>1. Catálogo (30 ítems)</h2>
+            <table>
+                <thead><tr><th>ID</th><th>Descripción</th><th>Precio</th></tr></thead>
+                <tbody id="data-cat"></tbody>
+            </table>
+        </div>
+        <div>
+            <h2>2. Agentes de Venta (15 perfiles)</h2>
+            <table>
+                <thead><tr><th>ID_Age</th><th>Nombre</th><th>Apellido</th><th>Meta</th></tr></thead>
+                <tbody id="data-age"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>3. Histórico de Ventas (100 Registros)</h2>
+    <div class="scroll-area">
+        <table>
+            <thead><tr><th>Folio</th><th>Vendedor (Ape)</th><th>ID_Prod</th><th>Cant</th><th>Región</th></tr></thead>
+            <tbody id="data-ven"></tbody>
+        </table>
+    </div>
+
+    <div class="instrucciones">
+        <h2>🛠️ ACTIVIDADES A REALIZAR (HOJA DE RUTA)</h2>
+        <ul class="checklist">
+            <li><strong>Estructura:</strong> Importar datos y convertir a <strong>Tablas (CTRL+Q)</strong>. Nombrar pestañas y tablas.</li>
+            <li><strong>Concatenación:</strong> En la hoja de Agentes, crear "Nombre Completo" uniendo Nombre y Apellido con espacio.</li>
+            <li><strong>Búsqueda Avanzada:</strong> En Ventas, usar <code>BUSCARV</code> o <code>BUSCARX</code> para traer el Precio y calcular el Total (Precio * Cantidad).</li>
+            <li><strong>Sumar.Si.Conjunto:</strong> En una nueva columna en Agentes, sumar las ventas logradas solo si pertenecen a la región "Norte" o "Sur" (según indique el instructor).</li>
+            <li><strong>Condicional SI:</strong> Evaluar: Si <em>Venta Lograda >= Meta</em>, colocar <strong>"APROBADO"</strong>, si no <strong>"SIN BONO"</strong>.</li>
+            <li><strong>Formato Condicional:</strong> Aplicar escalas de color a las ventas y resaltar en negrita roja los "SIN BONO".</li>
+            <li><strong>Análisis Dinámico:</strong> Crear <strong>Tabla Dinámica</strong> en hoja nueva para resumir Ventas por Región. Insertar <strong>Gráfico Dinámico</strong>.</li>
+            <li><strong>Configuración de Salida:</strong> En la hoja de Agentes, definir el <strong>Rango de Impresión</strong> para que solo se vea la tabla final. Ajustar a una sola página.</li>
+            <li><strong>Exportación:</strong> Guardar el libro de Excel completo en formato <strong>PDF</strong> con el nombre <em>"Reporte_Final_Apellido.pdf"</em>.</li>
+            <li><strong>Correspondencia:</strong> Vincular el archivo de Excel con Word para generar las cartas masivas (ver formato abajo).</li>
+            <li><strong>Entrega Final:</strong> Al finalizar la correspondencia, elegir <strong>"Editar documentos individuales"</strong> y guardar el resultado final (las 15 cartas) como un solo archivo <strong>PDF</strong>.</li>
+        </ul>
+    </div>
+
+    <h2>4. Formato para Combinación de Correspondencia</h2>
+    <div class="carta-base">
+        <p style="text-align: right;"><strong>Fecha:</strong> 06 de Abril de 2026</p>
+        <p><strong>CARTA DE NOTIFICACIÓN DE NÓMINA</strong></p>
+        <p>Estimado(a): <strong>«Nombre_Completo»</strong></p>
+        <p>Nos complace informarle que después de auditar el sistema de ventas del Proyecto TechNova, sus resultados son:</p>
+        <ul>
+            <li>Venta Total del Mes: $«Suma_de_Venta»</li>
+            <li>Meta Establecida: $«Meta»</li>
+            <li>Resultado de Bono: <strong>«Bono»</strong></li>
+        </ul>
+        <p>Agradecemos su esfuerzo continuo en la región «Región».</p>
+        <br><br>
+        <p style="text-align: center;">Atentamente,<br><strong>Marcos Moreno Márquez</strong><br>Director General TechNova</p>
+    </div>
+</div>
+
+<footer>
+    <p>Examen diseñado para la Semana de Ofimática 2026. Prohibida su reproducción sin autorización del Instructor.</p>
+</footer>
+
+<script>
+    const productos = [
+        ["TN01","Laptop",15000],["TN02","Mouse",300],["TN03","Monitor",3500],["TN04","Teclado",850],["TN05","Disco SSD",1200],
+        ["TN06","USB 64GB",200],["TN07","Webcam",750],["TN08","Impresora",4200],["TN09","Toner",1100],["TN10","HDMI",150],
+        ["TN11","Hub USB",500],["TN12","Silla",3500],["TN13","Escritorio",5000],["TN14","Antivirus",600],["TN15","Office",1400],
+        ["TN16","Router",1200],["TN17","Switch",600],["TN18","Cargador",450],["TN19","Mochila",800],["TN20","Disco 2TB",1900],
+        ["TN21","Tablet",4000],["TN22","Audifonos",950],["TN23","Bocinas",1400],["TN24","Microfono",1200],["TN25","PowerBank",700],
+        ["TN26","Cable Red",180],["TN27","Soporte",950],["TN28","Ventilador",300],["TN29","Pasta Term",150],["TN30","NoBreak",1800]
+    ];
+
+    const agentes = [
+        ["A01","Juan","Pérez",45000],["A02","María","López",55000],["A03","Luis","García",38000],["A04","Ana","Ruiz",52000],
+        ["A05","Pedro","Soto",35000],["A06","Rosa","Díaz",41000],["A07","Carlos","Martínez",49000],["A08","Sofía","Torres",53000],
+        ["A09","Diego","Ramírez",36000],["A10","Elena","Ruiz",60000],["A11","Jorge","Mendoza",42000],["A12","Lucía","Flores",44000],
+        ["A13","Miguel","Cano",39000],["A14","Rosa","Mejía",47000],["A15","Felipe","Ortiz",51000]
+    ];
+
+    const reg = ["Norte", "Sur", "Centro", "Este", "Oeste"];
+
+    // Llenar Tablas
+    const fill = (id, arr) => {
+        const t = document.getElementById(id);
+        arr.forEach(r => {
+            let tr = "<tr>";
+            r.forEach(c => tr += `<td>${typeof c === 'number' ? '$'+c : c}</td>`);
+            t.innerHTML += tr + "</tr>";
+        });
+    }
+    fill("data-cat", productos);
+    fill("data-age", agentes);
+
+    const vTable = document.getElementById("data-ven");
+    for(let i=1; i<=100; i++){
+        let ag = agentes[Math.floor(Math.random()*agentes.length)][2];
+        let pr = productos[Math.floor(Math.random()*productos.length)][0];
+        let can = Math.floor(Math.random()*4)+1;
+        let r = reg[Math.floor(Math.random()*reg.length)];
+        vTable.innerHTML += `<tr><td>F-${1000+i}</td><td>${ag}</td><td>${pr}</td><td>${can}</td><td>${r}</td></tr>`;
+    }
+</script>
+</body>
+</html>

@@ -85,7 +85,7 @@
           "tipo": "práctica",
           "niveles": ["Intermedio", "", ""],
           "enlaces": [{"texto": "Función SI", "url": "https://support.microsoft.com/es-es/office/funci%C3%B3n-si-69aed7c9-4e8a-4755-a9bc-aa8bbff73be2"}],
-          "enlaces_de_respaldo": [],
+          "enlaces_de_respaldo": [],.
           "enlaces_videos": [{"texto": "Función SI lógica", "url": "https://www.youtube.com/watch?v=MYV5IMVXbgI"}]
         },
         {
@@ -142,7 +142,7 @@
           "descripcion": "MANUAL: 1. Crear gráfico de columnas. 2. Pegado especial vinculado en Word.",
           "tipo": "práctica",
           "niveles": ["Intermedio", "", ""],
-          "enlaces": [{"texto": "Gráficos Excel", "url": "https://support.microsoft.com/es-es/office/crear-un-gr%C3%A1fico-de-principio-a-fin-0baf399e-dd61-4e18-8a73-b3fd5d5680c2"}],
+          "enlaces": [{"texto": "Gráficos Excel", "url": "https://support.microsoft.com/es-es/of.fice/crear-un-gr%C3%A1fico-de-principio-a-fin-0baf399e-dd61-4e18-8a73-b3fd5d5680c2"}],
           "enlaces_de_respaldo": [{"texto": "Vincular a Word", "url": "https://support.microsoft.com/es-es/office/insertar-un-gr%C3%A1fico-en-word-desde-una-hoja-de-c%C3%A1lculo-de-excel-0b4d40a5-3544-4dcd-b28f-ba82a9b9f1e1"}],
           "enlaces_videos": [{"texto": "Gráficos desde cero", "url": "https://www.youtube.com/watch?v=KJzOaNGoQ_I"}]
         }
@@ -335,8 +335,8 @@
           "duracionMin": 70,
           "descripcion": "MANUAL: Presentación de portafolio de evidencias y entrega de resultados finales según EC0366.",
           "tipo": "cierre",
-          "niveles": ["Intermedio", "", ""],
-          "enlaces": [], "enlaces_de_respaldo": [], "enlaces_videos": []
+          "niveles": ["Examen Practico", "", ""],
+          "enlaces": [{"texto": "Índices", "url": "soporte/Ofimatica_EVA.html"}], "enlaces_de_respaldo": [], "enlaces_videos": []
         }
       ]
     },
