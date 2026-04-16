@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Composición: Regla de los Tercios</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #38bdf8;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #334155;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 3rem;
+            border-radius: 15px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; letter-spacing: -1px; }
+        h2 { color: var(--primary); border-left: 5px solid var(--accent); padding-left: 15px; margin-top: 2rem; }
+        
+        .grid-concept {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background: #f1f5f9;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .image-placeholder {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            margin: 1.5rem 0;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Dominando la Regla de los Tercios</h1>
+    <p>Guía de composición esencial para Marketing Digital</p>
+</header>
+
+<div class="container">
+    <p>Bienvenidos al módulo de <strong>Diseño y Comunicación Visual</strong>. Hoy aprenderemos cómo transformar un diseño común en una pieza profesional utilizando la técnica más importante del mundo visual.</p>
+
+    <h2>1. ¿Qué es la Regla de los Tercios?</h2>
+    <p>Consiste en dividir el lienzo en una cuadrícula de <strong>3x3</strong>. Los puntos donde las líneas se cruzan son los "puntos fuertes". Si colocas ahí tus elementos más importantes, el diseño será más atractivo.</p>
+
+    <img src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fwww.frikymama.com%2Fregla-de-los-tercios-coposicion-fotografica%2F&ved=0CBYQjRxqFwoTCMiA8vKg85MDFQAAAAAdAAAAABAj&opi=89978449" 
+         alt="Ejemplo Regla de los Tercios" 
+         class="image-placeholder">
+    <p style="text-align: center; font-style: italic; color: #64748b;">Ejemplo: Observa cómo el horizonte y el sujeto principal se alinean con las guías de la cuadrícula.</p>
+
+    <h2>2. Aplicación en Marketing Digital</h2>
+    <div class="card-container">
+        <div class="card">
+            <span class="badge">Flyers</span>
+            <h3>Jerarquía Visual</h3>
+            <p>Usa los tercios superiores para el mensaje clave y el inferior para el contacto o QR.</p>
+        </div>
+        <div class="card">
+            <span class="badge">Banners</span>
+            <h3>Espacio Negativo</h3>
+            <p>Coloca el producto en un lateral para dejar aire al texto de venta. Evita saturar el centro.</p>
+        </div>
+        <div class="card">
+            <span class="badge">Tarjetas</span>
+            <h3>Equilibrio Diagonal</h3>
+            <p>Logotipo arriba a la izquierda y beneficio abajo a la derecha para guiar la lectura.</p>
+        </div>
+    </div>
+
+    <h2>3. Consejos Pro</h2>
+    <ul>
+        <li><strong>Dirección:</strong> Si el sujeto mira hacia la derecha, colócalo en el tercio izquierdo.</li>
+        <li><strong>El Horizonte:</strong> Nunca lo pongas al centro; usa la línea superior o inferior.</li>
+        <li><strong>Menos es Más:</strong> Deja espacios vacíos para que el diseño "respire".</li>
+    </ul>
+</div>
+
+<footer>
+    &copy; 2026 Curso de Marketing e Informática - Material para fines educativos
+</footer>
+
+</body>
+</html>
