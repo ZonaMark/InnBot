@@ -341,34 +341,35 @@ function renderPanelDia(dia, numSemana) {
         iniciarTemporizador(dia.juegoCierre.duracionMin);
       }
     });
-    // ==== BLOQUE DE ENCUESTA (último día REAL de última semana) ====
-    const semanas = obtenerSemanas(datosCursoGlobal);
-    const semanaActual = semanas.find(s => s.indice === numSemana);
-    const esUltimaSemana = numSemana === semanas.length;
+    if (encuestaURL) { 
+      // ==== BLOQUE DE ENCUESTA (último día REAL de última semana) ====
+      const semanas = obtenerSemanas(datosCursoGlobal);
+      const semanaActual = semanas.find(s => s.indice === numSemana);
+      const esUltimaSemana = numSemana === semanas.length;
 
-    // Filtrar SOLO los elementos que tienen propiedad 'dia' (ignorar soporte)
-    const diasReales = semanaActual.dias.filter(d => d.hasOwnProperty('dia'));
-    const diasNumeros = diasReales.map(d => d.dia);
-    const ultimoDiaReal = Math.max(...diasNumeros);
+      // Filtrar SOLO los elementos que tienen propiedad 'dia' (ignorar soporte)
+      const diasReales = semanaActual.dias.filter(d => d.hasOwnProperty('dia'));
+      const diasNumeros = diasReales.map(d => d.dia);
+      const ultimoDiaReal = Math.max(...diasNumeros);
 
-    const esUltimoDia = esUltimaSemana && dia.dia === ultimoDiaReal;
+      const esUltimoDia = esUltimaSemana && dia.dia === ultimoDiaReal;
 
-    if (esUltimoDia) {
-      const encuestaURL = localStorage.getItem("cursoEncuesta");
-      
-      if (encuestaURL) {
-        const encuestaCard = document.createElement("div");
-        encuestaCard.className = "activity-card encuesta-card";
-        encuestaCard.innerHTML = `
-          <h4>📝 Encuesta de satisfacción</h4>
-          <p>Ayúdanos a mejorar respondiendo esta breve encuesta sobre el curso.</p>
-          <div class="encuesta-container">
-            <a href="${encuestaURL}" target="_blank" class="btn-encuesta">
-              Responder encuesta
-            </a>
-          </div>
-        `;
-        activitiesList.appendChild(encuestaCard);
+      if (esUltimoDia) {
+        const encuestaURL = localStorage.getItem("cursoEncuesta");
+        
+        if (encuestaURL) {
+          const encuestaCard = document.createElement("div");
+          encuestaCard.className = "activity-card encuesta-card";
+          encuestaCard.innerHTML = `
+            <p>De acuerdo al EC0366, Desarrollo de cursos de formación en línea, Consteste la siguiente evaluación y encuesta de satisfacción</p>
+            <div class="enlaces-container">
+              <div class="enlaces-izquierda">
+                <div class="enlaces-grupo"><a class="enlace-principal"  href="${encuestaURL}" target="_blank"> EC0366: Evaluación/Encuesta </a></div>
+              </div>            
+            </div>
+          `;
+          activitiesList.appendChild(encuestaCard);
+        }
       }
     }
     // ==== FIN BLOQUE ENCUESTA ====
