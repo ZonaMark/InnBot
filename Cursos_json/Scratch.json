@@ -1,0 +1,515 @@
+{
+  "curso": {
+    "id": "SCRATCH-EC0366",
+    "titulo": "Scratch Pro: Pensamiento Computacional y Estándar EC0366",
+    "descripcion": "Curso intensivo de programación por bloques enfocado en el desarrollo de lógica, algoritmos y creación de contenidos educativos digitales.",
+    "edad": "10+ (Ideal para docentes y estudiantes)",
+    "Objetivo1": "Apropiar: Dominar la lógica de programación por bloques y el entorno Scratch. Producir: Crear proyectos interactivos, juegos y simulaciones funcionales. Optimizar: Aplicar estructuras de control para resolver problemas complejos de forma eficiente.",
+    "Objetivo2": "Que el participante desarrolle habilidades de pensamiento computacional mediante la metodología del estándar EC0366, logrando diseñar una solución digital integral que resuelva un problema de comunicación o aprendizaje.",
+    "PerfilEgre": "✔ Programar algoritmos con estructuras condicionales y ciclos ✔ Gestionar variables y listas de datos ✔ Utilizar sensores y operadores para interactividad avanzada ✔ Desarrollar proyectos bajo estándares de calidad instruccional ✔ Implementar extensiones de IA y video.",
+    "autor": "Marcos Moreno Márquez",
+    "version": "1.0",
+    "constancia": {
+      "titulo": "Constancia de participación",
+      "texto": "Se otorga la presente a quien concluye satisfactoriamente el curso 'Scratch Pro', demostrando competencias en lógica de programación y diseño de objetos de aprendizaje."
+    }
+  },
+
+  "configuracion": {
+    "bloqueoProgresivo": true,
+    "temporizadorActivo": true,
+    "mostrarConstanciaFinal": true,
+    "duracionRecesoMin": 15,
+    "unidadTiempo": "minutos"
+  },
+
+  "Semana1": [
+    {
+      "dia": 1,
+      "titulo": "Día 1: El Escenario de los Algoritmos",
+      "descripcion": "Introducción al pensamiento computacional y dominio de la interfaz de Scratch.",
+      "actividades": [
+        {
+          "id": "d1-act1",
+          "titulo": "Anatomía de Scratch y el estándar EC0366",
+          "duracionMin": 30,
+          "descripcion": "Exploración del entorno: escenario, objetos y panel de bloques.",
+          "tipo": "Teórico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [{"texto": "Scratch Web", "url": "https://scratch.mit.edu/"}],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act2",
+          "titulo": "Primeros pasos: Movimiento y Eventos",
+          "duracionMin": 45,
+          "descripcion": "Programar desplazamientos básicos y el uso de la 'Bandera Verde'.",
+          "tipo": "Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act3",
+          "titulo": "Lógica de Coordenadas (X, Y)",
+          "duracionMin": 30,
+          "descripcion": "Ubicación precisa de objetos en el plano cartesiano de Scratch.",
+          "tipo": "Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d1-act4",
+          "titulo": "Reto: La Carrera de Objetos",
+          "duracionMin": 30,
+          "descripcion": "Crear una animación simple donde dos objetos compiten por llegar a la meta.",
+          "tipo": "Reto",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 2,
+      "titulo": "Día 2: Animación y Ciclos Infinitos",
+      "descripcion": "Dando fluidez a los proyectos mediante el uso de bucles y cambio de apariencia.",
+      "actividades": [
+        {
+          "id": "d2-act1",
+          "titulo": "Apariencia y Disfraces",
+          "duracionMin": 35,
+          "descripcion": "Cambio de disfraces para simular caminata y efectos de color.",
+          "tipo": "Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act2",
+          "titulo": "El Bucle 'Por Siempre'",
+          "duracionMin": 40,
+          "descripcion": "Diferencia entre secuencias lineales y ciclos de ejecución continua.",
+          "tipo": "Teórico-Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act3",
+          "titulo": "Fondos y Diálogos",
+          "duracionMin": 30,
+          "descripcion": "Gestión de múltiples escenarios y bloques de decir/pensar.",
+          "tipo": "Práctico",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d2-act4",
+          "titulo": "Proyecto: La tarjeta animada",
+          "duracionMin": 30,
+          "descripcion": "Diseñar una tarjeta interactiva con al menos 3 objetos que reaccionen al clic.",
+          "tipo": "Proyecto",
+          "niveles": ["Básico", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 3,
+      "titulo": "Día 3: El Sonido de la Lógica",
+      "descripcion": "Integración de elementos auditivos y uso de sensores de entrada.",
+      "actividades": [
+        {
+          "id": "d3-act1",
+          "titulo": "Edición y programación de Audio",
+          "duracionMin": 40,
+          "descripcion": "Importar, grabar y modificar sonidos para eventos específicos.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act2",
+          "titulo": "Sensores: Ratón y Teclado",
+          "duracionMin": 35,
+          "descripcion": "Hacer que el objeto siga al ratón o se mueva con flechas.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d3-act3",
+          "titulo": "Laboratorio: Piano Digital",
+          "duracionMin": 60,
+          "descripcion": "Construcción de un instrumento musical funcional usando el teclado.",
+          "tipo": "Taller",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/Scratch1.html"}
+  ],
+
+  "Semana2": [
+    {
+      "dia": 4,
+      "titulo": "Día 4: Toma de Decisiones (Si... Entonces)",
+      "descripcion": "Introducción a las condicionales y operadores lógicos.",
+      "actividades": [
+        {
+          "id": "d4-act1",
+          "titulo": "Lógica Condicional",
+          "duracionMin": 45,
+          "descripcion": "Entender el bloque 'Si... entonces' y su importancia en juegos.",
+          "tipo": "Teórico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act2",
+          "titulo": "Sensores de Color y Contacto",
+          "duracionMin": 30,
+          "descripcion": "Programar reacciones cuando un objeto toca a otro o a un color.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d4-act3",
+          "titulo": "Reto: El Laberinto",
+          "duracionMin": 60,
+          "descripcion": "Crear un juego donde si tocas la pared, regresas al inicio.",
+          "tipo": "Reto",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 5,
+      "titulo": "Día 5: Memoria del programa (Variables)",
+      "descripcion": "Uso de variables para puntuación, tiempo y estados.",
+      "actividades": [
+        {
+          "id": "d5-act1",
+          "titulo": "¿Qué es una variable?",
+          "duracionMin": 30,
+          "descripcion": "Concepto de contenedor de datos y tipos de variables en Scratch.",
+          "tipo": "Teórico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act2",
+          "titulo": "Marcadores y Vidas",
+          "duracionMin": 45,
+          "descripcion": "Sumar puntos y restar vidas mediante colisiones.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d5-act3",
+          "titulo": "Proyecto: Recolector de Frutas",
+          "duracionMin": 60,
+          "descripcion": "Juego completo con cronómetro y contador de puntos.",
+          "tipo": "Proyecto",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 6,
+      "titulo": "Día 6: Comunicación entre objetos",
+      "descripcion": "Programación orientada a eventos usando mensajes.",
+      "actividades": [
+        {
+          "id": "d6-act1",
+          "titulo": "Bloques de Enviar y Recibir",
+          "duracionMin": 40,
+          "descripcion": "Sincronizar acciones entre diferentes objetos.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act2",
+          "titulo": "Cambio de nivel por mensajes",
+          "duracionMin": 35,
+          "descripcion": "Cómo pasar a la pantalla de 'Ganaste' o 'Perdiste' usando eventos.",
+          "tipo": "Práctico",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d6-act3",
+          "titulo": "Proyecto: Diálogo Interactivo",
+          "duracionMin": 60,
+          "descripcion": "Una historia corta donde dos personajes conversan de forma sincronizada.",
+          "tipo": "Proyecto",
+          "niveles": ["Intermedio", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "soporte/Scratch2.html"}
+  ],
+
+  "Semana3": [
+    {
+      "dia": 7,
+      "titulo": "Día 7: Clones y Modularización",
+      "descripcion": "Técnicas avanzadas para optimizar código.",
+      "actividades": [
+        {
+          "id": "d7-act1",
+          "titulo": "El ejército de clones",
+          "duracionMin": 45,
+          "descripcion": "Crear múltiples copias de un objeto (ej. lluvia de meteoritos) con un solo bloque.",
+          "tipo": "Práctico",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d7-act2",
+          "titulo": "Creación de Mis Bloques",
+          "duracionMin": 40,
+          "descripcion": "Definir funciones personalizadas para reutilizar código.",
+          "tipo": "Teórico-Práctico",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d7-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d7-act3",
+          "titulo": "Reto: Invasión Espacial",
+          "duracionMin": 50,
+          "descripcion": "Programar enemigos que aparecen aleatoriamente usando clones.",
+          "tipo": "Reto",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 8,
+      "titulo": "Día 8: Listas e Inteligencia Artificial",
+      "descripcion": "Uso de bases de datos simples y extensiones modernas.",
+      "actividades": [
+        {
+          "id": "d8-act1",
+          "titulo": "Listas (Arreglos)",
+          "duracionMin": 45,
+          "descripcion": "Crear inventarios o listas de nombres para interactuar con el usuario.",
+          "tipo": "Práctico",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d8-act2",
+          "titulo": "Extensiones: Video e IA",
+          "duracionMin": 40,
+          "descripcion": "Uso de la cámara para detectar movimiento o traducir textos.",
+          "tipo": "Taller",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d8-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d8-act3",
+          "titulo": "Taller: El traductor inteligente",
+          "duracionMin": 50,
+          "descripcion": "Crear un programa que traduzca frases escritas por el usuario usando voz.",
+          "tipo": "Práctico",
+          "niveles": ["Avanzado", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {
+      "dia": 9,
+      "titulo": "Día 9: Evaluación de Desempeño EC0366",
+      "descripcion": "Integración final y demostración de competencias.",
+      "actividades": [
+        {
+          "id": "d9-act1",
+          "titulo": "Desarrollo de Proyecto Final",
+          "duracionMin": 75,
+          "descripcion": "Crear un objeto de aprendizaje o juego complejo que integre variables, condicionales y sonido.",
+          "tipo": "Examen Práctico",
+          "niveles": ["Certificación", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d9-receso1",
+          "titulo": "Receso",
+          "duracionMin": 15,
+          "descripcion": "Descanso activo.",
+          "tipo": "receso",
+          "niveles": ["", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        },
+        {
+          "id": "d9-act2",
+          "titulo": "Presentación y Cierre",
+          "duracionMin": 60,
+          "descripcion": "Exhibición de proyectos, retroalimentación grupal y descarga de constancias.",
+          "tipo": "Evaluación Sumativa",
+          "niveles": ["Certificación", "", ""],
+          "enlaces": [],
+          "enlaces_de_respaldo": [],
+          "enlaces_videos": []
+        }
+      ]
+    },
+    {"soporte": "Soporte/scratch3.html"}
+  ],
+
+  "metadata": {
+    "fechaCreacion": "2026-04-08",
+    "ultimaActualizacion": "2026-04-08",
+    "formato": "JSON educativo",
+    "licencia": "Uso educativo",
+    "idioma": "es"
+  }
+}

@@ -1,4 +1,4 @@
-import { obtenerUrl } from "./Sections/ScriptForm.js";
+import { obtenerUrl } from "../Sections/ScriptForm.js";
 let nombreSeleccionado = null;
 let edadSeleccionada = null;
 const tipoAcceso = localStorage.getItem("tipoAcceso"); // "codigo" o "Libre"

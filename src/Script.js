@@ -1,7 +1,7 @@
 /* ============================================================
     CONFIGURACIÓN DEL SITIO Y ELEMENT SDK
 ============================================================ */
-import { validarCodigo } from "./Sections/ScriptForm.js";
+import { validarCodigo } from "../Sections/ScriptForm.js";
 let isDarkMode = true;
 
 export function iniciarSitio() {

@@ -164,7 +164,7 @@ img {
     height: 100%;
     overflow-y: auto;
     z-index: 1000;
-    background-image: url("img/argolla.png");
+    background-image: url("../img/argolla.png");
     background-repeat: repeat-y;
     background-position: right center;
     background-size: 40px auto;

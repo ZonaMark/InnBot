@@ -83,7 +83,7 @@
         },
         {
           "id": "d1-receso1",
-          "titulo": "Recese",
+          "titulo": "Receso",
           "duracionMin": 15,
           "descripcion": "Descanso activo (agua, estiramientos, respiro visual).",
           "tipo": "receso",

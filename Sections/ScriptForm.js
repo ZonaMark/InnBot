@@ -1,9 +1,14 @@
 /*  ================================= Script Form Dinámico =========================*/
 // ---------- Firebase ----------
+const homepath = (() => {
+  const path = window.location.pathname;
+  return path.includes('InnBot') ? '/InnBot/' : '/ZM/';
+})();
+
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-app.js";
 import { getDatabase, ref, set, get, push } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js";
-import { navigateToSection } from "../Script.js";
+import { navigateToSection } from "../src/Script.js";
 import { renderCarrito, esperarProductos } from "./Cargar_cart.js";
 import { getFunctions, httpsCallable } from "https://www.gstatic.com/firebasejs/10.13.2/firebase-functions.js";
 
@@ -22,9 +27,6 @@ const auth = getAuth(app);
 const functions = getFunctions(app, "us-central1");
 const generarCodigoFn = httpsCallable(functions, "generarCodigo");
 const validarCodigoFn = httpsCallable(functions, "validarCodigo");
-
-
-const homepath = "https://zonamark/ZM/";
 
 
 export async function validarCodigo(passValue) {
@@ -184,21 +186,16 @@ observer.observe(document.body, { childList: true, subtree: true });
 
 document.body.addEventListener("click", async (e) => {
   if (e.target && e.target.id === "submitBtn") {
-
     const pass = document.getElementById("passwordInput").value;
-
     try {
       const result = await generarCodigoFn({ password: pass });
-
       const box = document.getElementById("overcode");
       box.textContent = `Código generado: ${result.data.codigo}`;
-
       setTimeout(() => {
         box.textContent = "";
         document.getElementById("overcode").remove();
         document.getElementById("G91364").style.display = "none";
       }, 15000);
-
     } catch (error) {
       alert("Contraseña incorrecta ❌");
     }
