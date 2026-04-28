@@ -639,47 +639,61 @@ async function cargarLikns(){
 export async function navigateToSection(sectionName) {
     const mainSection = document.getElementById("heroSection");
     if (!mainSection) {
-		console.error("No se encontró #heroSection en index.html");
+        console.error("No se encontró #heroSection en index.html");
         return;
     }
+
     try {
+        // 1️⃣ Intentar HTML primero
         const response = await fetch(`Sections/${sectionName}.html`);
-        if (!response.ok) {
-            mainSection.innerHTML = `<p style="color:red;">No se pudo cargar la sección "${sectionName}".</p>`;
-            return;
-        }
-        const html = await response.text();
-        // Extraemos el contenido del <main> del archivo externo
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-        const sectionContent = doc.querySelector("main"); // buscamos solo el main interior
-        if (sectionContent) {
-            mainSection.innerHTML = sectionContent.innerHTML;
+        if (response.ok) {
+            const html = await response.text();
+
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(html, "text/html");
+            const sectionContent = doc.querySelector("main");
+            if (sectionContent) {
+                mainSection.innerHTML = sectionContent.innerHTML;
+            } else {
+                mainSection.innerHTML = `<p style="color:red;">La sección "${sectionName}" no tiene un &lt;main&gt; válido.</p>`;
+            }
 
         } else {
-            mainSection.innerHTML = `<p style="color:red;">La sección "${sectionName}" no tiene un &lt;main&gt; válido.</p>`;
+            // 2️⃣ Si NO hay HTML → intentar WEBP
+            const imgResponse = await fetch(`Sections/${sectionName}.webp`);
+
+            if (imgResponse.ok) {
+                window.open(`Sections/${sectionName}.webp`, "_blank");
+                return; // 🔴 IMPORTANTE: salir para no seguir ejecutando
+            } else {
+                mainSection.innerHTML = `<p style="color:red;">No se encontró la sección "${sectionName}".</p>`;
+                return;
+            }
         }
 
     } catch (error) {
-        mainSection.innerHTML = `<p style="color:red;">Error: No se encueUncaught SyntaxError: await is a reserved identifierntra la seccion: "${sectionName}".</p>`;
+        mainSection.innerHTML = `<p style="color:red;">Error al cargar "${sectionName}".</p>`;
         console.error(error);
     }
+
+    // 🔽 TU LÓGICA EXISTENTE (sin tocar)
     if (sectionName === "Cursos") {
-		setTimeout(() => {
-			cargarCursos();
-			cargarQRsCursos(); // se ejecuta justo después
-		}, 50);
-	}
+        setTimeout(() => {
+            cargarCursos();
+            cargarQRsCursos();
+        }, 50);
+    }
     if (sectionName === "Contacto") {
         setTimeout(() => cargarCursosEnSelect(), 50);
     }
-    if (sectionName === "Proyectos" ) {
-		setTimeout(() => cargarProyectos(), 50);
-	}
-	if (sectionName === "Servicios") {
+
+    if (sectionName === "Proyectos") {
+        setTimeout(() => cargarProyectos(), 50);
+    }
+    if (sectionName === "Servicios") {
         setTimeout(() => {
-          cargarServicios();
-          cargarQRsServ(); // se ejecuta justo después
+            cargarServicios();
+            cargarQRsServ();
         }, 50);
     }
     setTimeout(() => {
@@ -714,6 +728,7 @@ function ocultarModal() {
   document.getElementById("cursoModal").style.display = "none";
   document.getElementById("overlaySecun").style.display = "none";
 }
+
 
 export function cargarInicio() {
 
